@@ -10,19 +10,39 @@ Orca обновляется почти ежедневно, но строки м�
 
 ## Установка
 
-Orca пока не умеет ставить языковые пакеты из маркетплейса, поэтому подключается как dev-плагин — это штатный путь, не хак.
+### Способ 1 — через маркетплейс (рекомендуется)
+
+Orca сама предложит обновление, когда выйдет новая версия перевода.
+
+1. **Settings → Plugins** — включить систему плагинов
+2. **Marketplace sources → Add source**, вставить адрес:
+
+   ```
+   https://github.com/imgusev/orca-plugins.git
+   ```
+
+3. На вкладке **All** найти «Русский язык для Orca» и нажать **Install**
+4. **Settings → Appearance → Language** — выбрать русский
+
+### Способ 2 — по Git URL
+
+Без добавления источника, одной ссылкой. Обязателен явный `#ref` — без него Orca откажет, чтобы установка была привязана к конкретной версии:
+
+**Settings → Plugins → Install plugin → Git URL**
+
+```
+https://github.com/imgusev/orca-plugin-ru.git#v1.1.1
+```
+
+### Способ 3 — локальная папка
+
+Подходит, если правите перевод у себя.
 
 ```bash
 git clone https://github.com/imgusev/orca-plugin-ru.git ~/orca-plugin-ru
 ```
 
-Затем в Orca:
-
-1. **Settings → Plugins → Development → Add path**
-2. Указать путь к склонированной папке (`~/orca-plugin-ru`)
-3. Подтвердить разрешения — плагин добавляет только языковой каталог, кода в нём нет
-4. **Settings → Appearance → Language** — выбрать русский
-5. Перезапустить Orca
+**Settings → Plugins → Development → Add path** и полный путь к папке. Каталог перечитывается на лету — после `python3 tools/build.py` перезапуск не нужен.
 
 Обновление:
 
