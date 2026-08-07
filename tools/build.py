@@ -30,6 +30,12 @@ PLURAL_SUFFIX_RE = re.compile(r"(?<=[A-Za-z]{2})(\{\{[^}]+\}\})(?![A-Za-z0-9_])"
 # "The plugin stopped after an activation or worker error".
 PROTECTED_ROOT = "auto.components.settings."
 
+# Жёсткий лимит валидатора на одно значение. Превышение отклоняет ВЕСЬ пакет
+# ("translation at <path> exceeds 8192 characters") — плагин падает с
+# "The plugin stopped after an activation or worker error". Упираются в него
+# только CSS-блоки витрины возможностей, переводить в них всё равно нечего.
+MAX_VALUE_LENGTH = 8192
+
 try:
     ALLOWED_CHROME = set(open(os.path.join(HERE, "allowed-chrome.txt")).read().split())
 except FileNotFoundError:
@@ -87,9 +93,12 @@ def main() -> None:
         print(f"  {os.path.basename(path):20} {len(entries):5}")
     print(f"  {'by-key.json':20} {len(by_key):5} (переопределения по ключу)")
 
-    translated, skipped, missing, overridden = {}, [], [], 0
+    translated, skipped, missing, overridden, oversized = {}, [], [], 0, []
     for key, raw in source.items():
         english = decode_js(raw)
+        if len(english) > MAX_VALUE_LENGTH:
+            oversized.append(key)
+            continue
         if key in by_key:
             # null означает «оставить английским»: i18next возьмёт defaultValue
             overridden += 1
@@ -124,6 +133,10 @@ def main() -> None:
         if set(PLURAL_SUFFIX_RE.findall(decode_js(source[key]))) & set(PLACEHOLDER_RE.findall(value))
     ]
 
+    too_long = [k for k, v in translated.items() if len(v) > MAX_VALUE_LENGTH]
+    if too_long:
+        raise SystemExit(f"перевод длиннее {MAX_VALUE_LENGTH} символов отклонит весь пакет: {too_long[:3]}")
+
     out = os.path.join(ROOT, "locales", "ru.json")
     catalog = nest(translated)
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -140,6 +153,7 @@ def main() -> None:
     print(f"переведено:           {len(translated)} ({len(translated) * 100 // total}%)")
     print(f"защищено Orca:        {len(skipped)} (остаются английскими — это норма)")
     print(f"переопределено:       {overridden} по ключу (контекст важнее словаря)")
+    print(f"сверх лимита 8192:    {len(oversized)} (CSS-блоки, отклонили бы весь пакет)")
     print(f"нет в словарях:       {len(set(missing))}")
     print(f"плейсхолдеры:         {len(broken)} расхождений")
     print(f"суффиксы мн. числа:   {len(dropped_suffix)} отброшено · {len(kept_suffix)} осталось (должно быть 0)")
