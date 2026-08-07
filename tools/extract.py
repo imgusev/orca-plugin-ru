@@ -6,15 +6,27 @@
 то есть как defaultValue i18next. Языковой пакет подменяет строки
 по тем же ключам, поэтому нужна карта «ключ → английский текст».
 
-Результат: en-all.json рядом со скриптом (в .gitignore — файл производный).
+Результат: en-all.json рядом со скриптом (в .gitignore — файл производный)
+и ORCA_VERSION в корне репозитория — версия сборки, из которой сняты строки.
 """
 import json
 import os
+import plistlib
 import re
 import sys
 
 DEFAULT_ASAR = "/Applications/Orca.app/Contents/Resources/app.asar"
 PAIR = re.compile(r'"(auto\.[A-Za-z0-9_.]{3,90})"\s*,\s*"((?:[^"\\]|\\.){1,300})"')
+
+
+def orca_version(asar: str) -> str | None:
+    """Версия берётся из Info.plist того же бандла — чтобы каталог и версия не разъехались."""
+    plist = os.path.join(os.path.dirname(asar), os.pardir, "Info.plist")
+    try:
+        with open(plist, "rb") as f:
+            return plistlib.load(f).get("CFBundleShortVersionString")
+    except (OSError, plistlib.InvalidFileException):
+        return None
 
 
 def main() -> None:
@@ -32,9 +44,17 @@ def main() -> None:
         if key not in pairs or len(value) > len(pairs[key]):
             pairs[key] = value
 
-    out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "en-all.json")
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.path.join(here, "en-all.json")
     json.dump(pairs, open(out, "w"), ensure_ascii=False, indent=1)
     print(f"извлечено {len(pairs)} ключей → {out}")
+
+    version = orca_version(asar)
+    if version:
+        open(os.path.join(here, os.pardir, "ORCA_VERSION"), "w").write(version + "\n")
+        print(f"версия Orca: {version} → ORCA_VERSION")
+    else:
+        print("версия Orca не определена — Info.plist рядом с asar не прочитан")
 
 
 main()

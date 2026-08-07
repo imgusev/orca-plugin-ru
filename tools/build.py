@@ -94,8 +94,14 @@ def main() -> None:
     os.makedirs(os.path.dirname(out), exist_ok=True)
     json.dump(catalog, open(out, "w"), ensure_ascii=False, indent=1)
 
+    try:
+        version = open(os.path.join(ROOT, "ORCA_VERSION")).read().strip()
+    except FileNotFoundError:
+        version = "неизвестна"
+
     total = len(source)
-    print(f"\nвсего строк в Orca:   {total}")
+    print(f"\nверсия Orca:          {version}")
+    print(f"всего строк в Orca:   {total}")
     print(f"переведено:           {len(translated)} ({len(translated) * 100 // total}%)")
     print(f"защищено Orca:        {len(skipped)} (остаются английскими — это норма)")
     print(f"нет в словарях:       {len(set(missing))}")
