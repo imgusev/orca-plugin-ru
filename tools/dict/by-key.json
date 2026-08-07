@@ -1,0 +1,12 @@
+{
+ "_comment": "Переопределения для конкретных ключей: словари плоские (английский текст → перевод), поэтому одно и то же слово переводится одинаково везде. Здесь чинится контекст. null = оставить английским.",
+
+ "auto.lib.agent.catalog.667c104cff": null,
+ "auto.lib.open.in.app.catalog.d62b12e98a": null,
+ "auto.lib.agent.catalog.9e2a9bb87b": null,
+ "auto.lib.agent.catalog.bf53f09bf8": null,
+
+ "auto.components.settings.GeneralUpdateSettingsSection.7173352632": null,
+ "auto.components.right.sidebar.GitHistoryPanel.62e685d5ec": null,
+ "auto.components.right.sidebar.SourceControlAgentActionDialogForm.74168d7ada": null
+}

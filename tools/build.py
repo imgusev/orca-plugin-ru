@@ -17,6 +17,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 ESCAPE_RE = re.compile(r"\\x([0-9a-fA-F]{2})|\\u([0-9a-fA-F]{4})")
 PLACEHOLDER_RE = re.compile(r"\{\{[^}]+\}\}")
+# Плейсхолдер, приклеенный к концу слова — английский суффикс множественного числа:
+# "{{value0}} label{{value1}}" подставляет "s". В русском число выражается иначе,
+# поэтому в переводе такой плейсхолдер опускается, и это не расхождение, а норма.
+# Две буквы в lookbehind отсекают "Orca v{{value0}}" и ":L{{value0}}", где перед
+# плейсхолдером стоит одиночная буква версии или номера строки, а не окончание слова.
+PLURAL_SUFFIX_RE = re.compile(r"(?<=[A-Za-z]{2})(\{\{[^}]+\}\})(?![A-Za-z0-9_])")
 
 # Защищённая зона Orca: языковой пакет не может подменять тексты про доверие
 # к плагинам. Если такой ключ попадёт в каталог, валидатор отклонит ВЕСЬ пакет
@@ -66,16 +72,30 @@ def main() -> None:
         raise SystemExit("нет en-all.json — сначала запустите: python3 extract.py")
     source = json.load(open(source_path))
 
+    # переопределения по ключу: одно и то же английское слово в разных местах
+    # значит разное — "Cursor" в каталоге агентов это редактор, а не курсор
+    by_key_path = os.path.join(HERE, "dict", "by-key.json")
+    by_key = {k: v for k, v in json.load(open(by_key_path)).items() if not k.startswith("_")}
+
     ru: dict[str, str] = {}
     print("словари:")
     for path in sorted(glob.glob(os.path.join(HERE, "dict", "*.json"))):
+        if os.path.basename(path) == "by-key.json":
+            continue
         entries = json.load(open(path))
         ru.update(entries)
         print(f"  {os.path.basename(path):20} {len(entries):5}")
+    print(f"  {'by-key.json':20} {len(by_key):5} (переопределения по ключу)")
 
-    translated, skipped, missing = {}, [], []
+    translated, skipped, missing, overridden = {}, [], [], 0
     for key, raw in source.items():
         english = decode_js(raw)
+        if key in by_key:
+            # null означает «оставить английским»: i18next возьмёт defaultValue
+            overridden += 1
+            if by_key[key] is not None:
+                translated[key] = by_key[key]
+            continue
         if english not in ru:
             missing.append(english)
         elif protected(key):
@@ -83,10 +103,25 @@ def main() -> None:
         else:
             translated[key] = ru[english]
 
-    # плейсхолдеры обязаны совпадать, иначе интерфейс покажет пустоту вместо значения
-    broken = [
+    # плейсхолдеры обязаны совпадать, иначе интерфейс покажет пустоту вместо значения —
+    # кроме суффиксов множественного числа, которые в русском переводе положено выбрасывать
+    broken, dropped_suffix = [], []
+    for key, value in translated.items():
+        english = decode_js(source[key])
+        want = sorted(PLACEHOLDER_RE.findall(english))
+        got = sorted(PLACEHOLDER_RE.findall(value))
+        if want == got:
+            continue
+        suffixes = set(PLURAL_SUFFIX_RE.findall(english))
+        if suffixes and sorted(p for p in want if p not in suffixes) == got:
+            dropped_suffix.append(key)
+        else:
+            broken.append(key)
+
+    # суффикс, оставленный в переводе, рисует в интерфейсе «меток: 3s»
+    kept_suffix = [
         key for key, value in translated.items()
-        if sorted(PLACEHOLDER_RE.findall(decode_js(source[key]))) != sorted(PLACEHOLDER_RE.findall(value))
+        if set(PLURAL_SUFFIX_RE.findall(decode_js(source[key]))) & set(PLACEHOLDER_RE.findall(value))
     ]
 
     out = os.path.join(ROOT, "locales", "ru.json")
@@ -104,10 +139,17 @@ def main() -> None:
     print(f"всего строк в Orca:   {total}")
     print(f"переведено:           {len(translated)} ({len(translated) * 100 // total}%)")
     print(f"защищено Orca:        {len(skipped)} (остаются английскими — это норма)")
+    print(f"переопределено:       {overridden} по ключу (контекст важнее словаря)")
     print(f"нет в словарях:       {len(set(missing))}")
     print(f"плейсхолдеры:         {len(broken)} расхождений")
+    print(f"суффиксы мн. числа:   {len(dropped_suffix)} отброшено · {len(kept_suffix)} осталось (должно быть 0)")
     print(f"вложенность:          {depth(catalog)}/16 · записей {len(translated)}/20000")
     print(f"\nзаписано: {out}")
+
+    if kept_suffix:
+        print(f"\nАНГЛИЙСКИЙ СУФФИКС ОСТАЛСЯ В ПЕРЕВОДЕ ({len(kept_suffix)}) — в интерфейсе выйдет «меток: 3s»:")
+        for key in kept_suffix[:20]:
+            print(f"  en: {decode_js(source[key])!r}\n  ru: {translated[key]!r}")
 
     if broken:
         print("\nРАСХОЖДЕНИЯ ПО ПЛЕЙСХОЛДЕРАМ (перевод потеряет значение):")
