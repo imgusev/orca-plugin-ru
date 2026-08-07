@@ -1,0 +1,25 @@
+{
+  "manifestVersion": 1,
+  "id": "russian-language-pack",
+  "publisher": "imgusev",
+  "name": "Русский язык для Orca",
+  "version": "1.0.0",
+  "description": "Полная русификация интерфейса Orca: 10258 из 10438 строк (98%). Строки про доверие к плагинам защищены самой Orca и остаются английскими, как и технические литералы — команды, пути, имена агентов.",
+  "author": {
+    "name": "imgusev",
+    "url": "https://github.com/imgusev"
+  },
+  "repository": "https://github.com/imgusev/orca-plugin-ru",
+  "engines": {
+    "orca": ">=1.4.0"
+  },
+  "pluginApi": 1,
+  "contributes": {
+    "languagePacks": [
+      {
+        "locale": "ru",
+        "path": "locales/ru.json"
+      }
+    ]
+  }
+}

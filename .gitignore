@@ -1,0 +1,6 @@
+# производный файл: извлекается из установленной Orca через tools/extract.py
+tools/en-all.json
+
+.DS_Store
+__pycache__/
+*.pyc
