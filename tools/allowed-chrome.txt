@@ -18,12 +18,6 @@ auto.components.settings.PluginMarketplaceBrowser.noSourcesTitle
 auto.components.settings.PluginMarketplaceBrowser.refresh
 auto.components.settings.PluginMarketplaceBrowser.refreshing
 auto.components.settings.PluginMarketplaceBrowser.tryAgain
-auto.components.settings.plugins.search.description
-auto.components.settings.plugins.search.development
-auto.components.settings.plugins.search.install
-auto.components.settings.plugins.search.logs
-auto.components.settings.plugins.search.permissions
-auto.components.settings.plugins.search.title
 auto.components.settings.PluginsSettingsSection.empty
 auto.components.settings.PluginsSettingsSection.emptyTitle
 auto.components.settings.PluginsSettingsSection.install
@@ -32,3 +26,9 @@ auto.components.settings.PluginsSettingsSection.noInstalledResults
 auto.components.settings.PluginsSettingsSection.noInstalledResultsTitle
 auto.components.settings.PluginsSettingsSection.systemLabel
 auto.components.settings.PluginsSettingsSection.title
+auto.components.settings.plugins.search.description
+auto.components.settings.plugins.search.development
+auto.components.settings.plugins.search.install
+auto.components.settings.plugins.search.logs
+auto.components.settings.plugins.search.permissions
+auto.components.settings.plugins.search.title
