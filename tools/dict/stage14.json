@@ -1,0 +1,34 @@
+{
+ "Always show": "Показывать всегда",
+ "Hidden worktrees ({{value0}})": "Скрытые worktree ({{value0}})",
+ "{{value0}} currently hidden": "сейчас скрыто: {{value0}}",
+ "Showing…": "Отображение…",
+ "Choose which hidden worktrees to show individually.": "Выберите, какие скрытые worktree показать по одному.",
+ "Could not list this repo's worktrees.": "Не удалось получить список worktree этого репозитория.",
+ "Could not update worktree visibility. Try again.": "Не удалось изменить видимость worktree. Повторите.",
+ "Which worktrees are hidden by default?": "Какие worktree скрыты по умолчанию?",
+ "For newly added repositories, worktrees created manually or by another tool are hidden by default to avoid unexpected sidebar clutter.": "У только что добавленных репозиториев worktree, созданные вручную или другим инструментом, по умолчанию скрыты — чтобы боковая панель неожиданно не захламлялась.",
+ "This setting never hides worktrees created through Orca.": "Эта настройка никогда не скрывает worktree, созданные через Orca.",
+ "Always show includes current and future non-Orca worktrees, including agent worktrees under .claude/worktrees/* and .gsd-workspaces/*. When it is off, use Show below to add one individually.": "«Показывать всегда» охватывает текущие и будущие worktree не из Orca, включая worktree агентов в .claude/worktrees/* и .gsd-workspaces/*. Если выключено, добавляйте их по одному кнопкой «Показать» ниже.",
+
+ "Create worktree from Linear issue": "Создать worktree из задачи Linear",
+ "Create worktree from Linear issue {{value0}}": "Создать worktree из задачи Linear {{value0}}",
+ "Create worktree from Linear issue {{value0}}: {{value1}}": "Создать worktree из задачи Linear {{value0}}: {{value1}}",
+ "Create worktree from {{value0}}": "Создать worktree из {{value0}}",
+ "Loading Linear issue…": "Загрузка задачи Linear…",
+ "Loading Linear issue {{value0}}": "Загрузка задачи Linear {{value0}}",
+ "Loading {{value0}}…": "Загрузка {{value0}}…",
+
+ "Never ran": "Не запускалась",
+ "Succeeded": "Успешно",
+ "No automations match.": "Автоматизации не найдены.",
+ "{{value0}}, sorted ascending": "{{value0}}, по возрастанию",
+ "{{value0}}, sorted descending": "{{value0}}, по убыванию",
+
+ "Remote Orca host": "Удалённый хост Orca",
+ "Remote Orca host · {{host}}": "Удалённый хост Orca · {{host}}",
+ "SSH host": "SSH-хост",
+ "SSH host · {{host}}": "SSH-хост · {{host}}",
+
+ "Branch naming, base refs, and Git AI Author.": "Имена веток, базовые ref и ИИ-автор в Git."
+}
