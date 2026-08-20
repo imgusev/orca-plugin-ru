@@ -3443,7 +3443,9 @@
       "antigravityUsageDetails": "Открыть подробности расхода Antigravity",
       "grokUsageAria": "Открыть подробности расхода Grok",
       "grokUsageMenu": "Расход Grok",
-      "floatingTerminalNewActivity": "{{label}}, есть новое"
+      "floatingTerminalNewActivity": "{{label}}, есть новое",
+      "codexSignInSuccess": "Вход в Codex выполнен",
+      "codexSignInError": "Не удалось войти в Codex. Повторите попытку."
      },
      "StatusBarUsageEmptyCta": {
       "828c764a79": "Подключить аккаунт",
@@ -4408,7 +4410,8 @@
      "d36883e046": "Отмена",
      "b79b39d865": "Убрать проект",
      "removeDescriptionSsh": "Это убирает {{name}} только из Orca. Файлы остаются на {{host}} — добавьте этот SSH-хост заново, чтобы вернуть его.",
-     "removeDescriptionLocal": "Это убирает {{name}} только из Orca. На диске он остаётся."
+     "removeDescriptionLocal": "Это убирает {{name}} только из Orca. На диске он остаётся.",
+     "removeDescriptionVmRecipe": "Это убирает {{name}} из Orca. Будут ли безвозвратно удалены само окружение и его файлы, определяет рецепт VM."
     },
     "ScrollToCurrentWorkspaceToolbarButton": {
      "23989bb663": "Показать активная рабочая область"
@@ -4928,7 +4931,9 @@
      "noneFound": "Worktree не из Orca не найдены",
      "tryDifferentSearch": "Попробуйте другое имя или путь.",
      "disableSource": "Отключите источник, чтобы управлять его worktree по одному.",
-     "appearWhenDetected": "Новые worktree появятся здесь, когда Orca их обнаружит."
+     "appearWhenDetected": "Новые worktree появятся здесь, когда Orca их обнаружит.",
+     "openGlobalSettings": "Настроить в глобальных настройках",
+     "globalSettingsSources": "У этих источников есть глобальная настройка, которую можно переопределить здесь:"
     },
     "add": {
      "repo": {
@@ -5434,15 +5439,21 @@
      "duplicatePath": "Это расположение уже в списке.",
      "limit": "Удалите одно своё расположение, прежде чем добавлять другое.",
      "sources": "Источники",
-     "sourcesDescription": "Включённые источники добавляют в боковую панель текущие и будущие worktree.",
+     "sourcesDescription": "Показанные источники добавляют в боковую панель текущие и будущие worktree.",
      "found": "найдено: {{value0}}",
      "remove": "Убрать {{value0}}",
      "removeLocation": "Удалить своё расположение",
-     "toggle": "Показывать текущие и будущие worktree из {{value0}}",
      "addLocation": "Добавить расположение",
      "worktreeRoot": "Корень worktree",
      "add": "Добавить",
-     "rootHelp": "Orca будет распознавать worktree внутри этой папки."
+     "rootHelp": "Orca будет распознавать worktree внутри этой папки.",
+     "visibility": "Видимость для {{value0}}",
+     "show": "Показать",
+     "hide": "Скрыть",
+     "overridingGlobal": "Переопределяет глобальную настройку: {{value0}}",
+     "projectOnly": "Добавлено только в этом проекте.",
+     "useGlobalFor": "Использовать глобальное для {{value0}}",
+     "useGlobal": "Использовать глобальное"
     }
    },
    "shared": {
@@ -5635,6 +5646,7 @@
      "codexSystemDefaultNeedsSignIn": "Вход в Codex для {{value0}} не найден.",
      "codexConfigSyncMissingSource": "Codex продолжает использовать последние синхронизированные настройки: {{value0}} отсутствует. Восстановите файл, чтобы синхронизация продолжилась.",
      "codexConfigSyncBlankSource": "Codex продолжает использовать последние синхронизированные настройки: {{value0}} пуст. Это нормально, пока синхронизируемая папка догружается.",
+     "codexConfigSyncManagedHomeUnavailable": "Orca сейчас не смогла прочитать файлы Codex этого аккаунта, поэтому настройки могут не синхронизироваться. Обычно проходит само — файлы ненадолго блокирует антивирус или программа резервного копирования.",
      "codexConfigSyncUnreadableSource": "Codex продолжает использовать последние синхронизированные настройки: не удалось прочитать {{value0}}. Проверьте права на этот файл."
     },
     "AdvancedPane": {
@@ -6320,7 +6332,11 @@
      "7511097c5d": "Рабочая область",
      "31e300af1c": "Спрашивать перед удалением артефактов",
      "fb29a73a17": "Показывать подтверждение перед удалением опубликованного артефакта и его публичной ссылки.",
-     "bf46474e33": "Спрашивать подтверждение перед удалением опубликованного артефакта. Все, у кого есть публичная ссылка, потеряют доступ."
+     "bf46474e33": "Спрашивать подтверждение перед удалением опубликованного артефакта. Все, у кого есть публичная ссылка, потеряют доступ.",
+     "externalWorktrees": "Внешние worktree",
+     "externalWorktreesDescription": "Выберите, показывать ли по умолчанию worktree, созданные вне Orca.",
+     "show": "Показать",
+     "hide": "Скрыть"
     },
     "GhosttyImportModal": {
      "9d3e56ca36": "Применить изменения",
@@ -7044,7 +7060,14 @@
      "hostStateUnknown": "Неизвестно",
      "nestedHostLabel": "{{value0}} через {{value1}}",
      "hostStateWorkspaceWindowClosed": "Окно рабочей области закрыто",
-     "hostWorkspaceWindowClosedHelp": "Сервер доступен, но окно Orca на нём закрыто. Откройте Orca на {{value0}}, чтобы работать с этой конфигурацией."
+     "hostWorkspaceWindowClosedHelp": "Сервер доступен, но окно Orca на нём закрыто. Откройте Orca на {{value0}}, чтобы работать с этой конфигурацией.",
+     "externalWorktrees": "Внешние worktree",
+     "externalWorktreesDescription": "Переопределите для этого проекта, показывать ли worktree, созданные вне Orca.",
+     "externalWorktreesInherited": "Используется глобальное: {{value0}}",
+     "show": "Показать",
+     "hide": "Скрыть",
+     "externalWorktreesGlobal": "Глобально по умолчанию: {{value0}}",
+     "useGlobal": "Использовать глобальное"
     },
     "RepositorySourceControlAiActionRows": {
      "548a6e1281": "Шаблон команды",
@@ -8726,6 +8749,8 @@
       "005be5c699": "Переносить длинные строки в редакторе вместо горизонтальной прокрутки.",
       "editorFontFamily": "Шрифт редактора",
       "editorFontFamilyDesc": "Шрифт редакторов файлов и просмотра диффов. Оставьте пустым, чтобы использовать шрифт терминала.",
+      "externalWorktrees": "Внешние worktree",
+      "externalWorktreesDescription": "Выберите, показывать ли по умолчанию worktree, созданные вне Orca.",
       "editorFontKw": "шрифт",
       "f96cdaf37d": "проверка орфографии",
       "a51d23f4a1": "проверка орфографии",
@@ -8737,6 +8762,9 @@
       "wsl": "wsl",
       "distro": "дистрибутив",
       "execution": "выполнение",
+      "externalKeyword": "external",
+      "visibility": "видимость",
+      "sidebar": "боковая панель",
       "867dddea41": "закреплено",
       "5250cf0e48": "закрепить",
       "afa37a34e1": "закрыть"
@@ -9237,7 +9265,12 @@
       "keepForkUpToDateDescription": "Безопасно продвинуть этот форк за upstream.",
       "projectRuntime": "Среда выполнения проекта",
       "projectRuntimeDescription": "Выберите, где выполняется проект: в Windows или в WSL.",
+      "externalWorktrees": "Внешние worktree",
+      "externalWorktreesDescription": "Переопределите для этого проекта, показывать ли worktree, созданные вне Orca.",
       "waitForSetupBeforeAgent": "дождаться настройки перед запуском агента",
+      "external": "external",
+      "visibility": "видимость",
+      "sidebar": "боковая панель",
       "fork": "форк",
       "upstream": "upstream",
       "syncFork": "синхронизировать форк",
@@ -10042,7 +10075,11 @@
      "cloudVmTitle": "Облачные среды выполнения VM",
      "cloudVmRefresh": "Обновить облачные среды выполнения VM",
      "cloudVmLoading": "Проверка облачных сред выполнения VM…",
-     "cloudVmEmptyWithSetup": "Облачных сред выполнения VM пока нет. Создайте её из рабочей области по рецепту окружения."
+     "cloudVmEmptyWithSetup": "Облачных сред выполнения VM пока нет. Создайте её из рабочей области по рецепту окружения.",
+     "stoppingCleanup": "Остановка…",
+     "stopCleanup": "Остановить очистку",
+     "cleanupStopped": "Очистка остановлена",
+     "stopCleanupFailed": "Не удалось остановить очистку облачной среды выполнения VM."
     },
     "ephemeralVms": {
      "search": {
@@ -10612,6 +10649,21 @@
        "disconnectFailed": "Не удалось удалить сохранённые учётные данные Bitbucket."
       }
      }
+    },
+    "GlobalWorktreeVisibilitySourcesSetting": {
+     "saveFailed": "Не удалось сохранить умолчания видимости.",
+     "updateServer": "Обновите этот сервер, чтобы настроить умолчания источников.",
+     "updateServerDefaults": "Обновите этот сервер, чтобы настроить умолчания видимости."
+    },
+    "EphemeralVmCleanupStopDialog": {
+     "title": "Остановить очистку?",
+     "description": "Виртуальная машина может остаться запущенной, и за неё будут начисляться расходы. Очистку можно повторить позже.",
+     "cancel": "Продолжить очистку",
+     "stopping": "Остановка…",
+     "confirm": "Остановить очистку"
+    },
+    "shortcutDefinitionCatalog": {
+     "missionControlConflict": "Занято Mission Control. Назначьте другое сочетание здесь или измените его в системных настройках."
     }
    },
    "right": {
