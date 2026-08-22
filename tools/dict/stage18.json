@@ -1,0 +1,8 @@
+{
+ "<1m": "<1 мин",
+ "Last active {{value0}} ago": "Последняя активность {{value0}} назад",
+ "Project on SSH host {{hostName}}": "Проект на SSH-хосте {{hostName}}",
+ "{{value0}}d": "{{value0}} д",
+ "{{value0}}h": "{{value0}} ч",
+ "{{value0}}m": "{{value0}} мин"
+}

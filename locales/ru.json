@@ -2194,7 +2194,8 @@
     "27f10cca63": "Поиск переписок, терминалов, worktree, настроек и действий…",
     "2770f02910": "Поиск переписок, терминалов, worktree, настроек и действий",
     "paletteOpenTabBranch": "Имя ветки",
-    "paletteOpenTabWorkspace": "Имя рабочей области"
+    "paletteOpenTabWorkspace": "Имя рабочей области",
+    "lastActiveTime": "Последняя активность {{value0}} назад"
    },
    "github": {
     "pr": {
@@ -5722,7 +5723,14 @@
      "5b90e4a2f6": "скрытые worktree",
      "7f18c5b0d3": "Разобрать {{value0}} скрытый worktree в {{value1}}",
      "4e2b7a9c05": "Разобрать скрытые worktree ({{value0}}) в {{value1}}",
-     "c3e8a1f4b2": "Больше не показывать"
+     "c3e8a1f4b2": "Больше не показывать",
+     "6c07f3a91e": "{{value0}} на {{value1}}"
+    },
+    "NoticeHostGlyph": {
+     "hostDisconnected": "{{hostName}} отключён",
+     "sshHostProject": "Проект на SSH-хосте {{hostName}}",
+     "localHostProject": "Проект на этом хосте",
+     "runtimeHostProject": "Проект на {{hostName}}"
     },
     "newExternalWorktreesInboxActions": {
      "a11c2f6d89": "Не удалось оставить внешние worktree скрытыми. Повторите.",
@@ -16164,6 +16172,14 @@
     "workspaceSpace": {
      "otherTopLevelItems": "Прочие элементы верхнего уровня ({{value0}})"
     }
+   }
+  },
+  "cmd-j": {
+   "paletteSessionAge": {
+    "minutes": "{{value0}} мин",
+    "hours": "{{value0}} ч",
+    "days": "{{value0}} д",
+    "underOneMinute": "<1 мин"
    }
   }
  },
