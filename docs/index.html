@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Русский язык для Orca — русификатор интерфейса (Stably AI ADE)</title>
+<meta name="description" content="Языковой пакет: интерфейс Orca от Stably AI на русском, 98% строк. Установка через маркетплейс плагинов, без патчей приложения. Russian language pack for Orca.">
+<link rel="canonical" href="https://imgusev.github.io/orca-plugin-ru/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Русский язык для Orca — русификатор интерфейса">
+<meta property="og:description" content="98% интерфейса Orca (Stably AI ADE) на русском. Штатный языковой пакет, установка в пару кликов.">
+<meta property="og:url" content="https://imgusev.github.io/orca-plugin-ru/">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Русский язык для Orca",
+  "alternateName": "Russian language pack for Orca",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "macOS, Windows, Linux",
+  "description": "Языковой пакет, переводящий интерфейс Orca (Stably AI ADE) на русский язык — 98% строк.",
+  "url": "https://imgusev.github.io/orca-plugin-ru/",
+  "codeRepository": "https://github.com/imgusev/orca-plugin-ru",
+  "license": "https://opensource.org/licenses/MIT",
+  "inLanguage": "ru",
+  "isAccessibleForFree": true,
+  "author": { "@type": "Person", "name": "imgusev", "url": "https://github.com/imgusev" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<style>
+:root {
+  --bg: #ffffff; --fg: #18181b; --muted: #52525b; --border: #e4e4e7;
+  --card: #fafafa; --accent: #2563eb; --code-bg: #f4f4f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0b0b0d; --fg: #e9e9ec; --muted: #a1a1aa; --border: #26262b;
+          --card: #141417; --accent: #7aa2f7; --code-bg: #1b1b20; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 56px 20px 72px; }
+h1 { font-size: 2rem; line-height: 1.25; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 1.25rem; margin: 40px 0 12px; letter-spacing: -0.01em; }
+p, li { color: var(--fg); }
+.lead { font-size: 1.08rem; color: var(--muted); margin: 0 0 8px; }
+.en { color: var(--muted); font-style: italic; margin-top: 4px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code, kbd { background: var(--code-bg); border-radius: 4px; padding: 1px 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+pre { background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px 14px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  padding: 16px 18px; margin: 20px 0; }
+ol, ul { padding-left: 22px; }
+li { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; display: block; overflow-x: auto; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-weight: 600; font-size: 0.9rem; }
+footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Русский язык для Orca</h1>
+<p class="lead">Русификатор интерфейса <a href="https://github.com/stablyai/orca">Orca</a> — среды разработки агентов (ADE) от Stably AI. Переведено <strong>98% строк</strong>: настройки, терминал, редактор, боковые панели, GitHub, GitLab, Bitbucket, Linear и Jira, браузер, навыки и автоматизации.</p>
+<p class="en">Russian language pack for Orca (Stably AI agent IDE / ADE). Installed as a regular plugin — the app itself is never patched.</p>
+
+<div class="card">
+<p style="margin:0">Это <strong>не</strong> экранный диктор Orca из GNOME, не редактор MSI-пакетов Microsoft Orca и не OrcaSlicer. Речь про <a href="https://www.onorca.dev/">Orca от Stably AI</a> — приложение для работы с флотом параллельных агентов.</p>
+</div>
+
+<h2>Установка</h2>
+<ol>
+  <li><strong>Settings → Plugins</strong> — включить систему плагинов.</li>
+  <li><strong>Marketplace sources → Add source</strong>, вставить адрес:
+    <pre><code>https://github.com/imgusev/orca-plugins.git</code></pre></li>
+  <li>На вкладке <strong>All</strong> найти «Русский язык для Orca» и нажать <strong>Install</strong>.</li>
+  <li><strong>Settings → Appearance → Language</strong> — выбрать русский.</li>
+</ol>
+<p>Дальше Orca сама предложит обновление, когда выйдет новая версия перевода. Можно поставить и одной ссылкой — <strong>Settings → Plugins → Install plugin → Git URL</strong>, указав репозиторий с явным тегом версии.</p>
+
+<h2>Как это устроено</h2>
+<p>Пакет реализован штатным механизмом Orca (<code>contributes.languagePacks</code>): он отдаёт JSON-каталог, который приложение подмешивает в i18next. Исходники не патчатся, при обновлении Orca ничего не ломается — непереведённые строки просто показываются по-английски.</p>
+<table>
+  <tr><th>Свойство</th><th>Значение</th></tr>
+  <tr><td>Покрытие</td><td>98% строк интерфейса</td></tr>
+  <tr><td>Версия пакета</td><td>совпадает с версией Orca, из которой сняты строки</td></tr>
+  <tr><td>Минимальная Orca</td><td>1.4.169</td></tr>
+  <tr><td>Лицензия</td><td>MIT</td></tr>
+</table>
+<p>Каталог собирается из английского <code>en.json</code> по тегу конкретного релиза Orca, а не из <code>main</code>: ключ, которого нет в установленной версии, валидатор отвергает вместе со всем каталогом, и язык молча выключается. Сборка проверяет плейсхолдеры, лимит длины значений и защищённую зону приложения.</p>
+
+<h2>Что осталось английским</h2>
+<p>189 строк, и все осознанно: 180 из них Orca запрещает подменять языковым пакетам — это тексты, по которым пользователь решает, доверять ли плагину. Ещё около тысячи строк переведены «сами в себя»: команды, пути, переменные окружения, имена продуктов и идентификаторы состояний. Полный разбор — в <a href="https://github.com/imgusev/orca-plugin-ru/blob/main/UNTRANSLATED.md">UNTRANSLATED.md</a>.</p>
+
+<h2>Терминология</h2>
+<p>Термины держатся единообразно: <em>workspace</em> — «рабочая область», <em>runtime</em> — «среда выполнения», <em>review</em> — «ревью», <em>skill</em> — «навык», <em>pull request</em> — «пул-реквест». <code>worktree</code> намеренно остаётся латиницей: это имя команды <code>git worktree</code>, а «рабочее дерево» путается с working tree.</p>
+
+<h2>Ссылки</h2>
+<ul>
+  <li><a href="https://github.com/imgusev/orca-plugin-ru">Репозиторий пакета</a> — исходники, словари, инструменты сборки</li>
+  <li><a href="https://github.com/imgusev/orca-plugins">Источник для маркетплейса</a> — адрес для установки</li>
+  <li><a href="https://github.com/imgusev/orca-plugin-ru/releases">Релизы</a> — что нового в каждой версии</li>
+  <li><a href="https://github.com/imgusev/orca-plugin-ru/blob/main/CHANGELOG.md">История изменений</a></li>
+</ul>
+
+<footer>
+MIT. Английские оригиналы строк принадлежат <a href="https://github.com/stablyai/orca">stablyai/orca</a> и используются на условиях её лицензии MIT. Проект не связан со Stably AI официально.
+</footer>
+
+</div>
+</body>
+</html>

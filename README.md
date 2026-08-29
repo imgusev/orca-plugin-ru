@@ -1,6 +1,10 @@
-# Русский язык для Orca
+# Русский язык для Orca — русификатор интерфейса
 
-Языковой пакет, переводящий интерфейс [Orca](https://github.com/stablyai/orca) на русский — **13 596 из 13 785 строк (98%)**.
+Языковой пакет, переводящий интерфейс [Orca](https://github.com/stablyai/orca) на русский — **13 596 из 13 785 строк (98%)**. Речь про **Orca от Stably AI** — среду разработки агентов (ADE), а не про экранный диктор GNOME, редактор MSI или OrcaSlicer.
+
+*Russian language pack for Orca (Stably AI agent IDE / ADE): 98% of the UI translated, installed as a normal Orca plugin — no patching of the app.*
+
+Ставится через маркетплейс за пару кликов, обновляется вслед за приложением: номер версии пакета совпадает с версией Orca, под которую собран каталог.
 
 > **Собран для Orca 1.4.192, работает начиная с 1.4.169.** Версия сборки — в [ORCA_VERSION](ORCA_VERSION), нижняя граница совместимости — в [COMPAT](COMPAT).
 
