@@ -1,0 +1,58 @@
+{
+ "_comment": "Русские формы числа для ключей, которым translate передаёт count: i18next сам подставляет суффикс по правилам языка и спрашивает _one (1, 21, 31…), _few (2–4), _many (0, 5–20) и _other (дробные). В английском каталоге таких ключей нет, поэтому формы добавляются отсюда. Список ключей, которые вообще принимают count, — tools/plural-candidates.txt. Ключи с CamelCase-суффиксом …One приложение зовёт только при count = 1, поэтому им нужна лишь форма one; парному …Other нужны все четыре, потому что при 21 или 101 приложение зовёт его же. Строки, где склонять нечего (PR, «{{count}} д», «выбрано: {{count}}»), здесь не нужны.",
+
+ "auto.components.skills.count.skillOne": { "one": "{{count}} навык" },
+ "auto.components.skills.count.skillOther": { "one": "{{count}} навык", "few": "{{count}} навыка", "many": "{{count}} навыков", "other": "{{count}} навыка" },
+ "auto.components.skills.count.sourceOne": { "one": "{{count}} источник" },
+ "auto.components.skills.count.sourceOther": { "one": "{{count}} источник", "few": "{{count}} источника", "many": "{{count}} источников", "other": "{{count}} источника" },
+ "auto.components.skills.count.fileOne": { "one": "{{count}} файл" },
+ "auto.components.skills.count.fileOther": { "one": "{{count}} файл", "few": "{{count}} файла", "many": "{{count}} файлов", "other": "{{count}} файла" },
+ "auto.components.skills.count.linkOne": { "one": "{{count}} ссылка" },
+ "auto.components.skills.count.linkOther": { "one": "{{count}} ссылка", "few": "{{count}} ссылки", "many": "{{count}} ссылок", "other": "{{count}} ссылки" },
+ "auto.components.skills.count.deleteLinkOne": { "one": "{{count}} ссылка" },
+ "auto.components.skills.count.deleteLinkOther": { "one": "{{count}} ссылка", "few": "{{count}} ссылки", "many": "{{count}} ссылок", "other": "{{count}} ссылки" },
+ "auto.components.skills.count.resultOne": { "one": "{{count}} результат" },
+ "auto.components.skills.count.resultOther": { "one": "{{count}} результат", "few": "{{count}} результата", "many": "{{count}} результатов", "other": "{{count}} результата" },
+ "auto.components.skills.count.deleteFolderOne": { "one": "{{count}} папка" },
+ "auto.components.skills.count.deleteFolderOther": { "one": "{{count}} папка", "few": "{{count}} папки", "many": "{{count}} папок", "other": "{{count}} папки" },
+ "auto.components.skills.count.installOne": { "one": "Установить {{count}} навык" },
+ "auto.components.skills.count.installOther": { "one": "Установить {{count}} навык", "few": "Установить {{count}} навыка", "many": "Установить {{count}} навыков", "other": "Установить {{count}} навыка" },
+ "auto.components.skills.count.deleteOne": { "one": "Удалить {{count}} навык" },
+ "auto.components.skills.count.deleteOther": { "one": "Удалить {{count}} навык", "few": "Удалить {{count}} навыка", "many": "Удалить {{count}} навыков", "other": "Удалить {{count}} навыка" },
+ "auto.components.skills.count.deletedOne": { "one": "Удалён {{count}} навык" },
+ "auto.components.skills.count.deletedOther": { "one": "Удалён {{count}} навык", "few": "Удалено {{count}} навыка", "many": "Удалено {{count}} навыков", "other": "Удалено {{count}} навыка" },
+ "auto.components.skills.count.retryOne": { "one": "Повторить для {{count}} навыка" },
+ "auto.components.skills.count.retryOther": { "one": "Повторить для {{count}} навыка", "few": "Повторить для {{count}} навыков", "many": "Повторить для {{count}} навыков", "other": "Повторить для {{count}} навыков" },
+ "auto.components.skills.count.shareOne": { "one": "Поделиться {{count}} навыком" },
+ "auto.components.skills.count.shareOther": { "one": "Поделиться {{count}} навыком", "few": "Поделиться {{count}} навыками", "many": "Поделиться {{count}} навыками", "other": "Поделиться {{count}} навыками" },
+
+ "auto.components.skills.share.scriptOne": { "one": "{{count}} скрипт" },
+ "auto.components.skills.share.scriptOther": { "one": "{{count}} скрипт", "few": "{{count}} скрипта", "many": "{{count}} скриптов", "other": "{{count}} скрипта" },
+ "auto.components.skills.share.executableOne": { "one": "{{count}} исполняемый файл" },
+ "auto.components.skills.share.executableOther": { "one": "{{count}} исполняемый файл", "few": "{{count}} исполняемых файла", "many": "{{count}} исполняемых файлов", "other": "{{count}} исполняемых файла" },
+
+ "auto.components.sidebar.PreservedBranchBatchReviewDialog.a0f9863597": { "one": "Удалить принудительно {{count}} ветку", "few": "Удалить принудительно {{count}} ветки", "many": "Удалить принудительно {{count}} веток", "other": "Удалить принудительно {{count}} ветки" },
+ "auto.components.sidebar.preserved.branch.batch.toast.6310412304": { "one": "Разобрать {{count}} ветку", "few": "Разобрать {{count}} ветки", "many": "Разобрать {{count}} веток", "other": "Разобрать {{count}} ветки" },
+ "auto.components.sidebar.preserved.branch.batch.toast.d42f1f14e0": { "one": "Повторить для {{count}} ветки", "few": "Повторить для {{count}} веток", "many": "Повторить для {{count}} веток", "other": "Повторить для {{count}} веток" },
+ "auto.components.sidebar.preserved.branch.batch.toast.0e0379f24a": { "one": "сохранена {{count}} ветка", "few": "сохранено {{count}} ветки", "many": "сохранено {{count}} веток", "other": "сохранено {{count}} ветки" },
+ "auto.components.sidebar.preserved.branch.batch.toast.cea24c2b7d": { "one": "удалена {{count}} рабочая область", "few": "удалены {{count}} рабочие области", "many": "удалено {{count}} рабочих областей", "other": "удалено {{count}} рабочих областей" },
+ "auto.components.sidebar.preserved.branch.batch.toast.a3cdd9d9e6": { "one": "Git сохранил {{count}} локальную ветку: в ней могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.", "few": "Git сохранил {{count}} локальные ветки: в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.", "many": "Git сохранил {{count}} локальных веток: в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.", "other": "Git сохранил {{count}} локальных веток: в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне." },
+
+ "auto.components.right.sidebar.useFileDeletion.77fdc36183": { "one": "Удалить {{count}} объект?", "few": "Удалить {{count}} объекта?", "many": "Удалить {{count}} объектов?", "other": "Удалить {{count}} объекта?" },
+ "auto.components.right.sidebar.useFileDeletion.af1270b90d": { "one": "Удалить безвозвратно {{count}} объект?", "few": "Удалить безвозвратно {{count}} объекта?", "many": "Удалить безвозвратно {{count}} объектов?", "other": "Удалить безвозвратно {{count}} объекта?" },
+
+ "auto.components.sidebar.HostRemoveDialog.manyWorkspaces": { "one": "{{count}} рабочая область", "few": "{{count}} рабочие области", "many": "{{count}} рабочих областей", "other": "{{count}} рабочих областей" },
+ "auto.components.sidebar.HostRemoveDialog.workspacesFailed": { "one": "Не удалось убрать {{count}} рабочую область этого хоста. Хост сохранён, чтобы можно было повторить.", "few": "Не удалось убрать {{count}} рабочие области этого хоста. Хост сохранён, чтобы можно было повторить.", "many": "Не удалось убрать {{count}} рабочих областей этого хоста. Хост сохранён, чтобы можно было повторить.", "other": "Не удалось убрать {{count}} рабочих областей этого хоста. Хост сохранён, чтобы можно было повторить." },
+
+ "auto.components.right.sidebar.SourceControl.branchFilesChangedVsBaseOther": { "one": "{{count}} файл изменён относительно {{ref}}", "few": "{{count}} файла изменено относительно {{ref}}", "many": "{{count}} файлов изменено относительно {{ref}}", "other": "{{count}} файла изменено относительно {{ref}}" },
+ "auto.components.right.sidebar.SourceControl.compareBaseCommitsAheadOther": { "one": "{{count}} коммит впереди {{ref}}", "few": "{{count}} коммита впереди {{ref}}", "many": "{{count}} коммитов впереди {{ref}}", "other": "{{count}} коммита впереди {{ref}}" },
+ "auto.components.right.sidebar.SourceControl.compareBaseCommitsBehindOther": { "one": "{{count}} коммит позади {{ref}}", "few": "{{count}} коммита позади {{ref}}", "many": "{{count}} коммитов позади {{ref}}", "other": "{{count}} коммита позади {{ref}}" },
+
+ "auto.components.automations.externalScope.uncheckedHosts": { "one": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хосте.", "few": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах.", "many": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах.", "other": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах." },
+ "auto.components.editor.HtmlDocPreview.allowDirectories": { "one": "Разрешить {{count}} папку", "few": "Разрешить {{count}} папки", "many": "Разрешить {{count}} папок", "other": "Разрешить {{count}} папки" },
+ "auto.components.editor.HtmlDocPreview.multipleAssetsFailedNotice": { "one": "Не удалось загрузить {{count}} файл в этом документе.", "few": "Не удалось загрузить {{count}} файла в этом документе.", "many": "Не удалось загрузить {{count}} файлов в этом документе.", "other": "Не удалось загрузить {{count}} файла в этом документе." },
+ "auto.components.right.sidebar.AiVaultPanel.transcriptsSkipped": { "one": "пропущена {{count}} расшифровка", "few": "пропущено {{count}} расшифровки", "many": "пропущено {{count}} расшифровок", "other": "пропущено {{count}} расшифровки" },
+ "auto.components.settings.SourceControlActionRepoOverrideNote.plural": { "one": "Глобальное сохранение не затронет {{count}} репозиторий со своими рецептами.", "few": "Глобальное сохранение не затронет {{count}} репозитория со своими рецептами.", "many": "Глобальное сохранение не затронет {{count}} репозиториев со своими рецептами.", "other": "Глобальное сохранение не затронет {{count}} репозитория со своими рецептами." },
+ "auto.lib.feedback.image.attachments.additionalErrors": { "one": "Не удалось прикрепить ещё {{count}} изображение.", "few": "Не удалось прикрепить ещё {{count}} изображения.", "many": "Не удалось прикрепить ещё {{count}} изображений.", "other": "Не удалось прикрепить ещё {{count}} изображения." },
+ "components.workspace.cleanup.browse.forceDeleteProjectionMany": { "one": "{{count}} рабочая область сейчас показывает риск — возможно, понадобится принудительное удаление", "few": "{{count}} рабочие области сейчас показывают риск — возможно, понадобится принудительное удаление", "many": "{{count}} рабочих областей сейчас показывают риск — возможно, понадобится принудительное удаление", "other": "{{count}} рабочих областей сейчас показывают риск — возможно, понадобится принудительное удаление" }
+}

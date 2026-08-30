@@ -35,6 +35,9 @@ CHROME_PATH = "src/shared/plugins/plugin-translatable-chrome.ts"
 REPO = "stablyai/orca"
 CHROME_RE = re.compile(r"'(auto\.components\.settings\.[A-Za-z0-9_.]+)'")
 PAIR = re.compile(r'"(auto\.[A-Za-z0-9_.]{3,90})"\s*,\s*"((?:[^"\\]|\\.){1,300})"')
+# Вызов translate(ключ, defaultValue, { count }) — только у таких ключей i18next сам
+# подставляет суффикс числа по правилам языка, и русские _few/_many из каталога сработают.
+COUNT_CALL = re.compile(r'translate\("([A-Za-z0-9_.\-]+)"\s*,\s*"(?:[^"\\]|\\.){0,300}"\s*,\s*\{\s*count')
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -105,6 +108,20 @@ def scan_asar(asar: str) -> dict:
     return pairs
 
 
+def scan_plural_candidates(asar: str) -> set[str]:
+    """Ключи, которым translate передаёт count, а суффикс числа не зашит в сам ключ.
+
+    Для них i18next добавляет суффикс сам — по правилам текущего языка. Русский
+    просит _few и _many, которых в английском каталоге нет, поэтому такие формы
+    можно доложить из нашего каталога, и они действительно подставятся. Там, где
+    ключ уже приходит с суффиксом (…_one / …_other), форму выбрал JS, и каталог
+    на неё не влияет.
+    """
+    raw = open(asar, "rb").read().decode("utf-8", "ignore")
+    keys = set(COUNT_CALL.findall(raw))
+    return {k for k in keys if not re.search(r"_(one|few|many|other)$", k)}
+
+
 def main() -> None:
     asar = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_ASAR
     if not os.path.exists(asar):
@@ -129,6 +146,12 @@ def main() -> None:
     open(chrome_path, "w").write("\n".join(sorted(allowed)) + "\n")
     print(f"защищённая зона:      разрешено {len(allowed)} путей "
           f"(пересечение v{floor} … v{version})")
+
+    candidates = scan_plural_candidates(asar)
+    cand_path = os.path.join(HERE, "plural-candidates.txt")
+    open(cand_path, "w").write("\n".join(sorted(candidates)) + "\n")
+    print(f"формы числа:          {len(candidates)} ключей принимают count "
+          f"(суффикс подставляет i18next)")
 
     bundle = scan_asar(asar)
     extra = {k: v for k, v in bundle.items() if k not in catalog}

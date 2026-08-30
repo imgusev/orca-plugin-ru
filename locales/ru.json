@@ -924,7 +924,11 @@
       "tooMany": "Можно прикрепить до {{maxCount}} изображений.",
       "dimensionsTooLarge": "У {{fileName}} слишком большие размеры для безопасного предпросмотра.",
       "invalidImage": "{{fileName}} не является корректным поддерживаемым изображением.",
-      "additionalErrors": "Не удалось прикрепить ещё изображений: {{count}}."
+      "additionalErrors": "Не удалось прикрепить ещё изображений: {{count}}.",
+      "additionalErrors_one": "Не удалось прикрепить ещё {{count}} изображение.",
+      "additionalErrors_few": "Не удалось прикрепить ещё {{count}} изображения.",
+      "additionalErrors_many": "Не удалось прикрепить ещё {{count}} изображений.",
+      "additionalErrors_other": "Не удалось прикрепить ещё {{count}} изображения."
      }
     }
    },
@@ -4658,7 +4662,67 @@
      "deleteFolderOne": "{{count}} папка",
      "deleteFolderOther": "папок: {{count}}",
      "deleteLinkOne": "{{count}} ссылка",
-     "deleteLinkOther": "ссылок: {{count}}"
+     "deleteLinkOther": "ссылок: {{count}}",
+     "skillOne_one": "{{count}} навык",
+     "skillOther_one": "{{count}} навык",
+     "skillOther_few": "{{count}} навыка",
+     "skillOther_many": "{{count}} навыков",
+     "skillOther_other": "{{count}} навыка",
+     "sourceOne_one": "{{count}} источник",
+     "sourceOther_one": "{{count}} источник",
+     "sourceOther_few": "{{count}} источника",
+     "sourceOther_many": "{{count}} источников",
+     "sourceOther_other": "{{count}} источника",
+     "fileOne_one": "{{count}} файл",
+     "fileOther_one": "{{count}} файл",
+     "fileOther_few": "{{count}} файла",
+     "fileOther_many": "{{count}} файлов",
+     "fileOther_other": "{{count}} файла",
+     "linkOne_one": "{{count}} ссылка",
+     "linkOther_one": "{{count}} ссылка",
+     "linkOther_few": "{{count}} ссылки",
+     "linkOther_many": "{{count}} ссылок",
+     "linkOther_other": "{{count}} ссылки",
+     "deleteLinkOne_one": "{{count}} ссылка",
+     "deleteLinkOther_one": "{{count}} ссылка",
+     "deleteLinkOther_few": "{{count}} ссылки",
+     "deleteLinkOther_many": "{{count}} ссылок",
+     "deleteLinkOther_other": "{{count}} ссылки",
+     "resultOne_one": "{{count}} результат",
+     "resultOther_one": "{{count}} результат",
+     "resultOther_few": "{{count}} результата",
+     "resultOther_many": "{{count}} результатов",
+     "resultOther_other": "{{count}} результата",
+     "deleteFolderOne_one": "{{count}} папка",
+     "deleteFolderOther_one": "{{count}} папка",
+     "deleteFolderOther_few": "{{count}} папки",
+     "deleteFolderOther_many": "{{count}} папок",
+     "deleteFolderOther_other": "{{count}} папки",
+     "installOne_one": "Установить {{count}} навык",
+     "installOther_one": "Установить {{count}} навык",
+     "installOther_few": "Установить {{count}} навыка",
+     "installOther_many": "Установить {{count}} навыков",
+     "installOther_other": "Установить {{count}} навыка",
+     "deleteOne_one": "Удалить {{count}} навык",
+     "deleteOther_one": "Удалить {{count}} навык",
+     "deleteOther_few": "Удалить {{count}} навыка",
+     "deleteOther_many": "Удалить {{count}} навыков",
+     "deleteOther_other": "Удалить {{count}} навыка",
+     "deletedOne_one": "Удалён {{count}} навык",
+     "deletedOther_one": "Удалён {{count}} навык",
+     "deletedOther_few": "Удалено {{count}} навыка",
+     "deletedOther_many": "Удалено {{count}} навыков",
+     "deletedOther_other": "Удалено {{count}} навыка",
+     "retryOne_one": "Повторить для {{count}} навыка",
+     "retryOther_one": "Повторить для {{count}} навыка",
+     "retryOther_few": "Повторить для {{count}} навыков",
+     "retryOther_many": "Повторить для {{count}} навыков",
+     "retryOther_other": "Повторить для {{count}} навыков",
+     "shareOne_one": "Поделиться {{count}} навыком",
+     "shareOther_one": "Поделиться {{count}} навыком",
+     "shareOther_few": "Поделиться {{count}} навыками",
+     "shareOther_many": "Поделиться {{count}} навыками",
+     "shareOther_other": "Поделиться {{count}} навыками"
     },
     "host": {
      "local": "Этот компьютер",
@@ -4684,7 +4748,17 @@
      "noExecutableContent": "Скриптов и исполняемых файлов нет",
      "newVersionDescriptionPlain": "Добавляет новую версию к существующей ссылке.",
      "accessSummaryShort": "Скрытая ссылка — установить может любой, у кого она есть. Публикуется от имени {{value0}}.",
-     "accessSummaryPlain": "Скрытая ссылка — установить может любой, у кого она есть."
+     "accessSummaryPlain": "Скрытая ссылка — установить может любой, у кого она есть.",
+     "scriptOne_one": "{{count}} скрипт",
+     "scriptOther_one": "{{count}} скрипт",
+     "scriptOther_few": "{{count}} скрипта",
+     "scriptOther_many": "{{count}} скриптов",
+     "scriptOther_other": "{{count}} скрипта",
+     "executableOne_one": "{{count}} исполняемый файл",
+     "executableOther_one": "{{count}} исполняемый файл",
+     "executableOther_few": "{{count}} исполняемых файла",
+     "executableOther_many": "{{count}} исполняемых файлов",
+     "executableOther_other": "{{count}} исполняемых файла"
     },
     "description": {
      "showLess": "Свернуть",
@@ -5824,7 +5898,15 @@
      "alsoForgetLocal": "Также убрать эти {{value0}} из Orca",
      "advanced": "Дополнительно",
      "alsoDeleteRemoteHint": "Безвозвратно удаляет удалённые Git-worktree и их ветки. Отменить нельзя.",
-     "alsoForgetLocalHint": "Убирает их только из Orca. Удалённые файлы, worktree и ветки остаются нетронутыми."
+     "alsoForgetLocalHint": "Убирает их только из Orca. Удалённые файлы, worktree и ветки остаются нетронутыми.",
+     "manyWorkspaces_one": "{{count}} рабочая область",
+     "manyWorkspaces_few": "{{count}} рабочие области",
+     "manyWorkspaces_many": "{{count}} рабочих областей",
+     "manyWorkspaces_other": "{{count}} рабочих областей",
+     "workspacesFailed_one": "Не удалось убрать {{count}} рабочую область этого хоста. Хост сохранён, чтобы можно было повторить.",
+     "workspacesFailed_few": "Не удалось убрать {{count}} рабочие области этого хоста. Хост сохранён, чтобы можно было повторить.",
+     "workspacesFailed_many": "Не удалось убрать {{count}} рабочих областей этого хоста. Хост сохранён, чтобы можно было повторить.",
+     "workspacesFailed_other": "Не удалось убрать {{count}} рабочих областей этого хоста. Хост сохранён, чтобы можно было повторить."
     },
     "HostRenameDialog": {
      "1a2b3c4d5e": "Переименовать хост",
@@ -6096,23 +6178,33 @@
        "toast": {
         "a3cdd9d9e6": "Git сохранил локальные ветки ({{count}}): в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.",
         "a3cdd9d9e6_one": "Git сохранил {{count}} локальную ветку: в ней могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.",
-        "a3cdd9d9e6_other": "Git сохранил локальные ветки ({{count}}): в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.",
+        "a3cdd9d9e6_other": "Git сохранил {{count}} локальных веток: в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.",
         "6310412304": "Разобрать ветки: {{count}}",
         "6310412304_one": "Разобрать {{count}} ветку",
-        "6310412304_other": "Разобрать ветки: {{count}}",
+        "6310412304_other": "Разобрать {{count}} ветки",
         "cea24c2b7d": "удалено рабочих областей: {{count}}",
         "cea24c2b7d_one": "удалена {{count}} рабочая область",
-        "cea24c2b7d_other": "удалено рабочих областей: {{count}}",
+        "cea24c2b7d_other": "удалено {{count}} рабочих областей",
         "0e0379f24a": "сохранено веток: {{count}}",
         "0e0379f24a_one": "сохранена {{count}} ветка",
-        "0e0379f24a_other": "сохранено веток: {{count}}",
+        "0e0379f24a_other": "сохранено {{count}} ветки",
         "4cf75caab7": "{{value0}}, {{value1}}",
         "e61d78054f": "Удаление локальных веток: {{value0}}",
         "1e1a5f6763": "Удалено локальных веток: {{value0}}",
         "43d9395605": "{{value0}} удалено, {{value1}} не удалено",
         "d42f1f14e0": "Повторить для веток: {{count}}",
         "d42f1f14e0_one": "Повторить для {{count}} ветки",
-        "d42f1f14e0_other": "Повторить для веток: {{count}}"
+        "d42f1f14e0_other": "Повторить для {{count}} веток",
+        "6310412304_few": "Разобрать {{count}} ветки",
+        "6310412304_many": "Разобрать {{count}} веток",
+        "d42f1f14e0_few": "Повторить для {{count}} веток",
+        "d42f1f14e0_many": "Повторить для {{count}} веток",
+        "0e0379f24a_few": "сохранено {{count}} ветки",
+        "0e0379f24a_many": "сохранено {{count}} веток",
+        "cea24c2b7d_few": "удалены {{count}} рабочие области",
+        "cea24c2b7d_many": "удалено {{count}} рабочих областей",
+        "a3cdd9d9e6_few": "Git сохранил {{count}} локальные ветки: в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.",
+        "a3cdd9d9e6_many": "Git сохранил {{count}} локальных веток: в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне."
        }
       }
      }
@@ -6127,7 +6219,9 @@
      "285e1e4882": "Отмена",
      "a0f9863597": "Удалить принудительно ветки: {{count}}",
      "a0f9863597_one": "Удалить принудительно {{count}} ветку",
-     "a0f9863597_other": "Удалить принудительно ветки: {{count}}"
+     "a0f9863597_other": "Удалить принудительно {{count}} ветки",
+     "a0f9863597_few": "Удалить принудительно {{count}} ветки",
+     "a0f9863597_many": "Удалить принудительно {{count}} веток"
     },
     "WorktreeListScrollToTopButton": {
      "jumpToTop": "Перейти наверх"
@@ -10848,7 +10942,11 @@
      "review": "Ревью",
      "reviewFirst": "Сначала проверьте",
      "singular": "Глобальное сохранение не затронет 1 репозиторий со своим рецептом.",
-     "tooltipTitle": "Переопределения репозитория"
+     "tooltipTitle": "Переопределения репозитория",
+     "plural_one": "Глобальное сохранение не затронет {{count}} репозиторий со своими рецептами.",
+     "plural_few": "Глобальное сохранение не затронет {{count}} репозитория со своими рецептами.",
+     "plural_many": "Глобальное сохранение не затронет {{count}} репозиториев со своими рецептами.",
+     "plural_other": "Глобальное сохранение не затронет {{count}} репозитория со своими рецептами."
     },
     "linear": {
      "agent": {
@@ -11957,7 +12055,19 @@
       "a4e93c21d7": "Текущая ветка: {{value0}}",
       "c7d4e2f801": "Сменить базовый ref: {{value0}}",
       "f3a1b8c204": "upstream",
-      "createPrIntentGenerateDetailsFailed": "Не удалось подготовить описание ревью. Повторите создание PR."
+      "createPrIntentGenerateDetailsFailed": "Не удалось подготовить описание ревью. Повторите создание PR.",
+      "branchFilesChangedVsBaseOther_one": "{{count}} файл изменён относительно {{ref}}",
+      "branchFilesChangedVsBaseOther_few": "{{count}} файла изменено относительно {{ref}}",
+      "branchFilesChangedVsBaseOther_many": "{{count}} файлов изменено относительно {{ref}}",
+      "branchFilesChangedVsBaseOther_other": "{{count}} файла изменено относительно {{ref}}",
+      "compareBaseCommitsAheadOther_one": "{{count}} коммит впереди {{ref}}",
+      "compareBaseCommitsAheadOther_few": "{{count}} коммита впереди {{ref}}",
+      "compareBaseCommitsAheadOther_many": "{{count}} коммитов впереди {{ref}}",
+      "compareBaseCommitsAheadOther_other": "{{count}} коммита впереди {{ref}}",
+      "compareBaseCommitsBehindOther_one": "{{count}} коммит позади {{ref}}",
+      "compareBaseCommitsBehindOther_few": "{{count}} коммита позади {{ref}}",
+      "compareBaseCommitsBehindOther_many": "{{count}} коммитов позади {{ref}}",
+      "compareBaseCommitsBehindOther_other": "{{count}} коммита позади {{ref}}"
      },
      "SourceControlAgentActionDialog": {
       "8e856842d1": "Не удалось запустить выбранного агента.",
@@ -12566,7 +12676,15 @@
       "af1270b90d": "Удалить безвозвратно объектов: {{count}}?",
       "dd029aa5cd": "Выбранные объекты и содержимое каталогов на удалённом хосте будут удалены безвозвратно. Отменить нельзя.",
       "77fdc36183": "Удалить объектов: {{count}}?",
-      "fca915a67a": "Удалённые объекты стираются безвозвратно, отменить нельзя. Локальные перемещаются в {{value0}}."
+      "fca915a67a": "Удалённые объекты стираются безвозвратно, отменить нельзя. Локальные перемещаются в {{value0}}.",
+      "77fdc36183_one": "Удалить {{count}} объект?",
+      "77fdc36183_few": "Удалить {{count}} объекта?",
+      "77fdc36183_many": "Удалить {{count}} объектов?",
+      "77fdc36183_other": "Удалить {{count}} объекта?",
+      "af1270b90d_one": "Удалить безвозвратно {{count}} объект?",
+      "af1270b90d_few": "Удалить безвозвратно {{count}} объекта?",
+      "af1270b90d_many": "Удалить безвозвратно {{count}} объектов?",
+      "af1270b90d_other": "Удалить безвозвратно {{count}} объекта?"
      },
      "useFileExplorerHandlers": {
       "32cd9fd991": "Не удаётся открыть цель симлинка"
@@ -12632,7 +12750,11 @@
       "localSessionSshWorkspaceUnsupported": "История этой сессии хранится на данной машине, поэтому её нельзя возобновить в рабочей области по SSH. Откройте локальную область.",
       "prepareSessionResumeFailed": "Не удалось подготовить эту сессию к продолжению.",
       "sessionDeleted": "Сессия удалена",
-      "sessionDeleteFailed": "Не удалось удалить сессию"
+      "sessionDeleteFailed": "Не удалось удалить сессию",
+      "transcriptsSkipped_one": "пропущена {{count}} расшифровка",
+      "transcriptsSkipped_few": "пропущено {{count}} расшифровки",
+      "transcriptsSkipped_many": "пропущено {{count}} расшифровок",
+      "transcriptsSkipped_other": "пропущено {{count}} расшифровки"
      },
      "AiVaultPanelControls": {
       "scanningSessions": "Сканирование сессий",
@@ -14758,7 +14880,15 @@
      "allowDirectory": "Разрешить папку",
      "directoryAccessRequestOverflow": "{{folders}} и ещё {{count}}",
      "directoryAccessRequestMultiple": "Этому предпросмотру нужно читать файлы в {{folders}}.",
-     "allowDirectories": "Разрешить папок: {{count}}"
+     "allowDirectories": "Разрешить папок: {{count}}",
+     "allowDirectories_one": "Разрешить {{count}} папку",
+     "allowDirectories_few": "Разрешить {{count}} папки",
+     "allowDirectories_many": "Разрешить {{count}} папок",
+     "allowDirectories_other": "Разрешить {{count}} папки",
+     "multipleAssetsFailedNotice_one": "Не удалось загрузить {{count}} файл в этом документе.",
+     "multipleAssetsFailedNotice_few": "Не удалось загрузить {{count}} файла в этом документе.",
+     "multipleAssetsFailedNotice_many": "Не удалось загрузить {{count}} файлов в этом документе.",
+     "multipleAssetsFailedNotice_other": "Не удалось загрузить {{count}} файла в этом документе."
     }
    },
    "diff": {
@@ -15669,7 +15799,11 @@
     "externalScope": {
      "unknownManager": "Эта внешняя автоматизация больше не числится ни за одним хостом в поле зрения.",
      "uncheckedHost": "Не удалось проверить внешние менеджеры автоматизаций на {{hostLabel}}.",
-     "uncheckedHosts": "Не удалось проверить внешние менеджеры автоматизаций на хостах: {{count}}."
+     "uncheckedHosts": "Не удалось проверить внешние менеджеры автоматизаций на хостах: {{count}}.",
+     "uncheckedHosts_one": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хосте.",
+     "uncheckedHosts_few": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах.",
+     "uncheckedHosts_many": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах.",
+     "uncheckedHosts_other": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах."
     },
     "enablement": {
      "paused": "Приостановлено"
@@ -16717,7 +16851,11 @@
        "locked": "Заблокировано",
        "retainedAgents": "Завершённые агенты"
       }
-     }
+     },
+     "forceDeleteProjectionMany_one": "{{count}} рабочая область сейчас показывает риск — возможно, понадобится принудительное удаление",
+     "forceDeleteProjectionMany_few": "{{count}} рабочие области сейчас показывают риск — возможно, понадобится принудительное удаление",
+     "forceDeleteProjectionMany_many": "{{count}} рабочих областей сейчас показывают риск — возможно, понадобится принудительное удаление",
+     "forceDeleteProjectionMany_other": "{{count}} рабочих областей сейчас показывают риск — возможно, понадобится принудительное удаление"
     },
     "scan": {
      "progress": "Сканирование рабочих областей ({{value0}}/{{value1}})",
