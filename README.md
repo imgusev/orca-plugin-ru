@@ -145,9 +145,7 @@ gh api repos/imgusev/orca-plugin-ru/traffic/clones \
   --jq '"\(.count) клонов, \(.uniques) уникальных за 14 дней"'
 ```
 
-Отличить установку от обновления нельзя — и то и другое выглядит как клон. GitHub хранит эти данные всего 14 дней, поэтому снимки копятся в [`docs/traffic.csv`](docs/traffic.csv): раз в сутки их собирает `.github/workflows/traffic.yml`, вручную — `python3 tools/traffic.py`. Рядом, в [`docs/traffic-marketplace.csv`](docs/traffic-marketplace.csv), тем же способом копится статистика индекса маркетплейса — его клонируют при добавлении источника и при проверке обновлений.
-
-Встроенного `GITHUB_TOKEN` для traffic API не хватает (`Resource not accessible by integration`), нужен секрет `TRAFFIC_TOKEN` — fine-grained токен на этот репозиторий с правом *Administration: read-only*.
+Отличить установку от обновления нельзя — и то и другое выглядит как клон. GitHub хранит эти данные всего 14 дней, поэтому снимки копятся в [индексе маркетплейса](https://github.com/imgusev/orca-plugins/tree/main/data): статистику по всем плагинам источника собирает он, здесь лежит только перевод.
 
 ## Защищённая зона — важно
 
