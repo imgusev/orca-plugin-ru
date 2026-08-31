@@ -1,7 +1,12 @@
 name: traffic
 
 # GitHub хранит статистику трафика только 14 дней. Снимаем её раз в сутки
-# и дописываем в docs/traffic.csv, чтобы история не терялась.
+# и дописываем в docs/traffic.csv, чтобы история установок не терялась.
+#
+# Встроенный GITHUB_TOKEN к traffic API не допущен ("Resource not accessible
+# by integration"): этот API требует прав администратора репозитория. Поэтому
+# нужен секрет TRAFFIC_TOKEN — fine-grained PAT на этот репозиторий с правом
+# Administration: read-only (в classic-токене это скоуп repo).
 on:
   schedule:
     - cron: "17 3 * * *"
@@ -16,9 +21,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Проверить токен
+        run: |
+          if [ -z "${{ secrets.TRAFFIC_TOKEN }}" ]; then
+            echo "::error::нет секрета TRAFFIC_TOKEN — статистику собрать нечем."
+            echo "Создайте fine-grained PAT на этот репозиторий (Administration: read-only)"
+            echo "и положите его в Settings → Secrets and variables → Actions как TRAFFIC_TOKEN."
+            exit 1
+          fi
+
       - name: Собрать статистику
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
         run: python3 tools/traffic.py "$GITHUB_REPOSITORY" docs/traffic.csv
 
       - name: Зафиксировать, если что-то изменилось

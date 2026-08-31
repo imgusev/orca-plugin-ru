@@ -136,6 +136,19 @@ python3 build.py            # собрать locales/ru.json и показать
 
 Поднимать нижнюю границу в [COMPAT](COMPAT) стоит только осознанно: это отрежет пользователей на старых версиях, зато позволит переводить пути, разрешённые в новых. После правки `COMPAT` синхронизируйте `engines.orca` в манифесте.
 
+## Сколько раз пакет поставили
+
+Orca ставит и обновляет плагин через `git clone`, поэтому установки видны в статистике трафика GitHub:
+
+```bash
+gh api repos/imgusev/orca-plugin-ru/traffic/clones \
+  --jq '"\(.count) клонов, \(.uniques) уникальных за 14 дней"'
+```
+
+Отличить установку от обновления нельзя — и то и другое выглядит как клон. GitHub хранит эти данные всего 14 дней, поэтому снимки копятся в [`docs/traffic.csv`](docs/traffic.csv): раз в сутки их собирает `.github/workflows/traffic.yml`, вручную — `python3 tools/traffic.py`.
+
+Встроенного `GITHUB_TOKEN` для traffic API не хватает (`Resource not accessible by integration`), нужен секрет `TRAFFIC_TOKEN` — fine-grained токен на этот репозиторий с правом *Administration: read-only*.
+
 ## Защищённая зона — важно
 
 Orca запрещает языковым пакетам подменять тексты, по которым пользователь решает, доверять ли плагину (`auto.components.settings.Plugin*`): «заблокирован», «требует проверки», источник установки, диалоги удаления.
