@@ -5,8 +5,10 @@ name: traffic
 #
 # Встроенный GITHUB_TOKEN к traffic API не допущен ("Resource not accessible
 # by integration"): этот API требует прав администратора репозитория. Поэтому
-# нужен секрет TRAFFIC_TOKEN — fine-grained PAT на этот репозиторий с правом
-# Administration: read-only (в classic-токене это скоуп repo).
+# нужен секрет TRAFFIC_TOKEN — fine-grained PAT с правом Administration: read-only
+# (в classic-токене это скоуп repo). В Repository access у токена должны быть
+# выбраны оба репозитория: сам пакет и индекс маркетплейса — статистика обоих
+# копится здесь, чтобы не заводить второй секрет в соседнем репозитории.
 on:
   schedule:
     - cron: "17 3 * * *"
@@ -30,16 +32,28 @@ jobs:
             exit 1
           fi
 
-      - name: Собрать статистику
+      - name: Собрать статистику по пакету
         env:
           GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
         run: python3 tools/traffic.py "$GITHUB_REPOSITORY" docs/traffic.csv
+
+      # Индекс маркетплейса клонируется, когда кто-то добавляет источник и когда
+      # Orca проверяет обновления, — отдельный сигнал от установок самого пакета.
+      # Шаг не роняет сбор: если репозиторий не попал в область токена, будет
+      # предупреждение, а история пакета всё равно запишется.
+      - name: Собрать статистику по индексу маркетплейса
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+        run: |
+          python3 tools/traffic.py imgusev/orca-plugins docs/traffic-marketplace.csv \
+            || echo "::warning::добавьте imgusev/orca-plugins в Repository access у TRAFFIC_TOKEN"
 
       - name: Зафиксировать, если что-то изменилось
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/traffic.csv
+          git add docs/traffic.csv docs/traffic-marketplace.csv
           git diff --staged --quiet && echo "изменений нет" && exit 0
           git commit -m "traffic: снимок за $(date -u +%F)"
           git push
