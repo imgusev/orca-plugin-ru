@@ -1,0 +1,13 @@
+{
+ "Edit address": "Изменить адрес",
+ "Filtering the most this can carry: {{value0}} team labels. Rows picked past that are left out.": "Фильтруется предельно возможное: меток команд — {{value0}}. Всё, что выбрано сверх этого, не учитывается.",
+ "Filtering the most this can carry: {{value0}} team statuses. Rows picked past that are left out.": "Фильтруется предельно возможное: статусов команд — {{value0}}. Всё, что выбрано сверх этого, не учитывается.",
+ "Filtering {{value0}} of {{value1}} team labels — issues from the remaining teams are not included.": "Фильтруется меток команд: {{value0}} из {{value1}} — задачи остальных команд не попадут в выборку.",
+ "Filtering {{value0}} of {{value1}} team statuses — issues from the remaining teams are not included.": "Фильтруется статусов команд: {{value0}} из {{value1}} — задачи остальных команд не попадут в выборку.",
+ "Open in Orca browser": "Открыть в браузере Orca",
+ "Orca on this host needs an update before you can view run history or manage this automation. Scheduled runs may still continue on the host.": "Чтобы смотреть историю запусков и управлять этой автоматизацией, нужно обновить Orca на этом хосте. Запуски по расписанию на хосте при этом могут продолжаться.",
+ "Run history is unavailable from this host. This does not mean the automation failed or has no runs.": "История запусков с этого хоста недоступна. Это не значит, что автоматизация упала или ни разу не запускалась.",
+ "Some teams may be left out of this filter. Open Filters for details.": "Часть команд может не попасть в этот фильтр. Подробности — в разделе «Фильтры».",
+ "Too many attachments are waiting. Finish composing before attaching more.": "Слишком много вложений в очереди. Допишите сообщение, прежде чем добавлять ещё.",
+ "· partial": "· частично"
+}
