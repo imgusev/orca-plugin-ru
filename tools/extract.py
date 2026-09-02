@@ -7,7 +7,7 @@
    по тегу той версии, что стоит локально (`ORCA_VERSION`), а не из `main`.
    Ключ, добавленный в `main`, но не попавший в релиз, ломает языковой пакет
    у всех пользователей: валидатор релиза его не знает и отвергает каталог
-   целиком. Полный каталог релиза — 13 686 ключей для 1.4.194.
+   целиком. Полный каталог релиза — 13 720 ключей для 1.4.195.
 
 2. Разбор `app.asar` — добавляет ключи, которых в `en.json` нет: строки
    поиска по настройкам объявляются в коде и в каталог не попадают.
@@ -34,10 +34,12 @@ CATALOG_PATH = "src/renderer/src/i18n/locales/en.json"
 CHROME_PATH = "src/shared/plugins/plugin-translatable-chrome.ts"
 REPO = "stablyai/orca"
 CHROME_RE = re.compile(r"'(auto\.components\.settings\.[A-Za-z0-9_.]+)'")
-PAIR = re.compile(r'"(auto\.[A-Za-z0-9_.]{3,90})"\s*,\s*"((?:[^"\\]|\\.){1,300})"')
+# Кавычки — двойные или обратные: с 1.4.195 бандл минифицирован сильнее, часть
+# вызовов ушла в шаблонные литералы, а имя функции стало однобуквенным алиасом.
+PAIR = re.compile(r'(["`])(auto\.[A-Za-z0-9_.]{3,90})\1\s*,\s*(["`])((?:[^"`\\]|\\.){1,300})\3')
 # Вызов translate(ключ, defaultValue, { count }) — только у таких ключей i18next сам
 # подставляет суффикс числа по правилам языка, и русские _few/_many из каталога сработают.
-COUNT_CALL = re.compile(r'translate\("([A-Za-z0-9_.\-]+)"\s*,\s*"(?:[^"\\]|\\.){0,300}"\s*,\s*\{\s*count')
+COUNT_CALL = re.compile(r'\b\w+\((["`])([A-Za-z0-9_.\-]+)\1\s*,\s*(["`])(?:[^"`\\]|\\.){0,300}\3\s*,\s*\{\s*count')
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -98,7 +100,7 @@ def scan_asar(asar: str) -> dict:
     """Английский текст лежит в бандле как defaultValue: translate("auto.<ключ>", "English")."""
     raw = open(asar, "rb").read().decode("utf-8", "ignore")
     pairs: dict[str, str] = {}
-    for key, value in PAIR.findall(raw):
+    for _, key, _, value in PAIR.findall(raw):
         # значение — JS-литерал: кавычки и слеши в нём экранированы
         value = value.replace('\\"', '"').replace("\\\\", "\\").replace("\\n", "\n")
         # один ключ может встретиться в нескольких бандлах (renderer/web) —
@@ -118,7 +120,7 @@ def scan_plural_candidates(asar: str) -> set[str]:
     на неё не влияет.
     """
     raw = open(asar, "rb").read().decode("utf-8", "ignore")
-    keys = set(COUNT_CALL.findall(raw))
+    keys = {key for _, key, _ in COUNT_CALL.findall(raw)}
     return {k for k in keys if not re.search(r"_(one|few|many|other)$", k)}
 
 

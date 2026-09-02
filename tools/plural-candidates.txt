@@ -1,4 +1,5 @@
 auto.components.automations.externalScope.uncheckedHosts
+auto.components.editor.CombinedDiffViewer.skippedConflictsExcluded
 auto.components.editor.HtmlDocPreview.allowDirectories
 auto.components.editor.HtmlDocPreview.multipleAssetsFailedNotice
 auto.components.linear-issue-attribute-filter-sections.countSelected
