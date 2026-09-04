@@ -61,7 +61,7 @@
  "Open the review file first.": "Сначала откройте файл ревью.",
  "Open with Default App": "Открыть в приложении по умолчанию",
  "Open workspace ports as worktree-specific Orca localhost URLs so browser tabs are easier to tell apart.": "Открывать порты рабочей области как localhost-адреса Orca, привязанные к worktree, — так вкладки браузера легче различать.",
- "Open {{value0}} in floating workspace": "Открыть {{value0}} в плавающем рабочей области",
+ "Open {{value0}} in floating workspace": "Открыть {{value0}} в плавающей рабочей области",
  "OpenAI API key cleared": "API-ключ OpenAI очищен",
  "OpenAI API key saved": "API-ключ OpenAI сохранён",
  "OpenAI Transcription": "Распознавание речи OpenAI",

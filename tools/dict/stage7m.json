@@ -283,7 +283,7 @@
  "{{value0}} emulator devices detected.": "Обнаружено устройств эмулятора: {{value0}}.",
  "{{value0}} event subscriptions": "подписок на события: {{value0}}",
  "{{value0}} files found": "найдено файлов: {{value0}}",
- "{{value0}} floating workspace ({{value1}})": "плавающее рабочая область {{value0}} ({{value1}})",
+ "{{value0}} floating workspace ({{value1}})": "плавающая рабочая область {{value0}} ({{value1}})",
  "{{value0}} is not installed in WSL. Choose an installed distro or switch this project to Windows.": "{{value0}} не установлен в WSL. Выберите установленный дистрибутив или переключите проект на Windows.",
  "{{value0}} is reachable.": "{{value0}} доступен.",
  "{{value0}} items available{{value1}}": "доступно объектов: {{value0}}",

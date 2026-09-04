@@ -54,7 +54,7 @@
  "The downloaded file path is unavailable.": "Путь к загруженному файлу недоступен.",
  "The file contains configuration keys that this version of Orca does not recognize. You may need to update Orca, or check the file for typos.": "В файле есть ключи, которые эта версия Orca не распознаёт. Возможно, нужно обновить Orca или проверить файл на опечатки.",
  "The file is present, but Orca could not find valid `scripts` or `issueCommand` definitions.": "Файл есть, но Orca не нашла корректных описаний `scripts` или `issueCommand`.",
- "The floating workspace hit an error.": "В плавающем рабочей области произошла ошибка.",
+ "The floating workspace hit an error.": "В плавающей рабочей области произошла ошибка.",
  "The folder workspace could not be created. Check the error details above, then try again.": "Не удалось создать рабочую область из папки. Изучите ошибку выше и повторите.",
  "The host was verified, but Orca could not save it. Check the name and local settings storage, then try again.": "Хост проверен, но сохранить его не удалось. Проверьте имя и локальное хранилище настроек, затем повторите.",
  "The keyboard shortcut works regardless of where the toggle is shown.": "Сочетание клавиш работает независимо от того, где показана кнопка.",

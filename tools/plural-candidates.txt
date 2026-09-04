@@ -1,3 +1,5 @@
+auto.components.activity.clearCompleted.clearedMany
+auto.components.automations.AutomationRunsDashboard.historyUnavailableMany
 auto.components.automations.externalScope.uncheckedHosts
 auto.components.editor.CombinedDiffViewer.skippedConflictsExcluded
 auto.components.editor.HtmlDocPreview.allowDirectories
