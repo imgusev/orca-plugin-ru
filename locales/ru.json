@@ -1,4 +1,12 @@
 {
+ "sidebar": {
+  "revealFiltered": {
+   "title": "Показать скрытую рабочую область?",
+   "description": "Активная рабочая область скрыта в боковой панели. Чтобы показать её, фильтры боковой панели будут сброшены.",
+   "confirm": "Сбросить фильтры и показать",
+   "cancel": "Оставить фильтры"
+  }
+ },
  "app": {
   "recoverableError": {
    "rootTitle": "В отрисовщике Orca произошла ошибка.",
@@ -119,7 +127,8 @@
     "chinese": "中文（简体）",
     "korean": "한국어",
     "japanese": "日本語",
-    "spanish": "Español"
+    "spanish": "Español",
+    "french": "Français"
    },
    "statusBar": {
     "claudeToggleDescription": "Показывать расход токенов и стоимость Claude для активной рабочей области.",
@@ -136,7 +145,12 @@
    },
    "menuBarIcon": {
     "title": "Показывать значок в строке меню",
-    "description": "Держать ярлык Orca и индикатор активности в строке меню macOS."
+    "description": "Держать ярлык Orca и индикатор активности в строке меню macOS.",
+    "keyword": {
+     "menuBar": "строка меню",
+     "statusItem": "значок статуса",
+     "activity": "активность"
+    }
    }
   },
   "browser": {
@@ -949,7 +963,9 @@
     }
    },
    "activateAiVaultStructuredSession": {
-    "unavailable": "Структурированная сессия агента пока недоступна. Повторите через мгновение."
+    "unavailable": "Структурированная сессия агента пока недоступна. Повторите через мгновение.",
+    "gone": "Этот чат больше не на этом хосте, поэтому здесь его не открыть заново.",
+    "hostCannotOpen": "Этот чат нельзя открыть заново, пока Orca не обновится."
    },
    "ephemeralVmWorktreeCreation": {
     "sparseCheckoutUnsupported": "Рецепты с provisioned-root не поддерживают разреженный checkout."
@@ -2245,7 +2261,8 @@
    "Terminal": {
     "73768427cf": "Закрыть",
     "f82e9f02df": "Отмена",
-    "7958465754": "Есть локальные терминалы с работающими процессами. Всё равно закрыть окно?",
+    "7958465754": "Есть терминалы с работающими процессами. Всё равно закрыть окно?",
+    "b7c1f0a934": "Удалённый хост недоступен, и Orca не может понять, идёт ли там ещё работа. Всё равно закрыть окно?",
     "2fa9c69ff3": "Закрыть окно?",
     "cd51e28d8b": "Сохранить",
     "0037b21794": "Не сохранять",
@@ -2544,6 +2561,30 @@
         "7c302f8174": "Без названия"
        }
       }
+     },
+     "ProjectRoadmap": {
+      "be52f7b6db": "В этом представлении дорожной карты нет поля даты или итерации, по которому размещать элементы, поэтому Orca показывает их списком.",
+      "6405e036e0": "Месяц",
+      "f2b1cabef7": "Квартал",
+      "b6afc6fe45": "Год",
+      "343888b143": "Размещено по {{value0}}",
+      "6a088a5da1": "Без дат: {{value0}}",
+      "86eebd6020": "Сегодня",
+      "0bb1c1bc07": "Масштаб ленты",
+      "e304235879": "Элемент",
+      "e077c79083": "Без дат"
+     },
+     "ProjectRoadmapBar": {
+      "cd68ccc17a": "{{value0}} — {{value1}}",
+      "7d1220d979": "Ограниченный объект"
+     },
+     "ProjectPickerPanels": {
+      "04ec212ccb": "Дорожная карта",
+      "9fe1ac868c": "Не поддерживается"
+     },
+     "ProjectViewStates": {
+      "ac83c45672": "Переключитесь на представление «Таблица» или «Дорожная карта», чтобы работать с этим проектом в Orca.",
+      "e4cc8b14f2": "Orca отображает представления проектов «Таблица» и «Дорожная карта». Это представление использует макет, который Orca пока не умеет показывать."
      }
     },
     "GitHubMarkdownComposer": {
@@ -6314,6 +6355,11 @@
      "projectOnly": "Добавлено только в этом проекте.",
      "useGlobalFor": "Использовать глобальное для {{value0}}",
      "useGlobal": "Использовать глобальное"
+    },
+    "RepoScanUnavailableIndicator": {
+     "title": "Не удалось просканировать worktree для {{value0}}",
+     "retry": "Повторить сканирование",
+     "retained": "Существующие worktree сохраняются, пока сканирование не пройдёт успешно. Нажмите, чтобы повторить."
     }
    },
    "shared": {
@@ -7047,8 +7093,8 @@
       "defaultViewTerminal": "Чат в терминале",
       "defaultViewNative": "Режим чата",
       "structuredTitle": "Использовать обновлённый структурированный нативный чат",
-      "structuredCopy": "Подключиться к структурированной среде выполнения Codex на стороне хоста. Если выключено, чат работает через терминал, как раньше.",
-      "structuredScope": "Пока только локальные сессии macOS и Linux. Windows, WSL и удалённые хосты выполнения (включая SSH) продолжают работать через чат в терминале.",
+      "structuredCopy": "Подключиться к структурированной среде выполнения чата на стороне хоста для Codex и Claude. Если выключено, чат работает через терминал, как раньше.",
+      "structuredScope": "Пока только локальные сессии. WSL и удалённые хосты выполнения (включая SSH) продолжают работать через чат в терминале; Windows тоже переходит на него, если Orca не может прочитать время запуска процессов.",
       "structuredToggleLabel": "Переключить обновлённый структурированный нативный чат"
      },
      "agentDashboard": {
@@ -13673,7 +13719,9 @@
      "useLan": "Использовать LAN",
      "retrying": "Повтор…",
      "retry": "Повторить через Relay",
-     "copyDiagnostics": "Копировать диагностику"
+     "copyDiagnostics": "Копировать диагностику",
+     "reconnectTitle": "Сессия аккаунта Orca истекла.",
+     "reconnectBody": "Войдите снова, чтобы использовать Orca Relay, или выберите LAN для сопряжения через Tailscale или по общему Wi‑Fi."
     }
    },
    "gitlab": {
@@ -15199,8 +15247,18 @@
         "removeWorktree": "убрать worktree",
         "trashWorktree": "удалить worktree в корзину",
         "addQuickCommand": "добавить быструю команду",
-        "newQuickCommand": "новая быстрая команда"
-       }
+        "newQuickCommand": "новая быстрая команда",
+        "splitChatRight": "разделить чат вправо",
+        "moveChatRight": "переместить чат вправо",
+        "chatPaneRight": "панель чата справа",
+        "splitChatDown": "разделить чат вниз",
+        "moveChatDown": "переместить чат вниз",
+        "chatPaneBelow": "панель чата снизу"
+       },
+       "splitChatRight": "Разделить чат вправо",
+       "splitChatRightDescription": "Открыть активный чат в разделённой панели справа.",
+       "splitChatDown": "Разделить чат вниз",
+       "splitChatDownDescription": "Открыть активный чат в разделённой панели снизу."
       }
      },
      "palette": {
@@ -16046,7 +16104,8 @@
      "search": "Поиск",
      "showUnreadOnly": "Только непрочитанные",
      "showChildAgents": "Показывать дочерних агентов",
-     "activityOptions": "Параметры активности"
+     "activityOptions": "Параметры активности",
+     "threadListOptionsFiltered": "Параметры списка тредов, фильтры активны"
     },
     "clearCompleted": {
      "clearedOne": "Убран 1 завершённый агент",
@@ -16067,8 +16126,7 @@
      "dc708f3eff": "Закрыть агентов"
     },
     "ActivityScopeFilterControls": {
-     "clearHostFilter": "Показать все хосты",
-     "clearProjectFilter": "Показать все проекты",
+     "resetScope": "Показать все хосты и проекты",
      "hiddenCount": "скрыто: {{value0}}"
     },
     "ActivityThreadHoverCard": {
@@ -16077,6 +16135,9 @@
      "workspace": "Рабочая область",
      "copyPath": "Копировать путь",
      "jumpToWorkspace": "Перейти к рабочей области"
+    },
+    "ActivityThreadRow": {
+     "clearNotification": "Убрать уведомление"
     }
    },
    "confirmation": {
@@ -16736,6 +16797,41 @@
   }
  },
  "components": {
+  "onboarding": {
+   "flow": {
+    "stepTooltip": {
+     "agent": "Агент по умолчанию",
+     "theme": "Внешний вид",
+     "windowsTerminal": "Windows Terminal",
+     "notifications": "Уведомления",
+     "integrations": "Интеграции"
+    },
+    "actions": {
+     "addFirstProject": "Добавьте первый проект",
+     "continue": "Продолжить",
+     "openingAddProject": "Открывается добавление проекта..."
+    }
+   },
+   "skipConfirmation": {
+    "skip": "Пропустить",
+    "keepGoing": "Нет, продолжить"
+   },
+   "theme": {
+    "hints": {
+     "system": "Как в системе",
+     "dark": "Не напрягает глаза",
+     "light": "Светлая и чёткая"
+    }
+   },
+   "integrations": {
+    "capabilities": {
+     "startWorkspaceFromIssue": "Создавайте рабочую область из любой задачи или пул-реквеста GitHub с уже подставленными названием и контекстом",
+     "browseIssues": "Просматривайте задачи и пул-реквесты GitHub в разделе «Задачи», не выходя из Orca",
+     "reviewStatus": "Состояние задачи, статус ревью и проверки CI — у каждого worktree",
+     "managePullRequests": "Читайте, комментируйте и вливайте пул-реквесты, не выходя из Orca"
+    }
+   }
+  },
   "jiraUserPicker": {
    "select": "Выбрать {{value0}}",
    "search": "Поиск пользователей",
@@ -16820,7 +16916,14 @@
     "ranCommandsOneToolSummary": "Выполнено команд: {{commandCount}}, использован {{toolCount}} инструмент",
     "ranCommandsManyToolsSummary": "Выполнено команд: {{commandCount}}, использовано инструментов: {{toolCount}}",
     "usedOneSummary": "Использован 1 инструмент",
-    "usedManySummary": "Использовано инструментов: {{toolCount}}"
+    "usedManySummary": "Использовано инструментов: {{toolCount}}",
+    "editedFile": "Изменён файл",
+    "addedFile": "Добавлен файл",
+    "deletedFile": "Удалён файл",
+    "renamedFile": "Переименован файл",
+    "copyDiff": "Копировать дифф",
+    "diffGap": "Строки не показаны",
+    "diffTruncated": "Дифф обрезан"
    },
    "providerFrame": {
     "byteLength": "{{value0}} байт"
@@ -16829,9 +16932,22 @@
     "responding": "Агент отвечает",
     "working": "Работаю…",
     "thinking": "Размышляет",
-    "workingFor": "В работе {{value0}} с",
-    "workedFor": "Работа заняла {{value0}} с",
+    "workingFor": "В работе {{value0}}",
+    "workedFor": "Работа заняла {{value0}}",
     "toggleDetails": "Показать или скрыть подробности хода"
+   },
+   "backgroundTasks": {
+    "monitoring": "Наблюдение за фоновыми задачами",
+    "stop": "Остановить",
+    "stopTask": "Остановить {{value0}}",
+    "stopAll": "Остановить фоновые задачи",
+    "agent": "Фоновый агент",
+    "workflow": "Фоновый сценарий",
+    "command": "Фоновая команда",
+    "monitor": "Фоновый монитор",
+    "task": "Фоновая задача",
+    "runningList": "Выполняются фоновые задачи",
+    "detailsUnavailable": "Подробности задач для этой сессии недоступны."
    },
    "jumpToLatest": "Перейти к последнему",
    "toggle": {
@@ -16886,9 +17002,45 @@
     "message": "Структурированный чат блокирует ввод и отправку в терминал. Сообщения оркестрации остаются в очереди; переключитесь на терминал и проверьте входящие Orca командой",
     "command": "orca orchestration check"
    },
-   "structuredSessionCloseFailed": "Не удалось закрыть этот чат Codex",
-   "structuredSessionLaunchFailed": "Не удалось открыть чат Codex",
-   "structuredSessionCloseFailedDescription": "Терминал оставлен открытым, чтобы провайдера можно было восстановить."
+   "structuredSessionCloseFailed": "Не удалось закрыть эту сессию чата",
+   "structuredSessionLaunchFailed": "Не удалось открыть чат {{value0}}",
+   "structuredSessionLaunchPending": "Запуск чата {{value0}}…",
+   "structuredSessionCloseFailedDescription": "Терминал оставлен открытым, чтобы провайдера можно было восстановить.",
+   "handoff": {
+    "stage": {
+     "finishingChat": "Завершение сессии чата…",
+     "finishingTerminal": "Завершение терминала агента…",
+     "openingTerminal": "Открытие терминала агента…",
+     "resumingChat": "Возобновление сессии чата…",
+     "verifyingTerminal": "Проверка терминала агента…",
+     "verifyingChat": "Проверка сессии чата…",
+     "recovering": "Восстановление сессии агента…",
+     "manualRecovery": "Сессии агента требуется восстановление"
+    },
+    "switchingOwner": "Смена владельца сессии…",
+    "mode": {
+     "switching": "Переключение",
+     "terminal": "Терминал",
+     "chat": "Чат"
+    },
+    "switchingAfterTurn": "Переключение после этого хода",
+    "returningAfterTurn": "Возврат после этого хода",
+    "cancel": "Отмена",
+    "switchAfterTurn": "Переключиться после этого хода",
+    "stopTurnAndSwitch": "Остановить ход и переключиться",
+    "openAgentTui": "Открыть TUI агента",
+    "returnAfterTurn": "Вернуться после этого хода",
+    "returnToChat": "Вернуться в чат",
+    "agentOpenOnHost": "Агент открыт в терминале на {{value0}}.",
+    "agentOpen": "Агент открыт в терминале.",
+    "exitTerminal": "Выйдите из терминала агента, чтобы продолжить в чате.",
+    "retryProof": "Повторить проверку",
+    "retry": "Повторить",
+    "details": "Подробности"
+   },
+   "structuredSessionFellBackToTerminal": "Структурированный чат недоступен",
+   "structuredSessionFellBackToTerminalDescription": "Вместо него Orca попыталась открыть терминал {{value0}}.",
+   "structuredSessionLaunchFailedDescription": "Orca не смогла открыть структурированный чат {{value0}}. Подробности в логах."
   },
   "tab": {
    "bar": {
@@ -17312,6 +17464,7 @@
   },
   "terminal": {
    "closed": "Активного терминала нет — панель этого агента закрыта.",
+   "remotePreviewUnavailable": "Для этой удалённой сессии нет предпросмотра — откройте рабочую область, чтобы увидеть терминал.",
    "focusWorktree": "Открыть worktree",
    "close": "Закрыть"
   },
@@ -17415,5 +17568,17 @@
    "action": "Попробовать агентов",
    "hiddenToast": "Вкладка «Агенты» скрыта. Включить снова: Настройки → Экспериментальное."
   }
+ },
+ "rendererRecovery": {
+  "reload": "Перезагрузить",
+  "copyCommands": "Копировать команды",
+  "quit": "Выйти",
+  "stalledDetail": "Orca перезагрузила окно после сбоя, но загрузка так и не завершилась.",
+  "crashLoopDetail": "Orca безуспешно пыталась восстановиться {{recoveryCount}} раз подряд.",
+  "driverFallback": "Если это не помогает, причина обычно в графическом драйвере.",
+  "genericDetail": "Обычно это проблема графического драйвера или установки. Перезагрузите, чтобы повторить, или выйдите и запустите Orca заново.",
+  "title": "Orca не удаётся загрузиться",
+  "stalledMessage": "Окно приложения перестало отвечать при перезагрузке после сбоя.",
+  "crashLoopMessage": "Окно приложения падало несколько раз подряд и больше не перезагружается автоматически."
  }
 }
