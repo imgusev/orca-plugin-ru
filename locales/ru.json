@@ -16914,6 +16914,39 @@
    "empty": "Пользователи не найдены"
   },
   "native-chat": {
+   "taskList": {
+    "title": "Задачи",
+    "completed": "Завершено",
+    "inProgress": "В работе",
+    "pending": "В ожидании",
+    "empty": "Задач нет",
+    "progress": "Выполнено задач: {{completed}} из {{total}}",
+    "added": "Добавлена задача: {{task}}",
+    "removed": "Удалена задача: {{task}}",
+    "started": "Начата задача: {{task}}",
+    "finished": "Выполнена задача: {{task}}",
+    "reset": "Возвращена в ожидание: {{task}}",
+    "updated": "Обновлена задача: {{task}}",
+    "unchanged": "Задачи без изменений",
+    "showAll": "Полный список задач"
+   },
+   "turnDiff": {
+    "one": "1 изменённый файл",
+    "many": "Изменённых файлов: {{count}}",
+    "partial": "Частичный дифф",
+    "recorded": "Итоги по записанным правкам в этом ходе.",
+    "many_one": "{{count}} изменённый файл",
+    "many_few": "{{count}} изменённых файла",
+    "many_many": "{{count}} изменённых файлов",
+    "many_other": "{{count}} изменённых файла"
+   },
+   "receipt": {
+    "unavailable": "Выбранный ответ недоступен",
+    "cancelled": "Отменено",
+    "resolved": "Решено",
+    "resolver": "Отвечено на {{device}}",
+    "cancelledBy": "Отменено на {{device}}"
+   },
    "notices": {
     "compaction": "Контекст сжат",
     "details": "Подробности",

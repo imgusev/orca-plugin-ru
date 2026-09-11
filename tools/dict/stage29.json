@@ -1,0 +1,19 @@
+{
+ "No tasks": "Задач нет",
+ "{{completed}} of {{total}} tasks completed": "Выполнено задач: {{completed}} из {{total}}",
+ "Added {{task}}": "Добавлена задача: {{task}}",
+ "Removed {{task}}": "Удалена задача: {{task}}",
+ "Started {{task}}": "Начата задача: {{task}}",
+ "Completed {{task}}": "Выполнена задача: {{task}}",
+ "Marked pending: {{task}}": "Возвращена в ожидание: {{task}}",
+ "Updated {{task}}": "Обновлена задача: {{task}}",
+ "Tasks unchanged": "Задачи без изменений",
+ "Full task list": "Полный список задач",
+ "1 changed file": "1 изменённый файл",
+ "{{count}} changed files": "Изменённых файлов: {{count}}",
+ "Partial diff": "Частичный дифф",
+ "Totals from recorded edits in this turn.": "Итоги по записанным правкам в этом ходе.",
+ "Selected answer unavailable": "Выбранный ответ недоступен",
+ "Answered on {{device}}": "Отвечено на {{device}}",
+ "Cancelled on {{device}}": "Отменено на {{device}}"
+}

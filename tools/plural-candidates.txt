@@ -61,6 +61,7 @@ auto.components.skills.share.executableOther
 auto.components.skills.share.scriptOne
 auto.components.skills.share.scriptOther
 auto.lib.feedback.image.attachments.additionalErrors
+components.native-chat.turnDiff.many
 components.workspace.cleanup.browse.forceDeleteProjectionMany
 components.workspace.cleanup.browse.forceDeleteProjectionOne
 dashboardPopout.card.time.days
