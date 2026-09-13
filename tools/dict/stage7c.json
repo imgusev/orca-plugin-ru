@@ -95,7 +95,7 @@
  "Could not start the update download.": "Не удалось начать загрузку обновления.",
  "Could not switch to that build.": "Не удалось переключиться на эту сборку.",
  "Could not update Android SDK folder.": "Не удалось обновить папку Android SDK.",
- "Could not update this workspace.": "Не удалось обновить это рабочая область.",
+ "Could not update this workspace.": "Не удалось обновить эту рабочую область.",
  "Couldn't send to {{value0}}": "Не удалось отправить в {{value0}}",
  "Couldn't verify which host owns this workspace. Try again after it reconnects.": "Не удалось определить, какому хосту принадлежит рабочая область. Повторите после переподключения.",
  "Couldn’t clean up Cloud VM runtime.": "Не удалось очистить облачную среду выполнения VM.",
