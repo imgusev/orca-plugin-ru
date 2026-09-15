@@ -188,7 +188,7 @@
  "Orca verifies access and package identity before changing the selected machine.": "Orca проверяет доступ и подлинность пакета, прежде чем что-то менять на выбранном компьютере.",
  "Orca will keep these local copies by default. Select only the copies you want to discard and replace.": "По умолчанию Orca сохранит эти локальные копии. Отметьте только те, от которых хотите отказаться и заменить их.",
  "Orca will preserve them unless you explicitly discard the local changes.": "Orca сохранит их, пока вы явно не откажетесь от локальных изменений.",
- "Passkey": "Passkey",
+ "Passkey": "Ключ доступа",
  "Path copied": "Путь скопирован",
  "Pick an agent in Settings -> Git -> Source Control AI.": "Выберите агента в «Настройки → Git → ИИ для контроля версий».",
  "Preparing preview…": "Подготовка предпросмотра…",
