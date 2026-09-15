@@ -4,3 +4,8 @@ tools/en-all.json
 .DS_Store
 __pycache__/
 *.pyc
+
+# рабочие файлы release.py между check и publish
+tools/release-state.json
+tools/CHANGELOG_ENTRY.md
+tools/.release-notes.md
