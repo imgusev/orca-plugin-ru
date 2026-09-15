@@ -4,7 +4,7 @@
 
 Translates the [Orca](https://github.com/stablyai/orca) interface into Russian — **14 073 of 14 262 strings (98%)**. This is Orca by Stably AI, the agent development environment (ADE) — not the GNOME screen reader, the Microsoft MSI editor, or OrcaSlicer.
 
-> **Built for Orca 1.4.201, works from 1.4.169 up.** The build version lives in [ORCA_VERSION](ORCA_VERSION), the compatibility floor in [COMPAT](COMPAT).
+> **Built for Orca 1.4.203, works from 1.4.169 up.** The build version lives in [ORCA_VERSION](ORCA_VERSION), the compatibility floor in [COMPAT](COMPAT).
 
 The pack uses Orca's own plugin mechanism (`contributes.languagePacks`): the app is never patched, so an Orca update cannot break it. Untranslated strings fall back to English through i18next.
 
@@ -29,18 +29,18 @@ Orca then offers updates on its own whenever a new version ships.
 One link, no source needed. The explicit `#ref` is required by Orca so the install is pinned to a version:
 
 ```
-https://github.com/imgusev/orca-plugin-ru.git#v1.4.201
+https://github.com/imgusev/orca-plugin-ru.git#v1.4.203
 ```
 
 ## Versioning
 
-The package version equals the Orca version its catalog was extracted from — patch included. A catalog built from Orca 1.4.201 ships as `1.4.201`, tagged `v1.4.201`. The plugin card then tells you which app version the translation matches without checking anything else.
+The package version equals the Orca version its catalog was extracted from — patch included. A catalog built from Orca 1.4.203 ships as `1.4.203`, tagged `v1.4.203`. The plugin card then tells you which app version the translation matches without checking anything else.
 
-One consequence is worth knowing: a translation-only fix cannot ship without an Orca release. The manifest validator demands strict semver — there is no fourth segment, and `1.4.201-fix1` sorts *below* `1.4.201`, so Orca would not treat it as an update. Such a fix waits for the next Orca release; they arrive almost daily.
+One consequence is worth knowing: a translation-only fix cannot ship without an Orca release. The manifest validator demands strict semver — there is no fourth segment, and `1.4.203-fix1` sorts *below* `1.4.203`, so Orca would not treat it as an update. Such a fix waits for the next Orca release; they arrive almost daily.
 
 ## How the catalog is built
 
-The English catalog is fetched from the Orca repository **at the tag of the installed version** — `src/renderer/src/i18n/locales/en.json` at `v1.4.201`, never from `main`. A key added to `main` but not yet released is unknown to the installed validator, and it rejects **the entire catalog**, silently disabling the language. Parsing the minified `app.asar` remains a safety net for keys that bypass the catalog. Up to 1.4.197 it recovered 152 settings-search keys missing from `en.json`; since 1.4.201, after [PR #18040](https://github.com/stablyai/orca/pull/18040) landed, they ship in the catalog and the pass adds nothing.
+The English catalog is fetched from the Orca repository **at the tag of the installed version** — `src/renderer/src/i18n/locales/en.json` at `v1.4.203`, never from `main`. A key added to `main` but not yet released is unknown to the installed validator, and it rejects **the entire catalog**, silently disabling the language. Parsing the minified `app.asar` remains a safety net for keys that bypass the catalog. Up to 1.4.197 it recovered 152 settings-search keys missing from `en.json`; since 1.4.203, after [PR #18040](https://github.com/stablyai/orca/pull/18040) landed, they ship in the catalog and the pass adds nothing.
 
 ```bash
 cd tools
