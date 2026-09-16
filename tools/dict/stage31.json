@@ -1,0 +1,19 @@
+{
+ "Couldn't read the dropped files.": "Не удалось прочитать перетащенные файлы.",
+ "Drop the left gutter agent output is painted behind, so copied text is not indented. Only the indent every selected line shares is removed.": "Убирать левое поле, за которым рисуется вывод агента, чтобы скопированный текст не был с отступом. Удаляется только отступ, общий для всех выделенных строк.",
+ "Drop to attach to this chat": "Отпустите, чтобы прикрепить к этому чату",
+ "Files are added to your message as paths the agent can read.": "Файлы добавляются в сообщение как пути, которые агент может прочитать.",
+ "Files can only be attached to their source workspace.": "Файлы можно прикрепить только к их исходной рабочей области.",
+ "Not reported": "Не сообщено",
+ "Orca couldn't read a path for the dropped files.": "Orca не смогла прочитать путь перетащенных файлов.",
+ "Recently added items can take a while to appear.": "Недавно добавленные элементы могут появиться не сразу.",
+ "Save them to disk first, then drop the saved files.": "Сначала сохраните их на диск, затем перетащите сохранённые файлы.",
+ "This view has no items yet.": "В этом представлении пока нет элементов.",
+ "This workspace changed hosts while attaching — drop the files again.": "Во время прикрепления рабочая область сменила хост — перетащите файлы ещё раз.",
+ "Trim Gutter on Copy": "Убирать поле при копировании",
+ "gutter": "поле",
+ "indent": "отступ",
+ "leading": "ведущие",
+ "spaces": "пробелы",
+ "whitespace": "пробельные символы"
+}
