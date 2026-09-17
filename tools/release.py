@@ -256,6 +256,10 @@ def cmd_precheck(_: argparse.Namespace) -> int:
 def cmd_check(_: argparse.Namespace) -> int:
     inst, built = installed_version(), built_version()
     print(f"на диске Orca {inst}, каталог собран под {built}")
+    released = sh("git", "show", "HEAD:ORCA_VERSION", quiet=True).strip()
+    if inst == released:
+        print(f"Orca {inst} уже выпущена (HEAD собран под неё) — ВЫПУСКАТЬ НЕЧЕГО, остановиться")
+        return 0
     old = head_ru()
     extract = run_extract()
     report, text = run_build()
@@ -387,10 +391,8 @@ def cmd_publish(args: argparse.Namespace) -> int:
                    f"Выпуск нужен только для совпадения номера пакета с версией приложения.")
         bullets = ""
     else:
-        summary = (f"Каталог — {fmt(translated)} из {fmt(total)} строк ({pct}%). Приложение добавило "
-                   f"{len(added)} {plural(len(added), 'ключ', 'ключа', 'ключей')}, "
-                   f"убрало {num_word(len(removed))} и переписало текст у {num_word(len(rewritten))}"
-                   f"{'' if len(rewritten) != 1 else ' ключа'} — переведены все.")
+        summary = (f"Каталог — {fmt(translated)} из {fmt(total)} строк ({pct}%). "
+                   f"Приложение {changes_phrase(len(added), len(removed), len(rewritten))} — переведены все.")
         bullets = entry_body + "\n"
     protected_line = f"- Защищённая зона не изменилась: те же {EXPECT['protected']} ключей и {EXPECT['allowed_paths']} разрешённых пути"
     entry = (f"## {version} — {today} · Orca {version} (совместим с {compat()}+)\n\n"
@@ -471,6 +473,18 @@ def cmd_publish(args: argparse.Namespace) -> int:
             os.remove(path)
     print("готово")
     return 0
+
+
+def changes_phrase(added: int, removed: int, rewritten: int) -> str:
+    parts = []
+    parts.append(f"добавило {added} {plural(added, 'ключ', 'ключа', 'ключей')}" if added
+                 else "не добавило ни одного ключа")
+    parts.append(f"убрало {num_word(removed)}" if removed else "ничего не убрало")
+    genitive = {1: "одного", 2: "двух", 3: "трёх", 4: "четырёх", 5: "пяти", 6: "шести",
+                7: "семи", 8: "восьми", 9: "девяти", 10: "десяти"}
+    parts.append(f"переписало текст у {genitive.get(rewritten, rewritten)}" if rewritten
+                 else "текст ни у одного не переписало")
+    return ", ".join(parts[:-1]) + " и " + parts[-1] if len(parts) > 1 else parts[0]
 
 
 def read_old_numbers() -> dict[str, str]:
