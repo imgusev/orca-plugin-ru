@@ -269,5 +269,11 @@
   "few": "{{count}} изменённых файла",
   "many": "{{count}} изменённых файлов",
   "other": "{{count}} изменённых файла"
+ },
+ "sessionHistory.settings.showMore": {
+  "one": "Показать ещё {{count}}",
+  "few": "Показать ещё {{count}}",
+  "many": "Показать ещё {{count}}",
+  "other": "Показать ещё {{count}}"
  }
 }

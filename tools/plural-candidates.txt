@@ -68,3 +68,4 @@ dashboardPopout.card.time.days
 dashboardPopout.card.time.hours
 dashboardPopout.card.time.minutes
 dashboardPopout.total
+sessionHistory.settings.showMore
