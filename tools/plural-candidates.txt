@@ -69,3 +69,7 @@ dashboardPopout.card.time.hours
 dashboardPopout.card.time.minutes
 dashboardPopout.total
 sessionHistory.settings.showMore
+sessionSearch.panel.resultsOne
+sessionSearch.panel.resultsOther
+sessionSearch.panel.sessionsOne
+sessionSearch.panel.sessionsOther

@@ -275,5 +275,23 @@
   "few": "Показать ещё {{count}}",
   "many": "Показать ещё {{count}}",
   "other": "Показать ещё {{count}}"
+ },
+ "sessionSearch.panel.resultsOne": {
+  "one": "{{count}} результат"
+ },
+ "sessionSearch.panel.resultsOther": {
+  "one": "{{count}} результат",
+  "few": "{{count}} результата",
+  "many": "{{count}} результатов",
+  "other": "{{count}} результата"
+ },
+ "sessionSearch.panel.sessionsOne": {
+  "one": "{{count}} сессия"
+ },
+ "sessionSearch.panel.sessionsOther": {
+  "one": "{{count}} сессия",
+  "few": "{{count}} сессии",
+  "many": "{{count}} сессий",
+  "other": "{{count}} сессии"
  }
 }

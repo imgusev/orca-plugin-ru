@@ -1,0 +1,18 @@
+{
+ "• excludes unpriced models": "• без учёта моделей без цены",
+ "). The auth cookie still covers workspace discovery; auth alone is not enough for usage. OpenCode Go auth is web-based and shared across Windows and WSL terminals.": "). Cookie auth по-прежнему нужен для поиска рабочей области, но одного auth для расхода недостаточно. Авторизация OpenCode Go работает через веб и общая для терминалов Windows и WSL.",
+ "Paste the full Cookie header from your browser's DevTools → Network → any opencode.ai request, including __Host-console_session (e.g.": "Вставьте полный заголовок Cookie из DevTools браузера → Network → любой запрос к opencode.ai, включая __Host-console_session (например,",
+ "auth=…; __Host-console_session=…": "auth=…; __Host-console_session=…",
+ "Paste the full opencode.ai Cookie header, including __Host-console_session, for rate limit fetching.": "Вставьте полный заголовок Cookie opencode.ai, включая __Host-console_session, для чтения лимитов.",
+ "console": "консоль",
+ "Indexed history": "Проиндексированная история",
+ "Most relevant": "Самые подходящие",
+ "Newest": "Самые новые",
+ "Sort results: {{value0}}": "Сортировка результатов: {{value0}}",
+ "Sort sessions: {{value0}}": "Сортировка сессий: {{value0}}",
+ "{{count}} session": "{{count}} сессия",
+ "{{count}} sessions": "сессий: {{count}}",
+ "{{value0}} of {{value1}} sessions": "сессий: {{value0}} из {{value1}}",
+ "Show more sessions": "Показать ещё сессии",
+ "Loading more sessions…": "Загрузка сессий…"
+}
