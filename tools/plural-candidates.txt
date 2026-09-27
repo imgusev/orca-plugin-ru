@@ -20,6 +20,7 @@ auto.components.settings.SourceControlActionRepoOverrideNote.plural
 auto.components.sidebar.HostRemoveDialog.manyWorkspaces
 auto.components.sidebar.HostRemoveDialog.workspacesFailed
 auto.components.sidebar.PreservedBranchBatchReviewDialog.a0f9863597
+auto.components.sidebar.SidebarFeedbackImageAttachments.screenshotsHint
 auto.components.sidebar.preserved.branch.batch.toast.0e0379f24a
 auto.components.sidebar.preserved.branch.batch.toast.6310412304
 auto.components.sidebar.preserved.branch.batch.toast.a3cdd9d9e6

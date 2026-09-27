@@ -293,5 +293,11 @@
   "few": "{{count}} сессии",
   "many": "{{count}} сессий",
   "other": "{{count}} сессии"
+ },
+ "auto.components.sidebar.SidebarFeedbackImageAttachments.screenshotsHint": {
+  "one": "Можно прикрепить до {{count}} скриншота, всего до {{maxSize}}",
+  "few": "Можно прикрепить до {{count}} скриншотов, всего до {{maxSize}}",
+  "many": "Можно прикрепить до {{count}} скриншотов, всего до {{maxSize}}",
+  "other": "Можно прикрепить до {{count}} скриншотов, всего до {{maxSize}}"
  }
 }
