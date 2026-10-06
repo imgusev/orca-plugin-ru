@@ -305,5 +305,11 @@
   "few": "Orca не смогла скопировать {{count}} перетащенных файла.",
   "many": "Orca не смогла скопировать {{count}} перетащенных файлов.",
   "other": "Orca не смогла скопировать {{count}} перетащенных файла."
+ },
+ "auto.components.settings.NotificationHostToggles.offCount": {
+  "one": "Отключён {{count}} компьютер",
+  "few": "Отключены {{count}} компьютера",
+  "many": "Отключено {{count}} компьютеров",
+  "other": "Отключены {{count}} компьютера"
  }
 }

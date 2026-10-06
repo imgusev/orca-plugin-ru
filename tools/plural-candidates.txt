@@ -15,6 +15,7 @@ auto.components.right.sidebar.github.pr.stack.confirmation.92ca033e72
 auto.components.right.sidebar.github.pr.stack.confirmation.eb7051d268
 auto.components.right.sidebar.useFileDeletion.77fdc36183
 auto.components.right.sidebar.useFileDeletion.af1270b90d
+auto.components.settings.NotificationHostToggles.offCount
 auto.components.settings.SourceControlActionRepoOverrideNote.more
 auto.components.settings.SourceControlActionRepoOverrideNote.plural
 auto.components.sidebar.HostRemoveDialog.manyWorkspaces
