@@ -21,6 +21,10 @@ auto.components.right.sidebar.useFileDeletion.af1270b90d
 auto.components.settings.NotificationHostToggles.offCount
 auto.components.settings.SourceControlActionRepoOverrideNote.more
 auto.components.settings.SourceControlActionRepoOverrideNote.plural
+auto.components.settings.managedServers.blocker.terminals
+auto.components.settings.managedServers.terminals.count
+auto.components.settings.sshHostServer.terminalsElsewhere
+auto.components.settings.sshHostServer.terminalsLive
 auto.components.sidebar.HostRemoveDialog.manyWorkspaces
 auto.components.sidebar.HostRemoveDialog.workspacesFailed
 auto.components.sidebar.PreservedBranchBatchReviewDialog.a0f9863597
@@ -80,3 +84,7 @@ sessionSearch.panel.resultsOne
 sessionSearch.panel.resultsOther
 sessionSearch.panel.sessionsOne
 sessionSearch.panel.sessionsOther
+workspace.links.allReviewChecks
+workspace.links.count
+workspace.links.show
+workspace.links.stackSummary
