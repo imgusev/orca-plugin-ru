@@ -154,9 +154,13 @@ def main() -> None:
     # плейсхолдеры обязаны совпадать, иначе интерфейс покажет пустоту вместо значения —
     # кроме суффиксов множественного числа, которые в русском переводе положено выбрасывать
     broken, dropped_suffix = [], []
+    plural_bases = set(plurals)
     for key, value in translated.items():
         if key not in source:
             continue  # форма числа: своего английского оригинала у неё нет, проверена выше
+        stem, _, form = key.rpartition("_")
+        if form in PLURAL_FORMS and stem in plural_bases:
+            continue  # форма числа из plurals.json: плейсхолдеры уже сверены с базовым ключом выше
         english = decode_js(source[key])
         want = sorted(PLACEHOLDER_RE.findall(english))
         got = sorted(PLACEHOLDER_RE.findall(value))
