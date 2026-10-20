@@ -7,7 +7,7 @@
    по тегу той версии, что стоит локально (`ORCA_VERSION`), а не из `main`.
    Ключ, добавленный в `main`, но не попавший в релиз, ломает языковой пакет
    у всех пользователей: валидатор релиза его не знает и отвергает каталог
-   целиком. Полный каталог релиза — 16 203 ключей для 1.4.229.
+   целиком. Полный каталог релиза — 16 311 ключей для 1.4.230.
 
 2. Разбор `app.asar` — страховка: добавляет ключи, которых в `en.json` нет.
    До 1.4.197 так добирались строки поиска по настройкам (~152 ключа):
@@ -24,7 +24,6 @@
 белый список защищённой зоны, общий для всего диапазона поддерживаемых версий
 (нижняя граница — файл COMPAT).
 """
-import base64
 import json
 import os
 import plistlib
@@ -59,18 +58,22 @@ def orca_version(asar: str) -> str | None:
 
 
 def fetch_file(path: str, version: str) -> bytes:
-    """Тянет файл по тегу через gh — системный python3 на macOS без корневых сертификатов."""
+    """Тянет файл по тегу через gh — системный python3 на macOS без корневых сертификатов.
+
+    Raw-тип ответа, а не base64 в JSON: с 1.4.230 en.json больше 1 МБ, и contents
+    API для таких файлов отдаёт content: null."""
     ref = f"v{version}"
     try:
         raw = subprocess.run(
-            ["gh", "api", f"repos/{REPO}/contents/{path}?ref={ref}", "--jq", ".content"],
-            capture_output=True, text=True, check=True, timeout=120,
+            ["gh", "api", "-H", "Accept: application/vnd.github.raw",
+             f"repos/{REPO}/contents/{path}?ref={ref}"],
+            capture_output=True, check=True, timeout=120,
         ).stdout
     except FileNotFoundError:
         sys.exit("нужен gh CLI: brew install gh && gh auth login")
     except subprocess.CalledProcessError as err:
         sys.exit(f"не удалось получить {path} на теге {ref}:\n{err.stderr.strip()}")
-    return base64.b64decode(raw)
+    return raw
 
 
 def fetch_catalog(version: str) -> dict:

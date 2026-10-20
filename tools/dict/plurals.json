@@ -413,5 +413,23 @@
   "few": "Открыть заново {{count}} терминала",
   "many": "Открыть заново {{count}} терминалов",
   "other": "Открыть заново {{count}} терминала"
+ },
+ "accounts.claude.switchSessions.restartOther": {
+  "one": "Перезапустить {{count}} сессию",
+  "few": "Перезапустить {{count}} сессии",
+  "many": "Перезапустить {{count}} сессий",
+  "other": "Перезапустить {{count}} сессии"
+ },
+ "accounts.claude.switchSessions.restartingOther": {
+  "one": "Перезапуск {{count}} сессии Claude на {{account}}",
+  "few": "Перезапуск {{count}} сессий Claude на {{account}}",
+  "many": "Перезапуск {{count}} сессий Claude на {{account}}",
+  "other": "Перезапуск {{count}} сессий Claude на {{account}}"
+ },
+ "components.native-chat.queuedMessages.imageCount": {
+  "one": "{{count}} изображение",
+  "few": "{{count}} изображения",
+  "many": "{{count}} изображений",
+  "other": "{{count}} изображения"
  }
 }
