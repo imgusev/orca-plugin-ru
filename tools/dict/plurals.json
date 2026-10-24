@@ -431,5 +431,164 @@
   "few": "{{count}} изображения",
   "many": "{{count}} изображений",
   "other": "{{count}} изображения"
+ },
+ "auto.components.settings.SshDestructiveActionDialog.moreTargets": {
+  "one": "+ ещё {{count}}",
+  "few": "+ ещё {{count}}",
+  "many": "+ ещё {{count}}",
+  "other": "+ ещё {{count}}"
+ },
+ "auto.components.settings.SshPaneToolbar.hiddenDeselectedPlural": {
+  "one": "Снято выделение со скрытых хостов: {{count}}",
+  "few": "Снято выделение со скрытых хостов: {{count}}",
+  "many": "Снято выделение со скрытых хостов: {{count}}",
+  "other": "Снято выделение со скрытых хостов: {{count}}"
+ },
+ "auto.components.settings.SshPaneToolbar.hiddenDeselectedSingular": {
+  "one": "С {{count}} скрытого хоста снято выделение"
+ },
+ "auto.components.settings.SshPaneToolbar.hostCount": {
+  "one": "{{count}} хост",
+  "few": "{{count}} хоста",
+  "many": "{{count}} хостов",
+  "other": "{{count}} хоста"
+ },
+ "auto.components.settings.SshPaneToolbar.removeSelected": {
+  "one": "Удалить: {{count}}",
+  "few": "Удалить: {{count}}",
+  "many": "Удалить: {{count}}",
+  "other": "Удалить: {{count}}"
+ },
+ "auto.components.settings.SshPaneToolbar.restoreRemovedCount": {
+  "one": "Восстановить удалённые хосты ({{count}})…",
+  "few": "Восстановить удалённые хосты ({{count}})…",
+  "many": "Восстановить удалённые хосты ({{count}})…",
+  "other": "Восстановить удалённые хосты ({{count}})…"
+ },
+ "auto.components.settings.SshPaneToolbar.selectAll": {
+  "one": "Выбрать все: {{count}}",
+  "few": "Выбрать все: {{count}}",
+  "many": "Выбрать все: {{count}}",
+  "other": "Выбрать все: {{count}}"
+ },
+ "auto.components.settings.SshPaneToolbar.selectMatching": {
+  "one": "Выбрать все подходящие: {{count}}",
+  "few": "Выбрать все подходящие: {{count}}",
+  "many": "Выбрать все подходящие: {{count}}",
+  "other": "Выбрать все подходящие: {{count}}"
+ },
+ "auto.components.settings.SshPaneToolbar.selected": {
+  "one": "выбрано: {{count}}",
+  "few": "выбрано: {{count}}",
+  "many": "выбрано: {{count}}",
+  "other": "выбрано: {{count}}"
+ },
+ "auto.components.settings.SshTargetDestructiveActions.bulkAction": {
+  "one": "Удалить: {{count}}",
+  "few": "Удалить: {{count}}",
+  "many": "Удалить: {{count}}",
+  "other": "Удалить: {{count}}"
+ },
+ "auto.components.settings.SshTargetDestructiveActions.bulkConnectedPlural": {
+  "one": "Подключён {{count}} хост. Его удалённые терминалы будут закрыты.",
+  "few": "Подключено {{count}} хоста. Их удалённые терминалы будут закрыты.",
+  "many": "Подключено {{count}} хостов. Их удалённые терминалы будут закрыты.",
+  "other": "Подключено {{count}} хоста. Их удалённые терминалы будут закрыты."
+ },
+ "auto.components.settings.SshTargetDestructiveActions.bulkConnectedSingular": {
+  "one": "Подключён {{count}} хост. Его удалённые терминалы будут закрыты."
+ },
+ "auto.components.settings.SshTargetDestructiveActions.bulkTitlePlural": {
+  "one": "Удалить {{count}} SSH-хост?",
+  "few": "Удалить {{count}} SSH-хоста?",
+  "many": "Удалить {{count}} SSH-хостов?",
+  "other": "Удалить {{count}} SSH-хоста?"
+ },
+ "auto.components.settings.SshTargetDestructiveActions.bulkTitleSingular": {
+  "one": "Удалить {{count}} SSH-хост?"
+ },
+ "auto.components.settings.SshTargetList.filteredCount": {
+  "one": "{{count}} из {{total}}",
+  "few": "{{count}} из {{total}}",
+  "many": "{{count}} из {{total}}",
+  "other": "{{count}} из {{total}}"
+ },
+ "auto.components.settings.serverList.updateAll": {
+  "one": "Обновить все ({{count}})",
+  "few": "Обновить все ({{count}})",
+  "many": "Обновить все ({{count}})",
+  "other": "Обновить все ({{count}})"
+ },
+ "auto.components.settings.sshBulkRemove.failedCount": {
+  "one": "Не удалось: {{count}}",
+  "few": "Не удалось: {{count}}",
+  "many": "Не удалось: {{count}}",
+  "other": "Не удалось: {{count}}"
+ },
+ "auto.components.settings.sshBulkRemove.removedCount": {
+  "one": "Удалено: {{count}}",
+  "few": "Удалено: {{count}}",
+  "many": "Удалено: {{count}}",
+  "other": "Удалено: {{count}}"
+ },
+ "auto.components.settings.sshBulkRemove.skippedCount": {
+  "one": "Пропущено: {{count}}",
+  "few": "Пропущено: {{count}}",
+  "many": "Пропущено: {{count}}",
+  "other": "Пропущено: {{count}}"
+ },
+ "auto.components.settings.sshBulkTest.alreadyConnected": {
+  "one": "Уже подключено: {{count}}",
+  "few": "Уже подключено: {{count}}",
+  "many": "Уже подключено: {{count}}",
+  "other": "Уже подключено: {{count}}"
+ },
+ "auto.components.settings.sshBulkTest.failed": {
+  "one": "Не удалось: {{count}}",
+  "few": "Не удалось: {{count}}",
+  "many": "Не удалось: {{count}}",
+  "other": "Не удалось: {{count}}"
+ },
+ "auto.components.settings.sshBulkTest.passed": {
+  "one": "Доступно: {{count}}",
+  "few": "Доступно: {{count}}",
+  "many": "Доступно: {{count}}",
+  "other": "Доступно: {{count}}"
+ },
+ "browser.newTab.runningElsewhere": {
+  "one": "Работает в других рабочих областях: {{count}}",
+  "few": "Работает в других рабочих областях: {{count}}",
+  "many": "Работает в других рабочих областях: {{count}}",
+  "other": "Работает в других рабочих областях: {{count}}"
+ },
+ "fileSearch.filters.active": {
+  "one": "Активно: {{count}}",
+  "few": "Активно: {{count}}",
+  "many": "Активно: {{count}}",
+  "other": "Активно: {{count}}"
+ },
+ "resourceManager.pty.withoutTab": {
+  "one": "Без вкладки: {{count}}",
+  "few": "Без вкладки: {{count}}",
+  "many": "Без вкладки: {{count}}",
+  "other": "Без вкладки: {{count}}"
+ },
+ "sourceControl.discard.deleteUntrackedFilesDescription": {
+  "one": "Будет безвозвратно удалён неотслеживаемый файл: {{count}}. Это действие нельзя отменить.",
+  "few": "Будут безвозвратно удалены неотслеживаемые файлы: {{count}}. Это действие нельзя отменить.",
+  "many": "Будут безвозвратно удалены неотслеживаемые файлы: {{count}}. Это действие нельзя отменить.",
+  "other": "Будут безвозвратно удалены неотслеживаемые файлы: {{count}}. Это действие нельзя отменить."
+ },
+ "sourceControl.discard.unstagedFilesIncludingUntrackedDescription": {
+  "one": "В выбранном файле ({{count}}) изменения вне индекса будут отменены, а неотслеживаемый файл — удалён безвозвратно. Это действие нельзя отменить.",
+  "few": "В выбранных файлах ({{count}}) изменения вне индекса будут отменены, а неотслеживаемые файлы — удалены безвозвратно. Это действие нельзя отменить.",
+  "many": "В выбранных файлах ({{count}}) изменения вне индекса будут отменены, а неотслеживаемые файлы — удалены безвозвратно. Это действие нельзя отменить.",
+  "other": "В выбранных файлах ({{count}}) изменения вне индекса будут отменены, а неотслеживаемые файлы — удалены безвозвратно. Это действие нельзя отменить."
+ },
+ "workspaceSpace.changes.count": {
+  "one": "Изменённый файл ({{count}})",
+  "few": "Изменённые файлы ({{count}})",
+  "many": "Изменённые файлы ({{count}})",
+  "other": "Изменённые файлы ({{count}})"
  }
 }

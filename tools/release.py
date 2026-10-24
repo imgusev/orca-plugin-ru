@@ -54,7 +54,7 @@ PLIST = "/Applications/Orca.app/Contents/Info.plist"
 STATE = os.path.join(HERE, "release-state.json")
 ENTRY = os.path.join(HERE, "CHANGELOG_ENTRY.md")
 
-EXPECT = {"protected": 180, "oversized": 2, "allowed_paths": 34}
+EXPECT = {"protected": 180, "oversized": 0, "allowed_paths": 34}
 ESC = re.compile(r"\\x([0-9a-fA-F]{2})|\\u([0-9a-fA-F]{4})")
 PLURAL_ONLY = re.compile(r"_(few|many)$")
 # файлы, которые вправе быть изменёнными к моменту publish

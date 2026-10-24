@@ -7,7 +7,7 @@
    по тегу той версии, что стоит локально (`ORCA_VERSION`), а не из `main`.
    Ключ, добавленный в `main`, но не попавший в релиз, ломает языковой пакет
    у всех пользователей: валидатор релиза его не знает и отвергает каталог
-   целиком. Полный каталог релиза — 16 311 ключей для 1.4.230.
+   целиком. Полный каталог релиза — 16 914 ключей для 1.4.238.
 
 2. Разбор `app.asar` — страховка: добавляет ключи, которых в `en.json` нет.
    До 1.4.197 так добирались строки поиска по настройкам (~152 ключа):
@@ -24,6 +24,7 @@
 белый список защищённой зоны, общий для всего диапазона поддерживаемых версий
 (нижняя граница — файл COMPAT).
 """
+import glob
 import json
 import os
 import plistlib
@@ -102,17 +103,26 @@ def flatten(node: dict, prefix: str = "") -> dict:
     return out
 
 
+def bundle_texts(asar: str) -> list[str]:
+    """С 1.4.238 renderer лежит не в app.asar, а чанками в app.asar.unpacked/out/renderer."""
+    texts = [open(asar, "rb").read().decode("utf-8", "ignore")]
+    chunks = os.path.join(os.path.dirname(asar), "app.asar.unpacked", "out", "renderer")
+    for path in sorted(glob.glob(os.path.join(chunks, "**", "*.js"), recursive=True)):
+        texts.append(open(path, "rb").read().decode("utf-8", "ignore"))
+    return texts
+
+
 def scan_asar(asar: str) -> dict:
     """Английский текст лежит в бандле как defaultValue: translate("auto.<ключ>", "English")."""
-    raw = open(asar, "rb").read().decode("utf-8", "ignore")
     pairs: dict[str, str] = {}
-    for _, key, _, value in PAIR.findall(raw):
-        # значение — JS-литерал: кавычки и слеши в нём экранированы
-        value = value.replace('\\"', '"').replace("\\\\", "\\").replace("\\n", "\n")
-        # один ключ может встретиться в нескольких бандлах (renderer/web) —
-        # берём самый длинный вариант, он полнее
-        if key not in pairs or len(value) > len(pairs[key]):
-            pairs[key] = value
+    for raw in bundle_texts(asar):
+        for _, key, _, value in PAIR.findall(raw):
+            # значение — JS-литерал: кавычки и слеши в нём экранированы
+            value = value.replace('\\"', '"').replace("\\\\", "\\").replace("\\n", "\n")
+            # один ключ может встретиться в нескольких бандлах (renderer/web) —
+            # берём самый длинный вариант, он полнее
+            if key not in pairs or len(value) > len(pairs[key]):
+                pairs[key] = value
     return pairs
 
 
@@ -125,8 +135,7 @@ def scan_plural_candidates(asar: str) -> set[str]:
     ключ уже приходит с суффиксом (…_one / …_other), форму выбрал JS, и каталог
     на неё не влияет.
     """
-    raw = open(asar, "rb").read().decode("utf-8", "ignore")
-    keys = {key for _, key, _ in COUNT_CALL.findall(raw)}
+    keys = {key for raw in bundle_texts(asar) for _, key, _ in COUNT_CALL.findall(raw)}
     return {k for k in keys if not re.search(r"_(one|few|many|other)$", k)}
 
 
