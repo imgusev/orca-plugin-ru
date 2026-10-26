@@ -1,5 +1,7 @@
 accounts.claude.switchSessions.restartOther
 accounts.claude.switchSessions.restartingOther
+accounts.claude.switchSessions.uncheckedOther
+auto.components.NativeChatResumeOnRestartModal.serverResumeAll
 auto.components.activity.ActivityThreadContextMenu.clearMany
 auto.components.activity.ActivityThreadContextMenu.markManyRead
 auto.components.activity.ActivityThreadContextMenu.markManyUnread
