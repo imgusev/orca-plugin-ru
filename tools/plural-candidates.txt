@@ -1,5 +1,7 @@
+accounts.claude.switchSessions.notMovedOther
 accounts.claude.switchSessions.restartOther
 accounts.claude.switchSessions.restartingOther
+accounts.claude.switchSessions.reviewBodyOther
 accounts.claude.switchSessions.uncheckedOther
 auto.components.NativeChatResumeOnRestartModal.serverResumeAll
 auto.components.activity.ActivityThreadContextMenu.clearMany
@@ -115,6 +117,9 @@ sessionSearch.panel.resultsOne
 sessionSearch.panel.resultsOther
 sessionSearch.panel.sessionsOne
 sessionSearch.panel.sessionsOther
+settings.agents.permissionOverrideMore
+settings.agents.permissionOverridesFollow
+settings.agents.permissionOverridesKept
 sourceControl.discard.deleteUntrackedFilesDescription
 sourceControl.discard.unstagedFilesIncludingUntrackedDescription
 terminal.newerDaemonBanner.reopenTerminal

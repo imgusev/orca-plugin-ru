@@ -597,7 +597,37 @@
   "many": "Возобновить все {{count}} чатов на {{machine}}",
   "other": "Возобновить все {{count}} чата на {{machine}}"
  },
- "workspaceSpace.changes.count": {
+  "accounts.claude.switchSessions.notMovedOther": {
+    "one": "Ещё {{count}} сессия не перенесена.",
+    "few": "Ещё {{count}} сессии не перенесены.",
+    "many": "Ещё {{count}} сессий не перенесены.",
+    "other": "Ещё {{count}} сессии не перенесены."
+  },
+  "accounts.claude.switchSessions.reviewBodyOther": {
+    "one": "Ещё {{count}} сессия Claude не перенесена в {{next}}.",
+    "few": "Ещё {{count}} сессии Claude не перенесены в {{next}}.",
+    "many": "Ещё {{count}} сессий Claude не перенесены в {{next}}.",
+    "other": "Ещё {{count}} сессии Claude не перенесены в {{next}}."
+  },
+  "settings.agents.permissionOverrideMore": {
+    "one": "и ещё {{count}} агент",
+    "few": "и ещё {{count}} агента",
+    "many": "и ещё {{count}} агентов",
+    "other": "и ещё {{count}} агента"
+  },
+  "settings.agents.permissionOverridesFollow": {
+    "one": "{{count}} агент теперь использует режим «{{mode}}»",
+    "few": "{{count}} агента теперь используют режим «{{mode}}»",
+    "many": "{{count}} агентов теперь используют режим «{{mode}}»",
+    "other": "{{count}} агента теперь используют режим «{{mode}}»"
+  },
+  "settings.agents.permissionOverridesKept": {
+    "one": "{{count}} агент по-прежнему использует собственные настройки разрешений:",
+    "few": "{{count}} агента по-прежнему используют собственные настройки разрешений:",
+    "many": "{{count}} агентов по-прежнему используют собственные настройки разрешений:",
+    "other": "{{count}} агента по-прежнему используют собственные настройки разрешений:"
+  },
+  "workspaceSpace.changes.count": {
   "one": "Изменённый файл ({{count}})",
   "few": "Изменённые файлы ({{count}})",
   "many": "Изменённые файлы ({{count}})",
