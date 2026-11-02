@@ -7,7 +7,7 @@
    по тегу той версии, что стоит локально (`ORCA_VERSION`), а не из `main`.
    Ключ, добавленный в `main`, но не попавший в релиз, ломает языковой пакет
    у всех пользователей: валидатор релиза его не знает и отвергает каталог
-   целиком. Полный каталог релиза — 17 187 ключей для 1.4.242.
+   целиком. Полный каталог релиза — 18 555 ключей для 1.4.246.
 
 2. Разбор `app.asar` — страховка: добавляет ключи, которых в `en.json` нет.
    До 1.4.197 так добирались строки поиска по настройкам (~152 ключа):
@@ -34,7 +34,11 @@ import sys
 
 DEFAULT_ASAR = "/Applications/Orca.app/Contents/Resources/app.asar"
 CATALOG_PATH = "src/renderer/src/i18n/locales/en.json"
-CHROME_PATH = "src/shared/plugins/plugin-translatable-chrome.ts"
+# с 1.4.245 файл переехал в languages/, на тегах COMPAT (1.4.169 … 1.4.244) — старый путь
+CHROME_PATHS = (
+    "src/shared/plugins/languages/plugin-translatable-chrome.ts",
+    "src/shared/plugins/plugin-translatable-chrome.ts",
+)
 REPO = "stablyai/orca"
 CHROME_RE = re.compile(r"'(auto\.components\.settings\.[A-Za-z0-9_.]+)'")
 # Кавычки — двойные или обратные: с 1.4.195 бандл минифицирован сильнее, часть
@@ -58,7 +62,7 @@ def orca_version(asar: str) -> str | None:
         return None
 
 
-def fetch_file(path: str, version: str) -> bytes:
+def fetch_file(path: str, version: str, fatal: bool = True) -> bytes | None:
     """Тянет файл по тегу через gh — системный python3 на macOS без корневых сертификатов.
 
     Raw-тип ответа, а не base64 в JSON: с 1.4.230 en.json больше 1 МБ, и contents
@@ -73,7 +77,9 @@ def fetch_file(path: str, version: str) -> bytes:
     except FileNotFoundError:
         sys.exit("нужен gh CLI: brew install gh && gh auth login")
     except subprocess.CalledProcessError as err:
-        sys.exit(f"не удалось получить {path} на теге {ref}:\n{err.stderr.strip()}")
+        if fatal:
+            sys.exit(f"не удалось получить {path} на теге {ref}:\n{err.stderr.strip()}")
+        return None
     return raw
 
 
@@ -83,7 +89,12 @@ def fetch_catalog(version: str) -> dict:
 
 def fetch_allowed_chrome(version: str) -> set[str]:
     """Пути защищённой зоны, которые эта версия разрешает переводить."""
-    return set(CHROME_RE.findall(fetch_file(CHROME_PATH, version).decode("utf-8")))
+    # с 1.4.245 файл переехал в languages/; COMPAT-теги ниже переезда держат старый путь
+    for path in CHROME_PATHS:
+        raw = fetch_file(path, version, fatal=False)
+        if raw is not None:
+            return set(CHROME_RE.findall(raw.decode("utf-8")))
+    sys.exit(f"не удалось получить translatable-chrome ни по одному пути на теге v{version}")
 
 
 def compat_floor() -> str:
@@ -164,15 +175,17 @@ def main() -> None:
     print(f"защищённая зона:      разрешено {len(allowed)} путей "
           f"(пересечение v{floor} … v{version})")
 
-    candidates = scan_plural_candidates(asar)
+    bundle = scan_asar(asar)
+    extra = {k: v for k, v in bundle.items() if k not in catalog}
+    print(f"добавлено из app.asar:    {len(extra)} (нет в каталоге релиза)")
+
+    # считаются после мерджа каталога с добором из бандла: вызов translate может
+    # остаться в мёртвом коде — формы для несуществующего ключа build.py отвергнет
+    candidates = {k for k in scan_plural_candidates(asar) if k in catalog or k in extra}
     cand_path = os.path.join(HERE, "plural-candidates.txt")
     open(cand_path, "w").write("\n".join(sorted(candidates)) + "\n")
     print(f"формы числа:          {len(candidates)} ключей принимают count "
           f"(суффикс подставляет i18next)")
-
-    bundle = scan_asar(asar)
-    extra = {k: v for k, v in bundle.items() if k not in catalog}
-    print(f"добавлено из app.asar:    {len(extra)} (нет в каталоге релиза)")
 
     pairs = {**catalog, **extra}
     out = os.path.join(HERE, "en-all.json")

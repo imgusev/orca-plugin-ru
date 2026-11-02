@@ -1,131 +1,5 @@
 {
  "_comment": "Русские формы числа для ключей, которым translate передаёт count: i18next сам подставляет суффикс по правилам языка и спрашивает _one (1, 21, 31…), _few (2–4), _many (0, 5–20) и _other (дробные). В английском каталоге таких ключей нет, поэтому формы добавляются отсюда. Список ключей, которые вообще принимают count, — tools/plural-candidates.txt. Ключи с CamelCase-суффиксом …One приложение зовёт только при count = 1, поэтому им нужна лишь форма one; парному …Other нужны все четыре, потому что при 21 или 101 приложение зовёт его же. Строки, где склонять нечего (PR, «{{count}} д», «выбрано: {{count}}»), здесь не нужны.",
- "auto.components.skills.count.skillOne": {
-  "one": "{{count}} навык"
- },
- "auto.components.skills.count.skillOther": {
-  "one": "{{count}} навык",
-  "few": "{{count}} навыка",
-  "many": "{{count}} навыков",
-  "other": "{{count}} навыка"
- },
- "auto.components.skills.count.sourceOne": {
-  "one": "{{count}} источник"
- },
- "auto.components.skills.count.sourceOther": {
-  "one": "{{count}} источник",
-  "few": "{{count}} источника",
-  "many": "{{count}} источников",
-  "other": "{{count}} источника"
- },
- "auto.components.skills.count.fileOne": {
-  "one": "{{count}} файл"
- },
- "auto.components.skills.count.fileOther": {
-  "one": "{{count}} файл",
-  "few": "{{count}} файла",
-  "many": "{{count}} файлов",
-  "other": "{{count}} файла"
- },
- "auto.components.skills.count.linkOne": {
-  "one": "{{count}} ссылка"
- },
- "auto.components.skills.count.linkOther": {
-  "one": "{{count}} ссылка",
-  "few": "{{count}} ссылки",
-  "many": "{{count}} ссылок",
-  "other": "{{count}} ссылки"
- },
- "auto.components.skills.count.deleteLinkOne": {
-  "one": "{{count}} ссылка"
- },
- "auto.components.skills.count.deleteLinkOther": {
-  "one": "{{count}} ссылка",
-  "few": "{{count}} ссылки",
-  "many": "{{count}} ссылок",
-  "other": "{{count}} ссылки"
- },
- "auto.components.skills.count.resultOne": {
-  "one": "{{count}} результат"
- },
- "auto.components.skills.count.resultOther": {
-  "one": "{{count}} результат",
-  "few": "{{count}} результата",
-  "many": "{{count}} результатов",
-  "other": "{{count}} результата"
- },
- "auto.components.skills.count.deleteFolderOne": {
-  "one": "{{count}} папка"
- },
- "auto.components.skills.count.deleteFolderOther": {
-  "one": "{{count}} папка",
-  "few": "{{count}} папки",
-  "many": "{{count}} папок",
-  "other": "{{count}} папки"
- },
- "auto.components.skills.count.installOne": {
-  "one": "Установить {{count}} навык"
- },
- "auto.components.skills.count.installOther": {
-  "one": "Установить {{count}} навык",
-  "few": "Установить {{count}} навыка",
-  "many": "Установить {{count}} навыков",
-  "other": "Установить {{count}} навыка"
- },
- "auto.components.skills.count.deleteOne": {
-  "one": "Удалить {{count}} навык"
- },
- "auto.components.skills.count.deleteOther": {
-  "one": "Удалить {{count}} навык",
-  "few": "Удалить {{count}} навыка",
-  "many": "Удалить {{count}} навыков",
-  "other": "Удалить {{count}} навыка"
- },
- "auto.components.skills.count.deletedOne": {
-  "one": "Удалён {{count}} навык"
- },
- "auto.components.skills.count.deletedOther": {
-  "one": "Удалён {{count}} навык",
-  "few": "Удалено {{count}} навыка",
-  "many": "Удалено {{count}} навыков",
-  "other": "Удалено {{count}} навыка"
- },
- "auto.components.skills.count.retryOne": {
-  "one": "Повторить для {{count}} навыка"
- },
- "auto.components.skills.count.retryOther": {
-  "one": "Повторить для {{count}} навыка",
-  "few": "Повторить для {{count}} навыков",
-  "many": "Повторить для {{count}} навыков",
-  "other": "Повторить для {{count}} навыков"
- },
- "auto.components.skills.count.shareOne": {
-  "one": "Поделиться {{count}} навыком"
- },
- "auto.components.skills.count.shareOther": {
-  "one": "Поделиться {{count}} навыком",
-  "few": "Поделиться {{count}} навыками",
-  "many": "Поделиться {{count}} навыками",
-  "other": "Поделиться {{count}} навыками"
- },
- "auto.components.skills.share.scriptOne": {
-  "one": "{{count}} скрипт"
- },
- "auto.components.skills.share.scriptOther": {
-  "one": "{{count}} скрипт",
-  "few": "{{count}} скрипта",
-  "many": "{{count}} скриптов",
-  "other": "{{count}} скрипта"
- },
- "auto.components.skills.share.executableOne": {
-  "one": "{{count}} исполняемый файл"
- },
- "auto.components.skills.share.executableOther": {
-  "one": "{{count}} исполняемый файл",
-  "few": "{{count}} исполняемых файла",
-  "many": "{{count}} исполняемых файлов",
-  "other": "{{count}} исполняемых файла"
- },
  "auto.components.sidebar.PreservedBranchBatchReviewDialog.a0f9863597": {
   "one": "Удалить принудительно {{count}} ветку",
   "few": "Удалить принудительно {{count}} ветки",
@@ -162,53 +36,11 @@
   "many": "Git сохранил {{count}} локальных веток: в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне.",
   "other": "Git сохранил {{count}} локальных веток: в них могут быть невлитые коммиты. У сохранённых веток не остаётся папок рабочих областей, их коммиты остаются в репозитории. Orca может продолжать освобождать место на диске в фоне."
  },
- "auto.components.right.sidebar.useFileDeletion.77fdc36183": {
-  "one": "Удалить {{count}} объект?",
-  "few": "Удалить {{count}} объекта?",
-  "many": "Удалить {{count}} объектов?",
-  "other": "Удалить {{count}} объекта?"
- },
- "auto.components.right.sidebar.useFileDeletion.af1270b90d": {
-  "one": "Удалить безвозвратно {{count}} объект?",
-  "few": "Удалить безвозвратно {{count}} объекта?",
-  "many": "Удалить безвозвратно {{count}} объектов?",
-  "other": "Удалить безвозвратно {{count}} объекта?"
- },
- "auto.components.sidebar.HostRemoveDialog.manyWorkspaces": {
-  "one": "{{count}} рабочая область",
-  "few": "{{count}} рабочие области",
-  "many": "{{count}} рабочих областей",
-  "other": "{{count}} рабочих областей"
- },
  "auto.components.sidebar.HostRemoveDialog.workspacesFailed": {
   "one": "Не удалось убрать {{count}} рабочую область этого хоста. Хост сохранён, чтобы можно было повторить.",
   "few": "Не удалось убрать {{count}} рабочие области этого хоста. Хост сохранён, чтобы можно было повторить.",
   "many": "Не удалось убрать {{count}} рабочих областей этого хоста. Хост сохранён, чтобы можно было повторить.",
   "other": "Не удалось убрать {{count}} рабочих областей этого хоста. Хост сохранён, чтобы можно было повторить."
- },
- "auto.components.right.sidebar.SourceControl.branchFilesChangedVsBaseOther": {
-  "one": "{{count}} файл изменён относительно {{ref}}",
-  "few": "{{count}} файла изменено относительно {{ref}}",
-  "many": "{{count}} файлов изменено относительно {{ref}}",
-  "other": "{{count}} файла изменено относительно {{ref}}"
- },
- "auto.components.right.sidebar.SourceControl.compareBaseCommitsAheadOther": {
-  "one": "{{count}} коммит впереди {{ref}}",
-  "few": "{{count}} коммита впереди {{ref}}",
-  "many": "{{count}} коммитов впереди {{ref}}",
-  "other": "{{count}} коммита впереди {{ref}}"
- },
- "auto.components.right.sidebar.SourceControl.compareBaseCommitsBehindOther": {
-  "one": "{{count}} коммит позади {{ref}}",
-  "few": "{{count}} коммита позади {{ref}}",
-  "many": "{{count}} коммитов позади {{ref}}",
-  "other": "{{count}} коммита позади {{ref}}"
- },
- "auto.components.automations.externalScope.uncheckedHosts": {
-  "one": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хосте.",
-  "few": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах.",
-  "many": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах.",
-  "other": "Не удалось проверить внешние менеджеры автоматизаций на {{count}} хостах."
  },
  "auto.components.editor.HtmlDocPreview.allowDirectories": {
   "one": "Разрешить {{count}} папку",
@@ -222,12 +54,6 @@
   "many": "Не удалось загрузить {{count}} файлов в этом документе.",
   "other": "Не удалось загрузить {{count}} файла в этом документе."
  },
- "auto.components.right.sidebar.AiVaultPanel.transcriptsSkipped": {
-  "one": "пропущена {{count}} расшифровка",
-  "few": "пропущено {{count}} расшифровки",
-  "many": "пропущено {{count}} расшифровок",
-  "other": "пропущено {{count}} расшифровки"
- },
  "auto.components.settings.SourceControlActionRepoOverrideNote.plural": {
   "one": "Глобальное сохранение не затронет {{count}} репозиторий со своими рецептами.",
   "few": "Глобальное сохранение не затронет {{count}} репозитория со своими рецептами.",
@@ -240,59 +66,17 @@
   "many": "Не удалось прикрепить ещё {{count}} изображений.",
   "other": "Не удалось прикрепить ещё {{count}} изображения."
  },
- "components.workspace.cleanup.browse.forceDeleteProjectionMany": {
-  "one": "{{count}} рабочая область сейчас показывает риск — возможно, понадобится принудительное удаление",
-  "few": "{{count}} рабочие области сейчас показывают риск — возможно, понадобится принудительное удаление",
-  "many": "{{count}} рабочих областей сейчас показывают риск — возможно, понадобится принудительное удаление",
-  "other": "{{count}} рабочих областей сейчас показывают риск — возможно, понадобится принудительное удаление"
- },
  "auto.components.editor.CombinedDiffViewer.skippedConflictsExcluded": {
   "one": "{{count}} неразрешённый конфликт исключён из этого диффа.",
   "few": "{{count}} неразрешённых конфликта исключены из этого диффа.",
   "many": "{{count}} неразрешённых конфликтов исключено из этого диффа.",
   "other": "{{count}} неразрешённых конфликта исключены из этого диффа."
  },
- "auto.components.activity.clearCompleted.clearedMany": {
-  "one": "Убран {{count}} завершённый агент",
-  "few": "Убрано {{count}} завершённых агента",
-  "many": "Убрано {{count}} завершённых агентов",
-  "other": "Убрано {{count}} завершённых агента"
- },
- "auto.components.automations.AutomationRunsDashboard.historyUnavailableMany": {
-  "one": "История запусков недоступна для {{count}} автоматизации. В подсчёт входит только доступная история.",
-  "few": "История запусков недоступна для {{count}} автоматизаций. В подсчёт входит только доступная история.",
-  "many": "История запусков недоступна для {{count}} автоматизаций. В подсчёт входит только доступная история.",
-  "other": "История запусков недоступна для {{count}} автоматизаций. В подсчёт входит только доступная история."
- },
- "components.native-chat.turnDiff.many": {
-  "one": "{{count}} изменённый файл",
-  "few": "{{count}} изменённых файла",
-  "many": "{{count}} изменённых файлов",
-  "other": "{{count}} изменённых файла"
- },
  "sessionHistory.settings.showMore": {
   "one": "Показать ещё {{count}}",
   "few": "Показать ещё {{count}}",
   "many": "Показать ещё {{count}}",
   "other": "Показать ещё {{count}}"
- },
- "sessionSearch.panel.resultsOne": {
-  "one": "{{count}} результат"
- },
- "sessionSearch.panel.resultsOther": {
-  "one": "{{count}} результат",
-  "few": "{{count}} результата",
-  "many": "{{count}} результатов",
-  "other": "{{count}} результата"
- },
- "sessionSearch.panel.sessionsOne": {
-  "one": "{{count}} сессия"
- },
- "sessionSearch.panel.sessionsOther": {
-  "one": "{{count}} сессия",
-  "few": "{{count}} сессии",
-  "many": "{{count}} сессий",
-  "other": "{{count}} сессии"
  },
  "auto.components.sidebar.SidebarFeedbackImageAttachments.screenshotsHint": {
   "one": "Можно прикрепить до {{count}} скриншота, всего до {{maxSize}}",
@@ -348,18 +132,6 @@
   "many": "Ревью: {{count}} · Проверки: {{status}}",
   "other": "Ревью: {{count}} · Проверки: {{status}}"
  },
- "workspace.links.count": {
-  "one": "Связано: {{count}}",
-  "few": "Связано: {{count}}",
-  "many": "Связано: {{count}}",
-  "other": "Связано: {{count}}"
- },
- "workspace.links.show": {
-  "one": "Показать связанные ревью и задачи: {{count}}",
-  "few": "Показать связанные ревью и задачи: {{count}}",
-  "many": "Показать связанные ревью и задачи: {{count}}",
-  "other": "Показать связанные ревью и задачи: {{count}}"
- },
  "workspace.links.stackSummary": {
   "one": "Связано: {{count}} — {{references}}",
   "few": "Связано: {{count}} — {{references}}",
@@ -378,59 +150,11 @@
   "many": "На этом хосте всё ещё работают {{count}} терминалов, запущенных старой версией Orca, и сами они не останавливаются. Закройте их в той версии Orca или завершите на хосте, затем переподключитесь.",
   "other": "На этом хосте всё ещё работают {{count}} терминала, запущенные старой версией Orca, и сами они не останавливаются. Закройте их в той версии Orca или завершите на хосте, затем переподключитесь."
  },
- "auto.components.sidebar.RemoveFolderDialog.openTerminalWarningMany": {
-  "one": "В этом проекте закроется {{count}} открытый терминал.",
-  "few": "В этом проекте закроется {{count}} открытых терминала.",
-  "many": "В этом проекте закроется {{count}} открытых терминалов.",
-  "other": "В этом проекте закроется {{count}} открытых терминала."
- },
- "jira.workspace.count": {
-  "one": "С {{key}} связана {{count}} рабочая область.",
-  "few": "С {{key}} связано {{count}} рабочие области.",
-  "many": "С {{key}} связано {{count}} рабочих областей.",
-  "other": "С {{key}} связано {{count}} рабочие области."
- },
- "terminal.newerDaemonBanner.reopened": {
-  "one": "Открыт заново {{count}} терминал",
-  "few": "Открыты заново {{count}} терминала",
-  "many": "Открыто заново {{count}} терминалов",
-  "other": "Открыто заново {{count}} терминала"
- },
- "terminal.newerDaemonBanner.resumed": {
-  "one": "Возобновлена {{count}} сессия агента.",
-  "few": "Возобновлено {{count}} сессии агентов.",
-  "many": "Возобновлено {{count}} сессий агентов.",
-  "other": "Возобновлено {{count}} сессии агентов."
- },
- "terminal.severedDaemonBanner.count": {
-  "one": "{{count}} работающий терминал",
-  "few": "{{count}} работающих терминала",
-  "many": "{{count}} работающих терминалов",
-  "other": "{{count}} работающих терминала"
- },
- "terminal.newerDaemonBanner.reopenTerminal": {
-  "one": "Открыть заново {{count}} терминал",
-  "few": "Открыть заново {{count}} терминала",
-  "many": "Открыть заново {{count}} терминалов",
-  "other": "Открыть заново {{count}} терминала"
- },
- "accounts.claude.switchSessions.restartOther": {
-  "one": "Перезапустить {{count}} сессию",
-  "few": "Перезапустить {{count}} сессии",
-  "many": "Перезапустить {{count}} сессий",
-  "other": "Перезапустить {{count}} сессии"
- },
  "accounts.claude.switchSessions.restartingOther": {
   "one": "Перезапуск {{count}} сессии Claude на {{account}}",
   "few": "Перезапуск {{count}} сессий Claude на {{account}}",
   "many": "Перезапуск {{count}} сессий Claude на {{account}}",
   "other": "Перезапуск {{count}} сессий Claude на {{account}}"
- },
- "components.native-chat.queuedMessages.imageCount": {
-  "one": "{{count}} изображение",
-  "few": "{{count}} изображения",
-  "many": "{{count}} изображений",
-  "other": "{{count}} изображения"
  },
  "auto.components.settings.SshDestructiveActionDialog.moreTargets": {
   "one": "+ ещё {{count}}",
@@ -573,18 +297,6 @@
   "many": "Без вкладки: {{count}}",
   "other": "Без вкладки: {{count}}"
  },
- "sourceControl.discard.deleteUntrackedFilesDescription": {
-  "one": "Будет безвозвратно удалён неотслеживаемый файл: {{count}}. Это действие нельзя отменить.",
-  "few": "Будут безвозвратно удалены неотслеживаемые файлы: {{count}}. Это действие нельзя отменить.",
-  "many": "Будут безвозвратно удалены неотслеживаемые файлы: {{count}}. Это действие нельзя отменить.",
-  "other": "Будут безвозвратно удалены неотслеживаемые файлы: {{count}}. Это действие нельзя отменить."
- },
- "sourceControl.discard.unstagedFilesIncludingUntrackedDescription": {
-  "one": "В выбранном файле ({{count}}) изменения вне индекса будут отменены, а неотслеживаемый файл — удалён безвозвратно. Это действие нельзя отменить.",
-  "few": "В выбранных файлах ({{count}}) изменения вне индекса будут отменены, а неотслеживаемые файлы — удалены безвозвратно. Это действие нельзя отменить.",
-  "many": "В выбранных файлах ({{count}}) изменения вне индекса будут отменены, а неотслеживаемые файлы — удалены безвозвратно. Это действие нельзя отменить.",
-  "other": "В выбранных файлах ({{count}}) изменения вне индекса будут отменены, а неотслеживаемые файлы — удалены безвозвратно. Это действие нельзя отменить."
- },
  "accounts.claude.switchSessions.uncheckedOther": {
   "one": "Не удалось проверить {{count}} терминал на наличие Claude. Работающий в нём Claude останется на {{previous}} до перезапуска.",
   "few": "Не удалось проверить {{count}} терминала на наличие Claude. Работающий в них Claude останется на {{previous}} до перезапуска.",
@@ -597,40 +309,1477 @@
   "many": "Возобновить все {{count}} чатов на {{machine}}",
   "other": "Возобновить все {{count}} чата на {{machine}}"
  },
-  "accounts.claude.switchSessions.notMovedOther": {
-    "one": "Ещё {{count}} сессия не перенесена.",
-    "few": "Ещё {{count}} сессии не перенесены.",
-    "many": "Ещё {{count}} сессий не перенесены.",
-    "other": "Ещё {{count}} сессии не перенесены."
-  },
-  "accounts.claude.switchSessions.reviewBodyOther": {
-    "one": "Ещё {{count}} сессия Claude не перенесена в {{next}}.",
-    "few": "Ещё {{count}} сессии Claude не перенесены в {{next}}.",
-    "many": "Ещё {{count}} сессий Claude не перенесены в {{next}}.",
-    "other": "Ещё {{count}} сессии Claude не перенесены в {{next}}."
-  },
-  "settings.agents.permissionOverrideMore": {
-    "one": "и ещё {{count}} агент",
-    "few": "и ещё {{count}} агента",
-    "many": "и ещё {{count}} агентов",
-    "other": "и ещё {{count}} агента"
-  },
-  "settings.agents.permissionOverridesFollow": {
-    "one": "{{count}} агент теперь использует режим «{{mode}}»",
-    "few": "{{count}} агента теперь используют режим «{{mode}}»",
-    "many": "{{count}} агентов теперь используют режим «{{mode}}»",
-    "other": "{{count}} агента теперь используют режим «{{mode}}»"
-  },
-  "settings.agents.permissionOverridesKept": {
-    "one": "{{count}} агент по-прежнему использует собственные настройки разрешений:",
-    "few": "{{count}} агента по-прежнему используют собственные настройки разрешений:",
-    "many": "{{count}} агентов по-прежнему используют собственные настройки разрешений:",
-    "other": "{{count}} агента по-прежнему используют собственные настройки разрешений:"
-  },
-  "workspaceSpace.changes.count": {
+ "accounts.claude.switchSessions.notMovedOther": {
+  "one": "Ещё {{count}} сессия не перенесена.",
+  "few": "Ещё {{count}} сессии не перенесены.",
+  "many": "Ещё {{count}} сессий не перенесены.",
+  "other": "Ещё {{count}} сессии не перенесены."
+ },
+ "settings.agents.permissionOverrideMore": {
+  "one": "и ещё {{count}} агент",
+  "few": "и ещё {{count}} агента",
+  "many": "и ещё {{count}} агентов",
+  "other": "и ещё {{count}} агента"
+ },
+ "workspaceSpace.changes.count": {
   "one": "Изменённый файл ({{count}})",
   "few": "Изменённые файлы ({{count}})",
   "many": "Изменённые файлы ({{count}})",
   "other": "Изменённые файлы ({{count}})"
+ },
+ "auto.components.GitHubItemDialog.reactionCount": {
+  "one": "Реакций {{reaction}}: {{count}}",
+  "few": "Реакций {{reaction}}: {{count}}",
+  "many": "Реакций {{reaction}}: {{count}}",
+  "other": "Реакций {{reaction}}: {{count}}"
+ },
+ "auto.components.GitLabItemDialog.approvalsRemaining": {
+  "one": "Осталось согласований: {{count}}",
+  "few": "Осталось согласований: {{count}}",
+  "many": "Осталось согласований: {{count}}",
+  "other": "Осталось согласований: {{count}}"
+ },
+ "auto.components.GitLabItemDialog.approvalsRemainingOfRequired": {
+  "one": "Осталось согласований из {{required}} требуемых: {{count}}",
+  "few": "Осталось согласований из {{required}} требуемых: {{count}}",
+  "many": "Осталось согласований из {{required}} требуемых: {{count}}",
+  "other": "Осталось согласований из {{required}} требуемых: {{count}}"
+ },
+ "auto.components.NativeChatResumeOnRestartModal.activityMonitorCount": {
+  "one": "Мониторинг фоновых задач: {{count}}",
+  "few": "Мониторинг фоновых задач: {{count}}",
+  "many": "Мониторинг фоновых задач: {{count}}",
+  "other": "Мониторинг фоновых задач: {{count}}"
+ },
+ "auto.components.NativeChatResumeOnRestartModal.activitySubagentCount": {
+  "one": "Субагентов запущено: {{count}}",
+  "few": "Субагентов запущено: {{count}}",
+  "many": "Субагентов запущено: {{count}}",
+  "other": "Субагентов запущено: {{count}}"
+ },
+ "auto.components.NativeChatResumeOnRestartModal.continuedCount": {
+  "one": "Возобновлено чатов: {{count}}",
+  "few": "Возобновлено чатов: {{count}}",
+  "many": "Возобновлено чатов: {{count}}",
+  "other": "Возобновлено чатов: {{count}}"
+ },
+ "auto.components.NativeChatResumeOnRestartModal.notConfirmedCount": {
+  "one": "Не удалось подтвердить возобновление чатов: {{count}}",
+  "few": "Не удалось подтвердить возобновление чатов: {{count}}",
+  "many": "Не удалось подтвердить возобновление чатов: {{count}}",
+  "other": "Не удалось подтвердить возобновление чатов: {{count}}"
+ },
+ "auto.components.NativeChatResumeOnRestartModal.notConfirmedOtherCount": {
+  "one": "Не удалось подтвердить возобновление ещё {{count}} чатов",
+  "few": "Не удалось подтвердить возобновление ещё {{count}} чатов",
+  "many": "Не удалось подтвердить возобновление ещё {{count}} чатов",
+  "other": "Не удалось подтвердить возобновление ещё {{count}} чатов"
+ },
+ "auto.components.NativeChatResumeOnRestartModal.notContinuedCount": {
+  "one": "Чатов возобновить не удалось: {{count}}",
+  "few": "Чатов возобновить не удалось: {{count}}",
+  "many": "Чатов возобновить не удалось: {{count}}",
+  "other": "Чатов возобновить не удалось: {{count}}"
+ },
+ "auto.components.NativeChatResumeOnRestartModal.resumeChats": {
+  "one": "Возобновить чатов: {{count}}",
+  "few": "Возобновить чатов: {{count}}",
+  "many": "Возобновить чатов: {{count}}",
+  "other": "Возобновить чатов: {{count}}"
+ },
+ "auto.components.NativeChatResumeOnRestartModal.serverResumeHereCount": {
+  "one": "Возобновить чаты, запущенные здесь: {{count}}",
+  "few": "Возобновить чаты, запущенные здесь: {{count}}",
+  "many": "Возобновить чаты, запущенные здесь: {{count}}",
+  "other": "Возобновить чаты, запущенные здесь: {{count}}"
+ },
+ "auto.components.NativeChatResumeRunPanel.resumingCount": {
+  "one": "Возобновляется чатов: {{count}}",
+  "few": "Возобновляется чатов: {{count}}",
+  "many": "Возобновляется чатов: {{count}}",
+  "other": "Возобновляется чатов: {{count}}"
+ },
+ "auto.components.QuickOpen.filesFound": {
+  "one": "Найдено файлов: {{count}}",
+  "few": "Найдено файлов: {{count}}",
+  "many": "Найдено файлов: {{count}}",
+  "other": "Найдено файлов: {{count}}"
+ },
+ "auto.components.TaskPage.changedFileCount": {
+  "one": "файлов: {{count}}",
+  "few": "файлов: {{count}}",
+  "many": "файлов: {{count}}",
+  "other": "файлов: {{count}}"
+ },
+ "auto.components.TaskPage.labelCount": {
+  "one": "Метки: {{count}}",
+  "few": "Метки: {{count}}",
+  "many": "Метки: {{count}}",
+  "other": "Метки: {{count}}"
+ },
+ "auto.components.TaskPage.memberCount": {
+  "one": "Участников: {{count}}",
+  "few": "Участников: {{count}}",
+  "many": "Участников: {{count}}",
+  "other": "Участников: {{count}}"
+ },
+ "auto.components.TaskPage.shownCount": {
+  "one": "Показано: {{count}}",
+  "few": "Показано: {{count}}",
+  "many": "Показано: {{count}}",
+  "other": "Показано: {{count}}"
+ },
+ "auto.components.WorktreeJumpPalette.itemsAvailable": {
+  "one": "Доступно элементов: {{count}}.",
+  "few": "Доступно элементов: {{count}}.",
+  "many": "Доступно элементов: {{count}}.",
+  "other": "Доступно элементов: {{count}}."
+ },
+ "auto.components.WorktreeJumpPalette.resultsFound": {
+  "one": "Найдено результатов: {{count}}.",
+  "few": "Найдено результатов: {{count}}.",
+  "many": "Найдено результатов: {{count}}.",
+  "other": "Найдено результатов: {{count}}."
+ },
+ "auto.components.activity.ActivityPrototypePage.activityOptionsFilterCount": {
+  "one": "Параметры активности (фильтров: {{count}})",
+  "few": "Параметры активности (фильтров: {{count}})",
+  "many": "Параметры активности (фильтров: {{count}})",
+  "other": "Параметры активности (фильтров: {{count}})"
+ },
+ "auto.components.activity.ActivityPrototypePage.threadListOptionsActiveFilters": {
+  "one": "Параметры списка тредов (активных фильтров: {{count}})",
+  "few": "Параметры списка тредов (активных фильтров: {{count}})",
+  "many": "Параметры списка тредов (активных фильтров: {{count}})",
+  "other": "Параметры списка тредов (активных фильтров: {{count}})"
+ },
+ "auto.components.activity.ActivityTitlebarControls.unreadCount": {
+  "one": "Непрочитанных: {{count}}",
+  "few": "Непрочитанных: {{count}}",
+  "many": "Непрочитанных: {{count}}",
+  "other": "Непрочитанных: {{count}}"
+ },
+ "auto.components.activity.clearCompleted.cleared": {
+  "one": "Убрано завершённых агентов: {{count}}",
+  "few": "Убрано завершённых агентов: {{count}}",
+  "many": "Убрано завершённых агентов: {{count}}",
+  "other": "Убрано завершённых агентов: {{count}}"
+ },
+ "auto.components.automations.AutomationDetail.graceHours": {
+  "one": "Часов: {{count}}",
+  "few": "Часов: {{count}}",
+  "many": "Часов: {{count}}",
+  "other": "Часов: {{count}}"
+ },
+ "auto.components.automations.AutomationDetail.graceMinutes": {
+  "one": "Минут: {{count}}",
+  "few": "Минут: {{count}}",
+  "many": "Минут: {{count}}",
+  "other": "Минут: {{count}}"
+ },
+ "auto.components.automations.AutomationsPage.runUsageSummaryTokens": {
+  "one": "≈{{cost}} · {{tokens}} токенов",
+  "few": "≈{{cost}} · {{tokens}} токенов",
+  "many": "≈{{cost}} · {{tokens}} токенов",
+  "other": "≈{{cost}} · {{tokens}} токенов"
+ },
+ "auto.components.automations.ExternalAutomationManagers.automationCount": {
+  "one": "Автоматизаций: {{count}}",
+  "few": "Автоматизаций: {{count}}",
+  "many": "Автоматизаций: {{count}}",
+  "other": "Автоматизаций: {{count}}"
+ },
+ "auto.components.automations.externalScope.uncheckedHostCount": {
+  "one": "Не удалось проверить внешние менеджеры автоматизаций на хостах: {{count}}.",
+  "few": "Не удалось проверить внешние менеджеры автоматизаций на хостах: {{count}}.",
+  "many": "Не удалось проверить внешние менеджеры автоматизаций на хостах: {{count}}.",
+  "other": "Не удалось проверить внешние менеджеры автоматизаций на хостах: {{count}}."
+ },
+ "auto.components.automations.runHistory.occurrencesCount": {
+  "one": "Раз: {{count}}",
+  "few": "Раз: {{count}}",
+  "many": "Раз: {{count}}",
+  "other": "Раз: {{count}}"
+ },
+ "auto.components.automations.runHistory.occurrencesWithLatestCount": {
+  "one": "Раз: {{count}}, последний — {{date}}",
+  "few": "Раз: {{count}}, последний — {{date}}",
+  "many": "Раз: {{count}}, последний — {{date}}",
+  "other": "Раз: {{count}}, последний — {{date}}"
+ },
+ "auto.components.automations.runHistory.runCountSummary": {
+  "one": "Запусков: {{count}} · завершено {{completed}}",
+  "few": "Запусков: {{count}} · завершено {{completed}}",
+  "many": "Запусков: {{count}} · завершено {{completed}}",
+  "other": "Запусков: {{count}} · завершено {{completed}}"
+ },
+ "auto.components.automations.usage.tokensAndCost": {
+  "one": "Токенов: {{tokens}} · {{cost}}",
+  "few": "Токенов: {{tokens}} · {{cost}}",
+  "many": "Токенов: {{tokens}} · {{cost}}",
+  "other": "Токенов: {{tokens}} · {{cost}}"
+ },
+ "auto.components.dashboard.DashboardAgentChildDisclosure.hideChildAgents": {
+  "one": "Скрыть дочерних агентов: {{count}}",
+  "few": "Скрыть дочерних агентов: {{count}}",
+  "many": "Скрыть дочерних агентов: {{count}}",
+  "other": "Скрыть дочерних агентов: {{count}}"
+ },
+ "auto.components.dashboard.DashboardAgentChildDisclosure.showChildAgents": {
+  "one": "Показать дочерних агентов: {{count}}",
+  "few": "Показать дочерних агентов: {{count}}",
+  "many": "Показать дочерних агентов: {{count}}",
+  "other": "Показать дочерних агентов: {{count}}"
+ },
+ "auto.components.editor.CheckRunJobs.stepsPending": {
+  "one": "Ожидает: {{count}}",
+  "few": "Ожидает: {{count}}",
+  "many": "Ожидает: {{count}}",
+  "other": "Ожидает: {{count}}"
+ },
+ "auto.components.editor.CheckRunJobs.stepsSkipped": {
+  "one": "Пропущено: {{count}}",
+  "few": "Пропущено: {{count}}",
+  "many": "Пропущено: {{count}}",
+  "other": "Пропущено: {{count}}"
+ },
+ "auto.components.editor.CheckRunJobs.stepsSucceeded": {
+  "one": "Успешно: {{count}}",
+  "few": "Успешно: {{count}}",
+  "many": "Успешно: {{count}}",
+  "other": "Успешно: {{count}}"
+ },
+ "auto.components.editor.CombinedDiffViewer.changedFiles": {
+  "one": "Изменённых файлов: {{count}}",
+  "few": "Изменённых файлов: {{count}}",
+  "many": "Изменённых файлов: {{count}}",
+  "other": "Изменённых файлов: {{count}}"
+ },
+ "auto.components.editor.CombinedDiffViewer.changedFilesIn": {
+  "one": "Изменилось файлов в {{compareRef}}: {{count}}",
+  "few": "Изменилось файлов в {{compareRef}}: {{count}}",
+  "many": "Изменилось файлов в {{compareRef}}: {{count}}",
+  "other": "Изменилось файлов в {{compareRef}}: {{count}}"
+ },
+ "auto.components.editor.CombinedDiffViewer.changedFilesVs": {
+  "one": "Изменилось файлов относительно {{baseRef}}: {{count}}",
+  "few": "Изменилось файлов относительно {{baseRef}}: {{count}}",
+  "many": "Изменилось файлов относительно {{baseRef}}: {{count}}",
+  "other": "Изменилось файлов относительно {{baseRef}}: {{count}}"
+ },
+ "auto.components.editor.CombinedDiffViewer.clearNotesConfirm": {
+  "one": "Удалить заметки из этого worktree ({{count}})?",
+  "few": "Удалить заметки из этого worktree ({{count}})?",
+  "many": "Удалить заметки из этого worktree ({{count}})?",
+  "other": "Удалить заметки из этого worktree ({{count}})?"
+ },
+ "auto.components.editor.CombinedDiffViewer.moreNotesInSourceControl": {
+  "one": "Ещё заметок в контроле версий: {{count}}",
+  "few": "Ещё заметок в контроле версий: {{count}}",
+  "many": "Ещё заметок в контроле версий: {{count}}",
+  "other": "Ещё заметок в контроле версий: {{count}}"
+ },
+ "auto.components.editor.CombinedDiffViewer.showAiNotes": {
+  "one": "Показать заметок ИИ: {{count}}",
+  "few": "Показать заметок ИИ: {{count}}",
+  "many": "Показать заметок ИИ: {{count}}",
+  "other": "Показать заметок ИИ: {{count}}"
+ },
+ "auto.components.editor.ConflictComponents.unresolvedConflicts": {
+  "one": "Неразрешённых конфликтов: {{count}}",
+  "few": "Неразрешённых конфликтов: {{count}}",
+  "many": "Неразрешённых конфликтов: {{count}}",
+  "other": "Неразрешённых конфликтов: {{count}}"
+ },
+ "auto.components.editor.CsvViewer.columnCount": {
+  "one": "Столбцов: {{formatted}}",
+  "few": "Столбцов: {{formatted}}",
+  "many": "Столбцов: {{formatted}}",
+  "other": "Столбцов: {{formatted}}"
+ },
+ "auto.components.editor.CsvViewer.rowCount": {
+  "one": "Строк: {{formatted}}",
+  "few": "Строк: {{formatted}}",
+  "many": "Строк: {{formatted}}",
+  "other": "Строк: {{formatted}}"
+ },
+ "auto.components.editor.IpynbViewer.cellCount": {
+  "one": "Ячеек: {{count}}",
+  "few": "Ячеек: {{count}}",
+  "many": "Ячеек: {{count}}",
+  "other": "Ячеек: {{count}}"
+ },
+ "auto.components.github.PRFilterPickers.clearSelected": {
+  "one": "Очистить ({{count}})",
+  "few": "Очистить ({{count}})",
+  "many": "Очистить ({{count}})",
+  "other": "Очистить ({{count}})"
+ },
+ "auto.components.github.PRFilterSections.labelCount": {
+  "one": "Метки: {{count}}",
+  "few": "Метки: {{count}}",
+  "many": "Метки: {{count}}",
+  "other": "Метки: {{count}}"
+ },
+ "auto.components.github.project.ProjectCell.linkedPullRequestsOverflow": {
+  "one": "+ ещё {{count}}",
+  "few": "+ ещё {{count}}",
+  "many": "+ ещё {{count}}",
+  "other": "+ ещё {{count}}"
+ },
+ "auto.components.hostPicker.moreHosts": {
+  "one": "Ещё хостов: {{count}}. Найдите нужный по имени.",
+  "few": "Ещё хостов: {{count}}. Найдите нужный по имени.",
+  "many": "Ещё хостов: {{count}}. Найдите нужный по имени.",
+  "other": "Ещё хостов: {{count}}. Найдите нужный по имени."
+ },
+ "auto.components.linear-issue-attribute-filter-sections.countSelected": {
+  "one": "выбрано: {{count}}",
+  "few": "выбрано: {{count}}",
+  "many": "выбрано: {{count}}",
+  "other": "выбрано: {{count}}"
+ },
+ "auto.components.linear.project.view.surfaces.scopedIssueCount": {
+  "one": "Задач в области: {{count}}",
+  "few": "Задач в области: {{count}}",
+  "many": "Задач в области: {{count}}",
+  "other": "Задач в области: {{count}}"
+ },
+ "auto.components.linear.scope.selector.teamCount": {
+  "one": "Команд: {{count}}",
+  "few": "Команд: {{count}}",
+  "many": "Команд: {{count}}",
+  "other": "Команд: {{count}}"
+ },
+ "auto.components.onboarding.AgentStep.showMoreAgents": {
+  "one": "Показать ещё агентов: {{count}} →",
+  "few": "Показать ещё агентов: {{count}} →",
+  "many": "Показать ещё агентов: {{count}} →",
+  "other": "Показать ещё агентов: {{count}} →"
+ },
+ "auto.components.onboarding.IntegrationsStep.linearWorkspacesLinkedPlural": {
+  "one": "Связано рабочих областей: {{count}}. Добавить ещё одну или заменить ограниченный ключ можно в любой момент.",
+  "few": "Связано рабочих областей: {{count}}. Добавить ещё одну или заменить ограниченный ключ можно в любой момент.",
+  "many": "Связано рабочих областей: {{count}}. Добавить ещё одну или заменить ограниченный ключ можно в любой момент.",
+  "other": "Связано рабочих областей: {{count}}. Добавить ещё одну или заменить ограниченный ключ можно в любой момент."
+ },
+ "auto.components.prCheckCounts.checksFailing": {
+  "one": "Падает проверок: {{count}}",
+  "few": "Падает проверок: {{count}}",
+  "many": "Падает проверок: {{count}}",
+  "other": "Падает проверок: {{count}}"
+ },
+ "auto.components.prCheckCounts.checksNeedAction": {
+  "one": "Требуют действия проверок: {{count}}",
+  "few": "Требуют действия проверок: {{count}}",
+  "many": "Требуют действия проверок: {{count}}",
+  "other": "Требуют действия проверок: {{count}}"
+ },
+ "auto.components.prCheckCounts.checksPassingOfTotal": {
+  "one": "Проходит проверок: {{passing}} из {{count}}",
+  "few": "Проходит проверок: {{passing}} из {{count}}",
+  "many": "Проходит проверок: {{passing}} из {{count}}",
+  "other": "Проходит проверок: {{passing}} из {{count}}"
+ },
+ "auto.components.prCheckCounts.checksPending": {
+  "one": "Ожидает проверок: {{count}}",
+  "few": "Ожидает проверок: {{count}}",
+  "many": "Ожидает проверок: {{count}}",
+  "other": "Ожидает проверок: {{count}}"
+ },
+ "auto.components.repo.NestedRepoScanLimitNotice.folderLevels": {
+  "one": "Уровней папок: {{count}}",
+  "few": "Уровней папок: {{count}}",
+  "many": "Уровней папок: {{count}}",
+  "other": "Уровней папок: {{count}}"
+ },
+ "auto.components.repo.NestedRepoScanLimitNotice.milliseconds": {
+  "one": "{{count}} мс",
+  "few": "{{count}} мс",
+  "many": "{{count}} мс",
+  "other": "{{count}} мс"
+ },
+ "auto.components.repo.NestedRepoScanLimitNotice.repositories": {
+  "one": "Репозиториев: {{count}}",
+  "few": "Репозиториев: {{count}}",
+  "many": "Репозиториев: {{count}}",
+  "other": "Репозиториев: {{count}}"
+ },
+ "auto.components.repo.NestedRepoScanLimitNotice.seconds": {
+  "one": "Секунд: {{count}}",
+  "few": "Секунд: {{count}}",
+  "many": "Секунд: {{count}}",
+  "other": "Секунд: {{count}}"
+ },
+ "auto.components.right.sidebar.AiVaultPanel.transcriptsSkippedCount": {
+  "one": "Пропущено транскриптов: {{count}}",
+  "few": "Пропущено транскриптов: {{count}}",
+  "many": "Пропущено транскриптов: {{count}}",
+  "other": "Пропущено транскриптов: {{count}}"
+ },
+ "auto.components.right.sidebar.AiVaultSessionDetails.queuedMessageCount": {
+  "one": "Сообщений в очереди: {{count}}",
+  "few": "Сообщений в очереди: {{count}}",
+  "many": "Сообщений в очереди: {{count}}",
+  "other": "Сообщений в очереди: {{count}}"
+ },
+ "auto.components.right.sidebar.AiVaultSessionDetails.recoverableEmptyDetailCount": {
+  "one": "У этой сессии нет сохранённого диалога, но уцелело восстановимых элементов: {{count}}.",
+  "few": "У этой сессии нет сохранённого диалога, но уцелело восстановимых элементов: {{count}}.",
+  "many": "У этой сессии нет сохранённого диалога, но уцелело восстановимых элементов: {{count}}.",
+  "other": "У этой сессии нет сохранённого диалога, но уцелело восстановимых элементов: {{count}}."
+ },
+ "auto.components.right.sidebar.AiVaultSessionDetails.subagentTranscriptCount": {
+  "one": "Транскриптов субагентов: {{count}}",
+  "few": "Транскриптов субагентов: {{count}}",
+  "many": "Транскриптов субагентов: {{count}}",
+  "other": "Транскриптов субагентов: {{count}}"
+ },
+ "auto.components.right.sidebar.BulkActionBar.selectedCount": {
+  "one": "выбрано: {{count}}",
+  "few": "выбрано: {{count}}",
+  "many": "выбрано: {{count}}",
+  "other": "выбрано: {{count}}"
+ },
+ "auto.components.right.sidebar.BulkActionBar.stageCount": {
+  "one": "В индекс ({{count}})",
+  "few": "В индекс ({{count}})",
+  "many": "В индекс ({{count}})",
+  "other": "В индекс ({{count}})"
+ },
+ "auto.components.right.sidebar.BulkActionBar.unstageCount": {
+  "one": "Из индекса ({{count}})",
+  "few": "Из индекса ({{count}})",
+  "many": "Из индекса ({{count}})",
+  "other": "Из индекса ({{count}})"
+ },
+ "auto.components.right.sidebar.Search.fileCount": {
+  "one": "файлов: {{count}}",
+  "few": "файлов: {{count}}",
+  "many": "файлов: {{count}}",
+  "other": "файлов: {{count}}"
+ },
+ "auto.components.right.sidebar.Search.resultCount": {
+  "one": "результатов: {{count}}",
+  "few": "результатов: {{count}}",
+  "many": "результатов: {{count}}",
+  "other": "результатов: {{count}}"
+ },
+ "auto.components.right.sidebar.SourceControl.branchFilesChangedVsBase": {
+  "one": "изменено файлов относительно {{ref}}: {{count}}",
+  "few": "изменено файлов относительно {{ref}}: {{count}}",
+  "many": "изменено файлов относительно {{ref}}: {{count}}",
+  "other": "изменено файлов относительно {{ref}}: {{count}}"
+ },
+ "auto.components.right.sidebar.SourceControl.clearNotesFromFile": {
+  "one": "Удалить заметки из {{path}} ({{count}})?",
+  "few": "Удалить заметки из {{path}} ({{count}})?",
+  "many": "Удалить заметки из {{path}} ({{count}})?",
+  "other": "Удалить заметки из {{path}} ({{count}})?"
+ },
+ "auto.components.right.sidebar.SourceControl.clearNotesFromWorkspace": {
+  "one": "Удалить заметки из этой рабочей области ({{count}})?",
+  "few": "Удалить заметки из этой рабочей области ({{count}})?",
+  "many": "Удалить заметки из этой рабочей области ({{count}})?",
+  "other": "Удалить заметки из этой рабочей области ({{count}})?"
+ },
+ "auto.components.right.sidebar.SourceControl.commitsAheadShort": {
+  "one": "Впереди: {{count}}",
+  "few": "Впереди: {{count}}",
+  "many": "Впереди: {{count}}",
+  "other": "Впереди: {{count}}"
+ },
+ "auto.components.right.sidebar.SourceControl.compareBaseCommitsAhead": {
+  "one": "коммитов впереди {{ref}}: {{count}}",
+  "few": "коммитов впереди {{ref}}: {{count}}",
+  "many": "коммитов впереди {{ref}}: {{count}}",
+  "other": "коммитов впереди {{ref}}: {{count}}"
+ },
+ "auto.components.right.sidebar.SourceControl.compareBaseCommitsBehind": {
+  "one": "коммитов позади {{ref}}: {{count}}",
+  "few": "коммитов позади {{ref}}: {{count}}",
+  "many": "коммитов позади {{ref}}: {{count}}",
+  "other": "коммитов позади {{ref}}: {{count}}"
+ },
+ "auto.components.right.sidebar.SourceControl.conflictCount": {
+  "one": "Конфликтов: {{count}}",
+  "few": "Конфликтов: {{count}}",
+  "many": "Конфликтов: {{count}}",
+  "other": "Конфликтов: {{count}}"
+ },
+ "auto.components.right.sidebar.SourceControl.discardFailed": {
+  "one": "Не удалось отбросить изменения в файлах: {{count}}",
+  "few": "Не удалось отбросить изменения в файлах: {{count}}",
+  "many": "Не удалось отбросить изменения в файлах: {{count}}",
+  "other": "Не удалось отбросить изменения в файлах: {{count}}"
+ },
+ "auto.components.right.sidebar.SourceControl.noteCount": {
+  "one": "Заметок: {{count}}",
+  "few": "Заметок: {{count}}",
+  "many": "Заметок: {{count}}",
+  "other": "Заметок: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.commitsBehind": {
+  "one": "Позади коммитов: {{count}}",
+  "few": "Позади коммитов: {{count}}",
+  "many": "Позади коммитов: {{count}}",
+  "other": "Позади коммитов: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.failingChecks": {
+  "one": "Провалено проверок: {{count}}",
+  "few": "Провалено проверок: {{count}}",
+  "many": "Провалено проверок: {{count}}",
+  "other": "Провалено проверок: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.failingCount": {
+  "one": "Провалено: {{count}}",
+  "few": "Провалено: {{count}}",
+  "many": "Провалено: {{count}}",
+  "other": "Провалено: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.passingCount": {
+  "one": "Пройдено: {{count}}",
+  "few": "Пройдено: {{count}}",
+  "many": "Пройдено: {{count}}",
+  "other": "Пройдено: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.pendingChecks": {
+  "one": "Ожидает проверок: {{count}}",
+  "few": "Ожидает проверок: {{count}}",
+  "many": "Ожидает проверок: {{count}}",
+  "other": "Ожидает проверок: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.pendingCount": {
+  "one": "Ожидает: {{count}}",
+  "few": "Ожидает: {{count}}",
+  "many": "Ожидает: {{count}}",
+  "other": "Ожидает: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.sendQueuedCommentsToAi": {
+  "one": "Отправить агенту комментариев из очереди: {{count}}",
+  "few": "Отправить агенту комментариев из очереди: {{count}}",
+  "many": "Отправить агенту комментариев из очереди: {{count}}",
+  "other": "Отправить агенту комментариев из очереди: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.unresolvedChecks": {
+  "one": "Не завершено проверок: {{count}}",
+  "few": "Не завершено проверок: {{count}}",
+  "many": "Не завершено проверок: {{count}}",
+  "other": "Не завершено проверок: {{count}}"
+ },
+ "auto.components.right.sidebar.checks.panel.content.unresolvedCount": {
+  "one": "Не завершено: {{count}}",
+  "few": "Не завершено: {{count}}",
+  "many": "Не завершено: {{count}}",
+  "other": "Не завершено: {{count}}"
+ },
+ "auto.components.right.sidebar.fileExplorerMultiDrag.moreItems": {
+  "one": "+ ещё {{count}}",
+  "few": "+ ещё {{count}}",
+  "many": "+ ещё {{count}}",
+  "other": "+ ещё {{count}}"
+ },
+ "auto.components.right.sidebar.github.pr.stack.confirmation.mergeConfirm": {
+  "one": "Влить PR: {{count}}",
+  "few": "Влить PR: {{count}}",
+  "many": "Влить PR: {{count}}",
+  "other": "Влить PR: {{count}}"
+ },
+ "auto.components.right.sidebar.github.pr.stack.confirmation.queueConfirm": {
+  "one": "Поставить в очередь PR: {{count}}",
+  "few": "Поставить в очередь PR: {{count}}",
+  "many": "Поставить в очередь PR: {{count}}",
+  "other": "Поставить в очередь PR: {{count}}"
+ },
+ "auto.components.right.sidebar.source.control.compare.summary.commitsAhead": {
+  "one": "коммитов впереди {{ref}}: {{count}}",
+  "few": "коммитов впереди {{ref}}: {{count}}",
+  "many": "коммитов впереди {{ref}}: {{count}}",
+  "other": "коммитов впереди {{ref}}: {{count}}"
+ },
+ "auto.components.right.sidebar.source.control.discard.dialog.fileCount": {
+  "one": "файлов: {{count}}",
+  "few": "файлов: {{count}}",
+  "many": "файлов: {{count}}",
+  "other": "файлов: {{count}}"
+ },
+ "auto.components.right.sidebar.source.control.dropdown.items.fastForwardCount": {
+  "one": "Fast-forward на коммитов: {{count}}",
+  "few": "Fast-forward на коммитов: {{count}}",
+  "many": "Fast-forward на коммитов: {{count}}",
+  "other": "Fast-forward на коммитов: {{count}}"
+ },
+ "auto.components.right.sidebar.source.control.dropdown.items.pullCount": {
+  "one": "Получить коммитов: {{count}}",
+  "few": "Получить коммитов: {{count}}",
+  "many": "Получить коммитов: {{count}}",
+  "other": "Получить коммитов: {{count}}"
+ },
+ "auto.components.right.sidebar.source.control.dropdown.items.pushCount": {
+  "one": "Отправить коммитов: {{count}}",
+  "few": "Отправить коммитов: {{count}}",
+  "many": "Отправить коммитов: {{count}}",
+  "other": "Отправить коммитов: {{count}}"
+ },
+ "auto.components.right.sidebar.source.control.dropdown.items.titleForcePushOlderCopiesCount": {
+  "one": "В удалённом репозитории только старые копии локальных коммитов. Сделайте принудительный push коммитов ветки с lease, чтобы обновить {{upstreamName}}: {{count}}.",
+  "few": "В удалённом репозитории только старые копии локальных коммитов. Сделайте принудительный push коммитов ветки с lease, чтобы обновить {{upstreamName}}: {{count}}.",
+  "many": "В удалённом репозитории только старые копии локальных коммитов. Сделайте принудительный push коммитов ветки с lease, чтобы обновить {{upstreamName}}: {{count}}.",
+  "other": "В удалённом репозитории только старые копии локальных коммитов. Сделайте принудительный push коммитов ветки с lease, чтобы обновить {{upstreamName}}: {{count}}."
+ },
+ "auto.components.right.sidebar.source.control.dropdown.items.titleManualForcePush": {
+  "one": "Принудительно отправьте локальные коммиты с lease, чтобы обновить {{upstreamName}}: {{count}}.",
+  "few": "Принудительно отправьте локальные коммиты с lease, чтобы обновить {{upstreamName}}: {{count}}.",
+  "many": "Принудительно отправьте локальные коммиты с lease, чтобы обновить {{upstreamName}}: {{count}}.",
+  "other": "Принудительно отправьте локальные коммиты с lease, чтобы обновить {{upstreamName}}: {{count}}."
+ },
+ "auto.components.right.sidebar.source.control.dropdown.items.titleManualForcePushReplaceRemote": {
+  "one": "Принудительно отправьте локальные коммиты с lease, чтобы обновить {{upstreamName}} и заменить коммиты, которые есть только в удалённом репозитории: {{count}}.",
+  "few": "Принудительно отправьте локальные коммиты с lease, чтобы обновить {{upstreamName}} и заменить коммиты, которые есть только в удалённом репозитории: {{count}}.",
+  "many": "Принудительно отправьте локальные коммиты с lease, чтобы обновить {{upstreamName}} и заменить коммиты, которые есть только в удалённом репозитории: {{count}}.",
+  "other": "Принудительно отправьте локальные коммиты с lease, чтобы обновить {{upstreamName}} и заменить коммиты, которые есть только в удалённом репозитории: {{count}}."
+ },
+ "auto.components.right.sidebar.source.control.dropdown.items.titleUnpublishedForcePushCount": {
+  "one": "Принудительно отправьте коммиты ветки с lease и задайте upstream при необходимости: {{count}}.",
+  "few": "Принудительно отправьте коммиты ветки с lease и задайте upstream при необходимости: {{count}}.",
+  "many": "Принудительно отправьте коммиты ветки с lease и задайте upstream при необходимости: {{count}}.",
+  "other": "Принудительно отправьте коммиты ветки с lease и задайте upstream при необходимости: {{count}}."
+ },
+ "auto.components.right.sidebar.useFileDeletion.deleteItems": {
+  "one": "Удалить объектов: {{count}}?",
+  "few": "Удалить объектов: {{count}}?",
+  "many": "Удалить объектов: {{count}}?",
+  "other": "Удалить объектов: {{count}}?"
+ },
+ "auto.components.right.sidebar.useFileDeletion.permanentlyDeleteItems": {
+  "one": "Удалить безвозвратно объектов: {{count}}?",
+  "few": "Удалить безвозвратно объектов: {{count}}?",
+  "many": "Удалить безвозвратно объектов: {{count}}?",
+  "other": "Удалить безвозвратно объектов: {{count}}?"
+ },
+ "auto.components.right.sidebar.useFileExplorerImport.importFailedCount": {
+  "one": "Не удалось импортировать файлов: {{count}}.",
+  "few": "Не удалось импортировать файлов: {{count}}.",
+  "many": "Не удалось импортировать файлов: {{count}}.",
+  "other": "Не удалось импортировать файлов: {{count}}."
+ },
+ "auto.components.right.sidebar.useFileExplorerImport.importSkippedCount": {
+  "one": "Пропущено файлов: {{count}}.",
+  "few": "Пропущено файлов: {{count}}.",
+  "many": "Пропущено файлов: {{count}}.",
+  "other": "Пропущено файлов: {{count}}."
+ },
+ "auto.components.rightSidebar.FolderWorkspacePrChecksPanel.failingCountLabel": {
+  "one": "Провалено: {{count}}",
+  "few": "Провалено: {{count}}",
+  "many": "Провалено: {{count}}",
+  "other": "Провалено: {{count}}"
+ },
+ "auto.components.rightSidebar.FolderWorkspacePrChecksPanel.pendingCountLabel": {
+  "one": "Ожидает: {{count}}",
+  "few": "Ожидает: {{count}}",
+  "many": "Ожидает: {{count}}",
+  "other": "Ожидает: {{count}}"
+ },
+ "auto.components.rightSidebar.FolderWorkspacePrChecksPanel.worktreeCountLabel": {
+  "one": "Worktree: {{count}}",
+  "few": "Worktree: {{count}}",
+  "many": "Worktree: {{count}}",
+  "other": "Worktree: {{count}}"
+ },
+ "auto.components.rightSidebar.FolderWorkspaceWorktreesPanel.attachedCount": {
+  "one": "Прикреплено worktree: {{count}}",
+  "few": "Прикреплено worktree: {{count}}",
+  "many": "Прикреплено worktree: {{count}}",
+  "other": "Прикреплено worktree: {{count}}"
+ },
+ "auto.components.settings.SourceControlActionRepoOverrideNote.more": {
+  "one": "+ ещё {{count}}",
+  "few": "+ ещё {{count}}",
+  "many": "+ ещё {{count}}",
+  "other": "+ ещё {{count}}"
+ },
+ "auto.components.settings.sshHostServer.automationsLeftDisabled": {
+  "one": "Сервер Orca этого хоста забрал автоматизации ({{count}}), но не смог включить их обратно. Включите их в «Автоматизациях».",
+  "few": "Сервер Orca этого хоста забрал автоматизации ({{count}}), но не смог включить их обратно. Включите их в «Автоматизациях».",
+  "many": "Сервер Orca этого хоста забрал автоматизации ({{count}}), но не смог включить их обратно. Включите их в «Автоматизациях».",
+  "other": "Сервер Orca этого хоста забрал автоматизации ({{count}}), но не смог включить их обратно. Включите их в «Автоматизациях»."
+ },
+ "auto.components.sidebar.AddRemoteHostDialog.sshImportSynced": {
+  "one": "Добавлено хостов в Orca: {{count}}.",
+  "few": "Добавлено хостов в Orca: {{count}}.",
+  "many": "Добавлено хостов в Orca: {{count}}.",
+  "other": "Добавлено хостов в Orca: {{count}}."
+ },
+ "auto.components.sidebar.AddRepoNestedImportStep.foundRepositories": {
+  "one": "Найдено репозиториев в {{path}}: {{count}}.",
+  "few": "Найдено репозиториев в {{path}}: {{count}}.",
+  "many": "Найдено репозиториев в {{path}}: {{count}}.",
+  "other": "Найдено репозиториев в {{path}}: {{count}}."
+ },
+ "auto.components.sidebar.DeleteWorktreeDialog.removeBatchFolder": {
+  "one": "Убрать <target>рабочих областей: {{count}}</target> из Orca. Папки проектов на диске не будут удалены.",
+  "few": "Убрать <target>рабочих областей: {{count}}</target> из Orca. Папки проектов на диске не будут удалены.",
+  "many": "Убрать <target>рабочих областей: {{count}}</target> из Orca. Папки проектов на диске не будут удалены.",
+  "other": "Убрать <target>рабочих областей: {{count}}</target> из Orca. Папки проектов на диске не будут удалены."
+ },
+ "auto.components.sidebar.DeleteWorktreeDialog.removeBatchGit": {
+  "one": "Убрать <target>рабочих областей: {{count}}</target> из git и удалить их папки.",
+  "few": "Убрать <target>рабочих областей: {{count}}</target> из git и удалить их папки.",
+  "many": "Убрать <target>рабочих областей: {{count}}</target> из git и удалить их папки.",
+  "other": "Убрать <target>рабочих областей: {{count}}</target> из git и удалить их папки."
+ },
+ "auto.components.sidebar.DeleteWorktreeDialog.removeBatchMixed": {
+  "one": "Убрать <target>рабочих областей: {{count}}</target> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca.",
+  "few": "Убрать <target>рабочих областей: {{count}}</target> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca.",
+  "many": "Убрать <target>рабочих областей: {{count}}</target> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca.",
+  "other": "Убрать <target>рабочих областей: {{count}}</target> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca."
+ },
+ "auto.components.sidebar.DeleteWorktreeDialog.removeWithChildrenFolder": {
+  "one": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Папки проектов на диске не будут удалены.",
+  "few": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Папки проектов на диске не будут удалены.",
+  "many": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Папки проектов на диске не будут удалены.",
+  "other": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Папки проектов на диске не будут удалены."
+ },
+ "auto.components.sidebar.DeleteWorktreeDialog.removeWithChildrenGit": {
+  "one": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из git и удалить их папки.",
+  "few": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из git и удалить их папки.",
+  "many": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из git и удалить их папки.",
+  "other": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из git и удалить их папки."
+ },
+ "auto.components.sidebar.DeleteWorktreeDialog.removeWithChildrenMixed": {
+  "one": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca.",
+  "few": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca.",
+  "many": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca.",
+  "other": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca."
+ },
+ "auto.components.sidebar.DeleteWorktreeDirtyChangeHint.changeCount": {
+  "one": "Незафиксированных или неотслеживаемых изменений: {{count}}",
+  "few": "Незафиксированных или неотслеживаемых изменений: {{count}}",
+  "many": "Незафиксированных или неотслеживаемых изменений: {{count}}",
+  "other": "Незафиксированных или неотслеживаемых изменений: {{count}}"
+ },
+ "auto.components.sidebar.DeleteWorktreeDirtyChangeHint.moreLoadedPaths": {
+  "one": "и ещё загруженных путей: {{count}}",
+  "few": "и ещё загруженных путей: {{count}}",
+  "many": "и ещё загруженных путей: {{count}}",
+  "other": "и ещё загруженных путей: {{count}}"
+ },
+ "auto.components.sidebar.DeleteWorktreeLineageNotice.alsoDeletesChildren": {
+  "one": "Удаление этой рабочей области также удалит дочерних рабочих областей: {{count}}.",
+  "few": "Удаление этой рабочей области также удалит дочерних рабочих областей: {{count}}.",
+  "many": "Удаление этой рабочей области также удалит дочерних рабочих областей: {{count}}.",
+  "other": "Удаление этой рабочей области также удалит дочерних рабочих областей: {{count}}."
+ },
+ "auto.components.sidebar.DeleteWorktreeLineageNotice.moreChildren": {
+  "one": "+ ещё {{count}}",
+  "few": "+ ещё {{count}}",
+  "many": "+ ещё {{count}}",
+  "other": "+ ещё {{count}}"
+ },
+ "auto.components.sidebar.HostRemoveDialog.alsoRemoveWorkspaces": {
+  "one": "Также убрать эти рабочие области из Orca ({{count}})",
+  "few": "Также убрать эти рабочие области из Orca ({{count}})",
+  "many": "Также убрать эти рабочие области из Orca ({{count}})",
+  "other": "Также убрать эти рабочие области из Orca ({{count}})"
+ },
+ "auto.components.sidebar.HostSectionHeader.workspaceCount": {
+  "one": "рабочих областей: {{count}}",
+  "few": "рабочих областей: {{count}}",
+  "many": "рабочих областей: {{count}}",
+  "other": "рабочих областей: {{count}}"
+ },
+ "auto.components.sidebar.ImportedWorktreesVisibilityLine.hiding": {
+  "one": "Скрывается worktree: {{count}}",
+  "few": "Скрывается worktree: {{count}}",
+  "many": "Скрывается worktree: {{count}}",
+  "other": "Скрывается worktree: {{count}}"
+ },
+ "auto.components.sidebar.ImportedWorktreesVisibilityLine.hidingInRepo": {
+  "one": "Скрывается worktree в {{repo}}: {{count}}",
+  "few": "Скрывается worktree в {{repo}}: {{count}}",
+  "many": "Скрывается worktree в {{repo}}: {{count}}",
+  "other": "Скрывается worktree в {{repo}}: {{count}}"
+ },
+ "auto.components.sidebar.ImportedWorktreesVisibilityLine.keepHiddenAriaLabel": {
+  "one": "Оставить скрытыми обнаруженные worktree для {{repo}}: {{count}}; восстановить можно из меню проекта",
+  "few": "Оставить скрытыми обнаруженные worktree для {{repo}}: {{count}}; восстановить можно из меню проекта",
+  "many": "Оставить скрытыми обнаруженные worktree для {{repo}}: {{count}}; восстановить можно из меню проекта",
+  "other": "Оставить скрытыми обнаруженные worktree для {{repo}}: {{count}}; восстановить можно из меню проекта"
+ },
+ "auto.components.sidebar.ImportedWorktreesVisibilityLine.moreLocations": {
+  "one": "+ ещё расположений: {{count}}",
+  "few": "+ ещё расположений: {{count}}",
+  "many": "+ ещё расположений: {{count}}",
+  "other": "+ ещё расположений: {{count}}"
+ },
+ "auto.components.sidebar.LocalGitToolchainScanBanner.affectedProjects": {
+  "one": "Сканирование worktree приостановлено для проектов: {{count}}",
+  "few": "Сканирование worktree приостановлено для проектов: {{count}}",
+  "many": "Сканирование worktree приостановлено для проектов: {{count}}",
+  "other": "Сканирование worktree приостановлено для проектов: {{count}}"
+ },
+ "auto.components.sidebar.NewExternalWorktreesInboxLine.hiddenWorktreesNoun": {
+  "one": "скрытые worktree",
+  "few": "скрытые worktree",
+  "many": "скрытые worktree",
+  "other": "скрытые worktree"
+ },
+ "auto.components.sidebar.NewExternalWorktreesInboxLine.reviewHiddenWorktrees": {
+  "one": "Просмотреть скрытые worktree в {{scope}}: {{count}}",
+  "few": "Просмотреть скрытые worktree в {{scope}}: {{count}}",
+  "many": "Просмотреть скрытые worktree в {{scope}}: {{count}}",
+  "other": "Просмотреть скрытые worktree в {{scope}}: {{count}}"
+ },
+ "auto.components.sidebar.ProjectGroupDeleteDialog.moreProjects": {
+  "one": "+ ещё {{count}}",
+  "few": "+ ещё {{count}}",
+  "many": "+ ещё {{count}}",
+  "other": "+ ещё {{count}}"
+ },
+ "auto.components.sidebar.ProjectGroupDeleteDialog.removeContainedProjects": {
+  "one": "Убрать вложенных проектов: {{count}}",
+  "few": "Убрать вложенных проектов: {{count}}",
+  "many": "Убрать вложенных проектов: {{count}}",
+  "other": "Убрать вложенных проектов: {{count}}"
+ },
+ "auto.components.sidebar.RemoveFolderDialog.openTerminalWarning": {
+  "one": "В этом проекте закроется открытых терминалов: {{count}}.",
+  "few": "В этом проекте закроется открытых терминалов: {{count}}.",
+  "many": "В этом проекте закроется открытых терминалов: {{count}}.",
+  "other": "В этом проекте закроется открытых терминалов: {{count}}."
+ },
+ "auto.components.sidebar.SetupScriptPromptCard.savedWithSkippedFields": {
+  "one": "Пропущено неподдерживаемых полей: {{count}}. Команда настройки сохранена.",
+  "few": "Пропущено неподдерживаемых полей: {{count}}. Команда настройки сохранена.",
+  "many": "Пропущено неподдерживаемых полей: {{count}}. Команда настройки сохранена.",
+  "other": "Пропущено неподдерживаемых полей: {{count}}. Команда настройки сохранена."
+ },
+ "auto.components.sidebar.SidebarRepositoryFilterSection.selectedProjects": {
+  "one": "проектов: {{count}}",
+  "few": "проектов: {{count}}",
+  "many": "проектов: {{count}}",
+  "other": "проектов: {{count}}"
+ },
+ "auto.components.sidebar.SidebarWorkspaceOptionsMenu.optionsActiveFilters": {
+  "one": "Параметры рабочей области (активно фильтров: {{count}})",
+  "few": "Параметры рабочей области (активно фильтров: {{count}})",
+  "many": "Параметры рабочей области (активно фильтров: {{count}})",
+  "other": "Параметры рабочей области (активно фильтров: {{count}})"
+ },
+ "auto.components.sidebar.SidebarWorkspaceOptionsMenu.optionsFilterCount": {
+  "one": "Параметры рабочей области (фильтров: {{count}})",
+  "few": "Параметры рабочей области (фильтров: {{count}})",
+  "many": "Параметры рабочей области (фильтров: {{count}})",
+  "other": "Параметры рабочей области (фильтров: {{count}})"
+ },
+ "auto.components.sidebar.WorkspaceKanbanDrawerHeader.selectedCount": {
+  "one": "выбрано: {{count}}",
+  "few": "выбрано: {{count}}",
+  "many": "выбрано: {{count}}",
+  "other": "выбрано: {{count}}"
+ },
+ "auto.components.sidebar.WorktreeCardPorts.livePorts": {
+  "one": "Живых портов: {{count}}",
+  "few": "Живых портов: {{count}}",
+  "many": "Живых портов: {{count}}",
+  "other": "Живых портов: {{count}}"
+ },
+ "auto.components.sidebar.WorktreeList.childCount": {
+  "one": "Дочерних: {{count}}",
+  "few": "Дочерних: {{count}}",
+  "many": "Дочерних: {{count}}",
+  "other": "Дочерних: {{count}}"
+ },
+ "auto.components.sidebar.WorktreeList.hideChildWorkspaces": {
+  "one": "Скрыть дочерних рабочих областей: {{count}}",
+  "few": "Скрыть дочерних рабочих областей: {{count}}",
+  "many": "Скрыть дочерних рабочих областей: {{count}}",
+  "other": "Скрыть дочерних рабочих областей: {{count}}"
+ },
+ "auto.components.sidebar.WorktreeList.showChildWorkspaces": {
+  "one": "Показать дочерних рабочих областей: {{count}}",
+  "few": "Показать дочерних рабочих областей: {{count}}",
+  "many": "Показать дочерних рабочих областей: {{count}}",
+  "other": "Показать дочерних рабочих областей: {{count}}"
+ },
+ "auto.components.sidebar.WorktreeVisibilityDialog.searchHiddenPlaceholder": {
+  "one": "Поиск по worktree: {{count}}…",
+  "few": "Поиск по worktree: {{count}}…",
+  "many": "Поиск по worktree: {{count}}…",
+  "other": "Поиск по worktree: {{count}}…"
+ },
+ "auto.components.sidebar.local.base.ref.suggestion.toast.staleLocalBranch": {
+  "one": "Ваш новый worktree актуален, но локальная ветка {{branch}} отстаёт на коммитов: {{count}}, поэтому диффы ИИ могут сравнивать с устаревшей историей. Пусть Orca поддерживает её актуальной автоматически. Изменить это можно в любой момент в <settings>«Настройки › {{setting}}»</settings>",
+  "few": "Ваш новый worktree актуален, но локальная ветка {{branch}} отстаёт на коммитов: {{count}}, поэтому диффы ИИ могут сравнивать с устаревшей историей. Пусть Orca поддерживает её актуальной автоматически. Изменить это можно в любой момент в <settings>«Настройки › {{setting}}»</settings>",
+  "many": "Ваш новый worktree актуален, но локальная ветка {{branch}} отстаёт на коммитов: {{count}}, поэтому диффы ИИ могут сравнивать с устаревшей историей. Пусть Orca поддерживает её актуальной автоматически. Изменить это можно в любой момент в <settings>«Настройки › {{setting}}»</settings>",
+  "other": "Ваш новый worktree актуален, но локальная ветка {{branch}} отстаёт на коммитов: {{count}}, поэтому диффы ИИ могут сравнивать с устаревшей историей. Пусть Orca поддерживает её актуальной автоматически. Изменить это можно в любой момент в <settings>«Настройки › {{setting}}»</settings>"
+ },
+ "auto.components.sidebar.sidebarHostOptions.visibleHosts": {
+  "one": "хостов: {{count}}",
+  "few": "хостов: {{count}}",
+  "many": "хостов: {{count}}",
+  "other": "хостов: {{count}}"
+ },
+ "auto.components.sidebar.workspaceBatchActionLabels.deleteCount": {
+  "one": "Удалить рабочих областей: {{count}}",
+  "few": "Удалить рабочих областей: {{count}}",
+  "many": "Удалить рабочих областей: {{count}}",
+  "other": "Удалить рабочих областей: {{count}}"
+ },
+ "auto.components.sidebar.workspaceBatchActionLabels.sleepCount": {
+  "one": "Усыпить рабочих областей: {{count}}",
+  "few": "Усыпить рабочих областей: {{count}}",
+  "many": "Усыпить рабочих областей: {{count}}",
+  "other": "Усыпить рабочих областей: {{count}}"
+ },
+ "auto.components.skills.SkillBundleInstallOutcome.selectedChecked": {
+  "one": "Проверено выбранных навыков: {{count}}.",
+  "few": "Проверено выбранных навыков: {{count}}.",
+  "many": "Проверено выбранных навыков: {{count}}.",
+  "other": "Проверено выбранных навыков: {{count}}."
+ },
+ "auto.components.skills.SkillDelete.blockedLine": {
+  "one": "{{count}} × {{reason}}",
+  "few": "{{count}} × {{reason}}",
+  "many": "{{count}} × {{reason}}",
+  "other": "{{count}} × {{reason}}"
+ },
+ "auto.components.skills.SkillDelete.nothing": {
+  "one": "Ни один из выбранных навыков ({{count}}) нельзя удалить отсюда.",
+  "few": "Ни один из выбранных навыков ({{count}}) нельзя удалить отсюда.",
+  "many": "Ни один из выбранных навыков ({{count}}) нельзя удалить отсюда.",
+  "other": "Ни один из выбранных навыков ({{count}}) нельзя удалить отсюда."
+ },
+ "auto.components.skills.SkillDelete.resultLine": {
+  "one": "{{count}} × {{label}}",
+  "few": "{{count}} × {{label}}",
+  "many": "{{count}} × {{label}}",
+  "other": "{{count}} × {{label}}"
+ },
+ "auto.components.skills.SkillFreshnessNudge.title": {
+  "one": "Установленные навыки Orca устарели: {{count}}",
+  "few": "Установленные навыки Orca устарели: {{count}}",
+  "many": "Установленные навыки Orca устарели: {{count}}",
+  "other": "Установленные навыки Orca устарели: {{count}}"
+ },
+ "auto.components.skills.SkillFreshnessUpdateDialog.current": {
+  "one": "Навыков актуально: {{count}}",
+  "few": "Навыков актуально: {{count}}",
+  "many": "Навыков актуально: {{count}}",
+  "other": "Навыков актуально: {{count}}"
+ },
+ "auto.components.skills.SkillFreshnessUpdateDialog.upToDate": {
+  "one": "Навыков актуально: {{count}}.",
+  "few": "Навыков актуально: {{count}}.",
+  "many": "Навыков актуально: {{count}}.",
+  "other": "Навыков актуально: {{count}}."
+ },
+ "auto.components.skills.SkillFreshnessUpdateDialog.update": {
+  "one": "Доступно обновлений: {{count}}",
+  "few": "Доступно обновлений: {{count}}",
+  "many": "Доступно обновлений: {{count}}",
+  "other": "Доступно обновлений: {{count}}"
+ },
+ "auto.components.skills.SkillFreshnessUpdateDialog.updateAction": {
+  "one": "Обновить навыков: {{count}}",
+  "few": "Обновить навыков: {{count}}",
+  "many": "Обновить навыков: {{count}}",
+  "other": "Обновить навыков: {{count}}"
+ },
+ "auto.components.skills.SkillFreshnessUpdateDialog.updated": {
+  "one": "Обновлено навыков: {{count}}",
+  "few": "Обновлено навыков: {{count}}",
+  "many": "Обновлено навыков: {{count}}",
+  "other": "Обновлено навыков: {{count}}"
+ },
+ "auto.components.skills.SkillInstallReviewContent.placementsChecked": {
+  "one": "Проверлено размещений: {{count}}.",
+  "few": "Проверлено размещений: {{count}}.",
+  "many": "Проверлено размещений: {{count}}.",
+  "other": "Проверлено размещений: {{count}}."
+ },
+ "auto.components.skills.SkillsSelectionHeader.selectAll": {
+  "one": "Выбрать все подходящие ({{count}})",
+  "few": "Выбрать все подходящие ({{count}})",
+  "many": "Выбрать все подходящие ({{count}})",
+  "other": "Выбрать все подходящие ({{count}})"
+ },
+ "auto.components.skills.count.delete": {
+  "one": "Удалить навыков: {{count}}",
+  "few": "Удалить навыков: {{count}}",
+  "many": "Удалить навыков: {{count}}",
+  "other": "Удалить навыков: {{count}}"
+ },
+ "auto.components.skills.count.deleteFolder": {
+  "one": "папок: {{count}}",
+  "few": "папок: {{count}}",
+  "many": "папок: {{count}}",
+  "other": "папок: {{count}}"
+ },
+ "auto.components.skills.count.deleteLink": {
+  "one": "ссылок: {{count}}",
+  "few": "ссылок: {{count}}",
+  "many": "ссылок: {{count}}",
+  "other": "ссылок: {{count}}"
+ },
+ "auto.components.skills.count.deleted": {
+  "one": "Удалено навыков: {{count}}",
+  "few": "Удалено навыков: {{count}}",
+  "many": "Удалено навыков: {{count}}",
+  "other": "Удалено навыков: {{count}}"
+ },
+ "auto.components.skills.count.file": {
+  "one": "файлов: {{count}}",
+  "few": "файлов: {{count}}",
+  "many": "файлов: {{count}}",
+  "other": "файлов: {{count}}"
+ },
+ "auto.components.skills.count.install": {
+  "one": "Установить навыков: {{count}}",
+  "few": "Установить навыков: {{count}}",
+  "many": "Установить навыков: {{count}}",
+  "other": "Установить навыков: {{count}}"
+ },
+ "auto.components.skills.count.link": {
+  "one": "ссылок: {{count}}",
+  "few": "ссылок: {{count}}",
+  "many": "ссылок: {{count}}",
+  "other": "ссылок: {{count}}"
+ },
+ "auto.components.skills.count.result": {
+  "one": "результатов: {{count}}",
+  "few": "результатов: {{count}}",
+  "many": "результатов: {{count}}",
+  "other": "результатов: {{count}}"
+ },
+ "auto.components.skills.count.retry": {
+  "one": "Повторить для навыков: {{count}}",
+  "few": "Повторить для навыков: {{count}}",
+  "many": "Повторить для навыков: {{count}}",
+  "other": "Повторить для навыков: {{count}}"
+ },
+ "auto.components.skills.count.selected": {
+  "one": "выбрано: {{count}}",
+  "few": "выбрано: {{count}}",
+  "many": "выбрано: {{count}}",
+  "other": "выбрано: {{count}}"
+ },
+ "auto.components.skills.count.share": {
+  "one": "Поделиться навыками: {{count}}",
+  "few": "Поделиться навыками: {{count}}",
+  "many": "Поделиться навыками: {{count}}",
+  "other": "Поделиться навыками: {{count}}"
+ },
+ "auto.components.skills.count.skill": {
+  "one": "навыков: {{count}}",
+  "few": "навыков: {{count}}",
+  "many": "навыков: {{count}}",
+  "other": "навыков: {{count}}"
+ },
+ "auto.components.skills.count.source": {
+  "one": "источников: {{count}}",
+  "few": "источников: {{count}}",
+  "many": "источников: {{count}}",
+  "other": "источников: {{count}}"
+ },
+ "auto.components.skills.install.agentCount": {
+  "one": "агентов: {{count}}",
+  "few": "агентов: {{count}}",
+  "many": "агентов: {{count}}",
+  "other": "агентов: {{count}}"
+ },
+ "auto.components.skills.install.agentsCountBadge": {
+  "one": "выбрано: {{count}}",
+  "few": "выбрано: {{count}}",
+  "many": "выбрано: {{count}}",
+  "other": "выбрано: {{count}}"
+ },
+ "auto.components.skills.share.executable": {
+  "one": "исполняемых файлов: {{count}}",
+  "few": "исполняемых файлов: {{count}}",
+  "many": "исполняемых файлов: {{count}}",
+  "other": "исполняемых файлов: {{count}}"
+ },
+ "auto.components.skills.share.script": {
+  "one": "скриптов: {{count}}",
+  "few": "скриптов: {{count}}",
+  "many": "скриптов: {{count}}",
+  "other": "скриптов: {{count}}"
+ },
+ "auto.components.stats.UsageOverviewPane.sessionCount": {
+  "one": "Сессий: {{formatted}}",
+  "few": "Сессий: {{formatted}}",
+  "many": "Сессий: {{formatted}}",
+  "other": "Сессий: {{formatted}}"
+ },
+ "auto.components.stats.usage.overview.sections.eventCount": {
+  "one": "Событий: {{formatted}}",
+  "few": "Событий: {{formatted}}",
+  "many": "Событий: {{formatted}}",
+  "other": "Событий: {{formatted}}"
+ },
+ "auto.components.stats.usage.overview.sections.sessionCount": {
+  "one": "Сессий: {{formatted}}",
+  "few": "Сессий: {{formatted}}",
+  "many": "Сессий: {{formatted}}",
+  "other": "Сессий: {{formatted}}"
+ },
+ "auto.components.stats.usage.overview.sections.turnCount": {
+  "one": "Ходов: {{formatted}}",
+  "few": "Ходов: {{formatted}}",
+  "many": "Ходов: {{formatted}}",
+  "other": "Ходов: {{formatted}}"
+ },
+ "auto.components.status.bar.NativeChatResumeStatusSegment.ariaLabelCount": {
+  "one": "Доступно для возобновления чатов: {{count}}",
+  "few": "Доступно для возобновления чатов: {{count}}",
+  "many": "Доступно для возобновления чатов: {{count}}",
+  "other": "Доступно для возобновления чатов: {{count}}"
+ },
+ "auto.components.status.bar.NativeChatResumeStatusSegment.chatsFailedAria": {
+  "one": "Не удалось возобновить чатов: {{count}}. Нажмите для подробностей.",
+  "few": "Не удалось возобновить чатов: {{count}}. Нажмите для подробностей.",
+  "many": "Не удалось возобновить чатов: {{count}}. Нажмите для подробностей.",
+  "other": "Не удалось возобновить чатов: {{count}}. Нажмите для подробностей."
+ },
+ "auto.components.status.bar.NativeChatResumeStatusSegment.chatsFailedLabel": {
+  "one": "Не удалось возобновить чатов: {{count}}",
+  "few": "Не удалось возобновить чатов: {{count}}",
+  "many": "Не удалось возобновить чатов: {{count}}",
+  "other": "Не удалось возобновить чатов: {{count}}"
+ },
+ "auto.components.status.bar.NativeChatResumeStatusSegment.checkAriaCount": {
+  "one": "Проверить после возобновления чатов: {{count}}. Нажмите для подробностей.",
+  "few": "Проверить после возобновления чатов: {{count}}. Нажмите для подробностей.",
+  "many": "Проверить после возобновления чатов: {{count}}. Нажмите для подробностей.",
+  "other": "Проверить после возобновления чатов: {{count}}. Нажмите для подробностей."
+ },
+ "auto.components.status.bar.NativeChatResumeStatusSegment.checkLabelCount": {
+  "one": "Проверить чатов: {{count}}",
+  "few": "Проверить чатов: {{count}}",
+  "many": "Проверить чатов: {{count}}",
+  "other": "Проверить чатов: {{count}}"
+ },
+ "auto.components.status.bar.NativeChatResumeStatusSegment.labelCount": {
+  "one": "Возобновить чатов: {{count}}",
+  "few": "Возобновить чатов: {{count}}",
+  "many": "Возобновить чатов: {{count}}",
+  "other": "Возобновить чатов: {{count}}"
+ },
+ "auto.components.status.bar.NativeChatResumeStatusSegment.resumedAriaCount": {
+  "one": "Возобновлено чатов: {{count}}. Нажмите, чтобы открыть их.",
+  "few": "Возобновлено чатов: {{count}}. Нажмите, чтобы открыть их.",
+  "many": "Возобновлено чатов: {{count}}. Нажмите, чтобы открыть их.",
+  "other": "Возобновлено чатов: {{count}}. Нажмите, чтобы открыть их."
+ },
+ "auto.components.status.bar.NativeChatResumeStatusSegment.resumedLabelCount": {
+  "one": "Возобновлено чатов: {{count}}",
+  "few": "Возобновлено чатов: {{count}}",
+  "many": "Возобновлено чатов: {{count}}",
+  "other": "Возобновлено чатов: {{count}}"
+ },
+ "auto.components.status.bar.PortsStatusSegment.portsAria": {
+  "one": "Порты, портов рабочей области: {{count}}",
+  "few": "Порты, портов рабочей области: {{count}}",
+  "many": "Порты, портов рабочей области: {{count}}",
+  "other": "Порты, портов рабочей области: {{count}}"
+ },
+ "auto.components.status.bar.PortsStatusSegment.portsTooltip": {
+  "one": "Порты рабочих областей — {{count}}",
+  "few": "Порты рабочих областей — {{count}}",
+  "many": "Порты рабочих областей — {{count}}",
+  "other": "Порты рабочих областей — {{count}}"
+ },
+ "auto.components.status.bar.PortsStatusSegment.portsTooltipWithExternal": {
+  "one": "Порты рабочих областей — {{count}} · внешних: {{externalCount}}",
+  "few": "Порты рабочих областей — {{count}} · внешних: {{externalCount}}",
+  "many": "Порты рабочих областей — {{count}} · внешних: {{externalCount}}",
+  "other": "Порты рабочих областей — {{count}} · внешних: {{externalCount}}"
+ },
+ "auto.components.status.bar.RemoteServerUpdateStatusSegment.failedCount": {
+  "one": "Не удалось обновить серверов: {{count}}",
+  "few": "Не удалось обновить серверов: {{count}}",
+  "many": "Не удалось обновить серверов: {{count}}",
+  "other": "Не удалось обновить серверов: {{count}}"
+ },
+ "auto.components.status.bar.RemoteServerUpdateStatusSegment.updatedCount": {
+  "one": "Обновлено серверов: {{count}}",
+  "few": "Обновлено серверов: {{count}}",
+  "many": "Обновлено серверов: {{count}}",
+  "other": "Обновлено серверов: {{count}}"
+ },
+ "auto.components.status.bar.ResourceUsageStatusSegment.endOrphanTerminals": {
+  "one": "Завершить осиротевших терминалов: {{count}}",
+  "few": "Завершить осиротевших терминалов: {{count}}",
+  "many": "Завершить осиротевших терминалов: {{count}}",
+  "other": "Завершить осиротевших терминалов: {{count}}"
+ },
+ "auto.components.status.bar.ResourceUsageStatusSegment.orphanCount": {
+  "one": "Осиротевших: {{count}}",
+  "few": "Осиротевших: {{count}}",
+  "many": "Осиротевших: {{count}}",
+  "other": "Осиротевших: {{count}}"
+ },
+ "auto.components.status.bar.SkillUpdateStatusSegment.runningSkills": {
+  "one": "Обновление навыков: {{count}}…",
+  "few": "Обновление навыков: {{count}}…",
+  "many": "Обновление навыков: {{count}}…",
+  "other": "Обновление навыков: {{count}}…"
+ },
+ "auto.components.status.bar.SshStatusSegment.connectedHostCount": {
+  "one": "хостов: {{count}}",
+  "few": "хостов: {{count}}",
+  "many": "хостов: {{count}}",
+  "other": "хостов: {{count}}"
+ },
+ "auto.components.status.bar.SshStatusSegment.moreSshHostMatches": {
+  "one": "Ещё совпадений: {{count}}. Продолжайте ввод, чтобы уточнить поиск.",
+  "few": "Ещё совпадений: {{count}}. Продолжайте ввод, чтобы уточнить поиск.",
+  "many": "Ещё совпадений: {{count}}. Продолжайте ввод, чтобы уточнить поиск.",
+  "other": "Ещё совпадений: {{count}}. Продолжайте ввод, чтобы уточнить поиск."
+ },
+ "auto.components.status.bar.SshStatusSegment.moreSshHosts": {
+  "one": "Найти среди остальных SSH-хостов: {{count}}…",
+  "few": "Найти среди остальных SSH-хостов: {{count}}…",
+  "many": "Найти среди остальных SSH-хостов: {{count}}…",
+  "other": "Найти среди остальных SSH-хостов: {{count}}…"
+ },
+ "auto.components.status.bar.StatusBar.rateLimitResetsAvailable": {
+  "one": "Доступно сбросов лимита: {{count}}",
+  "few": "Доступно сбросов лимита: {{count}}",
+  "many": "Доступно сбросов лимита: {{count}}",
+  "other": "Доступно сбросов лимита: {{count}}"
+ },
+ "auto.components.status.bar.StatusBar.staleCodexSessions": {
+  "one": "Сессий Codex всё ещё на старом аккаунте: {{count}}.",
+  "few": "Сессий Codex всё ещё на старом аккаунте: {{count}}.",
+  "many": "Сессий Codex всё ещё на старом аккаунте: {{count}}.",
+  "other": "Сессий Codex всё ещё на старом аккаунте: {{count}}."
+ },
+ "auto.components.status.bar.WorkspaceSpaceManagerPanel.removedFromSpace": {
+  "one": "Рабочих областей убрано из «Пространства»: {{count}}.",
+  "few": "Рабочих областей убрано из «Пространства»: {{count}}.",
+  "many": "Рабочих областей убрано из «Пространства»: {{count}}.",
+  "other": "Рабочих областей убрано из «Пространства»: {{count}}."
+ },
+ "auto.components.status.bar.WorkspaceSpaceManagerPanel.selectedCount": {
+  "one": "выбрано: {{count}}",
+  "few": "выбрано: {{count}}",
+  "many": "выбрано: {{count}}",
+  "other": "выбрано: {{count}}"
+ },
+ "auto.components.status.bar.WorkspaceSpaceManagerPanel.topLevelItems": {
+  "one": "Элементов верхнего уровня: {{formattedCount}}",
+  "few": "Элементов верхнего уровня: {{formattedCount}}",
+  "many": "Элементов верхнего уровня: {{formattedCount}}",
+  "other": "Элементов верхнего уровня: {{formattedCount}}"
+ },
+ "auto.components.status.bar.resource.manager.terminal.copy.terminalSessionCount": {
+  "one": "сессий терминала: {{count}}",
+  "few": "сессий терминала: {{count}}",
+  "many": "сессий терминала: {{count}}",
+  "other": "сессий терминала: {{count}}"
+ },
+ "auto.components.status.bar.tooltip.rateLimitResetsAvailable": {
+  "one": "Доступно сбросов лимита: {{count}}",
+  "few": "Доступно сбросов лимита: {{count}}",
+  "many": "Доступно сбросов лимита: {{count}}",
+  "other": "Доступно сбросов лимита: {{count}}"
+ },
+ "auto.components.status.bar.workspaceSpaceDecision.activeAgents": {
+  "one": "активных агентов: {{count}}",
+  "few": "активных агентов: {{count}}",
+  "many": "активных агентов: {{count}}",
+  "other": "активных агентов: {{count}}"
+ },
+ "auto.components.status.bar.workspaceSpaceDecision.browserTabsOpen": {
+  "one": "Открыто вкладок браузера: {{count}}",
+  "few": "Открыто вкладок браузера: {{count}}",
+  "many": "Открыто вкладок браузера: {{count}}",
+  "other": "Открыто вкладок браузера: {{count}}"
+ },
+ "auto.components.status.bar.workspaceSpaceDecision.changedFiles": {
+  "one": "Изменённых файлов: {{count}}",
+  "few": "Изменённых файлов: {{count}}",
+  "many": "Изменённых файлов: {{count}}",
+  "other": "Изменённых файлов: {{count}}"
+ },
+ "auto.components.status.bar.workspaceSpaceDecision.completedAgents": {
+  "one": "Завершённых агентов: {{count}}",
+  "few": "Завершённых агентов: {{count}}",
+  "many": "Завершённых агентов: {{count}}",
+  "other": "Завершённых агентов: {{count}}"
+ },
+ "auto.components.status.bar.workspaceSpaceDecision.completedAgentsRetained": {
+  "one": "Оставлено завершённых агентов: {{count}}",
+  "few": "Оставлено завершённых агентов: {{count}}",
+  "many": "Оставлено завершённых агентов: {{count}}",
+  "other": "Оставлено завершённых агентов: {{count}}"
+ },
+ "auto.components.status.bar.workspaceSpaceDecision.dirtyEditorBuffers": {
+  "one": "Изменённых буферов редактора: {{count}}",
+  "few": "Изменённых буферов редактора: {{count}}",
+  "many": "Изменённых буферов редактора: {{count}}",
+  "other": "Изменённых буферов редактора: {{count}}"
+ },
+ "auto.components.status.bar.workspaceSpaceDecision.editorFilesOpen": {
+  "one": "Открыто в редакторе файлов: {{count}}",
+  "few": "Открыто в редакторе файлов: {{count}}",
+  "many": "Открыто в редакторе файлов: {{count}}",
+  "other": "Открыто в редакторе файлов: {{count}}"
+ },
+ "auto.components.status.bar.workspaceSpaceDecision.openFiles": {
+  "one": "Открытых файлов: {{count}}",
+  "few": "Открытых файлов: {{count}}",
+  "many": "Открытых файлов: {{count}}",
+  "other": "Открытых файлов: {{count}}"
+ },
+ "auto.components.task.project.source.combobox.hostCount": {
+  "one": "хостов: {{count}}",
+  "few": "хостов: {{count}}",
+  "many": "хостов: {{count}}",
+  "other": "хостов: {{count}}"
+ },
+ "auto.components.taskSourceContextSummary.projectCount": {
+  "one": "проектов: {{count}}",
+  "few": "проектов: {{count}}",
+  "many": "проектов: {{count}}",
+  "other": "проектов: {{count}}"
+ },
+ "auto.components.taskSourceContextSummary.selectedProjectCount": {
+  "one": "Выбрано проектов: {{count}}",
+  "few": "Выбрано проектов: {{count}}",
+  "many": "Выбрано проектов: {{count}}",
+  "other": "Выбрано проектов: {{count}}"
+ },
+ "auto.components.taskSourceContextSummary.sourceHostCount": {
+  "one": "Хостов-источников: {{count}}",
+  "few": "Хостов-источников: {{count}}",
+  "many": "Хостов-источников: {{count}}",
+  "other": "Хостов-источников: {{count}}"
+ },
+ "auto.components.taskSourceContextSummary.unavailableCount": {
+  "one": "Недоступно: {{count}}",
+  "few": "Недоступно: {{count}}",
+  "many": "Недоступно: {{count}}",
+  "other": "Недоступно: {{count}}"
+ },
+ "auto.components.terminal.pane.terminal.drop.handler.failedUploads": {
+  "one": "Не удалось загрузить файлов: {{count}}.",
+  "few": "Не удалось загрузить файлов: {{count}}.",
+  "many": "Не удалось загрузить файлов: {{count}}.",
+  "other": "Не удалось загрузить файлов: {{count}}."
+ },
+ "auto.components.terminal.pane.terminal.drop.handler.skippedItems": {
+  "one": "Пропущено элементов: {{count}}.",
+  "few": "Пропущено элементов: {{count}}.",
+  "many": "Пропущено элементов: {{count}}.",
+  "other": "Пропущено элементов: {{count}}."
+ },
+ "auto.components.terminal.pane.terminal.drop.handler.skippedSymlinks": {
+  "one": "Пропущено символьных ссылок: {{count}}.",
+  "few": "Пропущено символьных ссылок: {{count}}.",
+  "many": "Пропущено символьных ссылок: {{count}}.",
+  "other": "Пропущено символьных ссылок: {{count}}."
+ },
+ "auto.components.terminal.pane.terminal.drop.handler.uploadingFiles": {
+  "one": "Загрузка файлов в среду выполнения: {{count}}…",
+  "few": "Загрузка файлов в среду выполнения: {{count}}…",
+  "many": "Загрузка файлов в среду выполнения: {{count}}…",
+  "other": "Загрузка файлов в среду выполнения: {{count}}…"
+ },
+ "auto.components.terminal.pane.terminal.drop.handler.uploadingFilesToRemote": {
+  "one": "Загрузка файлов на удалённый хост: {{count}}…",
+  "few": "Загрузка файлов на удалённый хост: {{count}}…",
+  "many": "Загрузка файлов на удалённый хост: {{count}}…",
+  "other": "Загрузка файлов на удалённый хост: {{count}}…"
+ },
+ "components.native-chat.githubPeek.comments": {
+  "one": "Комментариев: {{count}}",
+  "few": "Комментариев: {{count}}",
+  "many": "Комментариев: {{count}}",
+  "other": "Комментариев: {{count}}"
+ },
+ "components.orchestration.workerAutoClose.finished": {
+  "one": "Временный исполнитель оркестрации завершён · Закроется через {{countdown}}",
+  "few": "Временный исполнитель оркестрации завершён · Закроется через {{countdown}}",
+  "many": "Временный исполнитель оркестрации завершён · Закроется через {{countdown}}",
+  "other": "Временный исполнитель оркестрации завершён · Закроется через {{countdown}}"
+ },
+ "dashboardPopout.card.time.days": {
+  "one": "{{count}} д",
+  "few": "{{count}} д",
+  "many": "{{count}} д",
+  "other": "{{count}} д"
+ },
+ "dashboardPopout.card.time.hours": {
+  "one": "{{count}} ч",
+  "few": "{{count}} ч",
+  "many": "{{count}} ч",
+  "other": "{{count}} ч"
+ },
+ "dashboardPopout.card.time.minutes": {
+  "one": "{{count}} мин",
+  "few": "{{count}} мин",
+  "many": "{{count}} мин",
+  "other": "{{count}} мин"
+ },
+ "dashboardPopout.total": {
+  "one": "всего: {{count}}",
+  "few": "всего: {{count}}",
+  "many": "всего: {{count}}",
+  "other": "всего: {{count}}"
+ },
+ "resourceManager.pty.endSelected": {
+  "one": "Завершить выбранные ({{count}})",
+  "few": "Завершить выбранные ({{count}})",
+  "many": "Завершить выбранные ({{count}})",
+  "other": "Завершить выбранные ({{count}})"
+ },
+ "sidebar.agentSummary.hideIdleChildren": {
+  "one": "Скрыть простаивающих дочерних агентов: {{count}}",
+  "few": "Скрыть простаивающих дочерних агентов: {{count}}",
+  "many": "Скрыть простаивающих дочерних агентов: {{count}}",
+  "other": "Скрыть простаивающих дочерних агентов: {{count}}"
+ },
+ "sidebar.agentSummary.idleChildCount": {
+  "one": "простаивает: {{count}}",
+  "few": "простаивает: {{count}}",
+  "many": "простаивает: {{count}}",
+  "other": "простаивает: {{count}}"
+ },
+ "sidebar.agentSummary.showIdleChildren": {
+  "one": "Показать простаивающих дочерних агентов: {{count}}",
+  "few": "Показать простаивающих дочерних агентов: {{count}}",
+  "many": "Показать простаивающих дочерних агентов: {{count}}",
+  "other": "Показать простаивающих дочерних агентов: {{count}}"
+ },
+ "sourceControl.discard.deleteCount": {
+  "one": "Удалить: {{count}}",
+  "few": "Удалить: {{count}}",
+  "many": "Удалить: {{count}}",
+  "other": "Удалить: {{count}}"
+ },
+ "auto.components.UpdateCard.moreSinceLastUpdate": {
+  "one": "+{{count}} новая с прошлого обновления",
+  "few": "+{{count}} новых с прошлого обновления",
+  "many": "+{{count}} новых с прошлого обновления",
+  "other": "+{{count}} новых с прошлого обновления"
+ },
+ "auto.components.automations.AutomationRunsDashboard.historyUnavailable": {
+  "one": "История запусков недоступна для {{count}} автоматизации. В подсчёт входит только доступная история.",
+  "few": "История запусков недоступна для {{count}} автоматизаций. В подсчёт входит только доступная история.",
+  "many": "История запусков недоступна для {{count}} автоматизаций. В подсчёт входит только доступная история.",
+  "other": "История запусков недоступна для {{count}} автоматизаций. В подсчёт входит только доступная история."
+ },
+ "auto.components.onboarding.IntegrationsStep.linearWorkspacesLinkedSingular": {
+  "one": "Связана {{count}} рабочая область. Добавить ещё одну или заменить ограниченный ключ можно в любой момент."
+ },
+ "auto.lib.browser.cookie.import.toast.otherUndecryptableCookies": {
+  "one": "Ещё {{count}} файл cookie не удалось расшифровать по другой причине.",
+  "few": "Ещё {{count}} файла cookie не удалось расшифровать по другой причине.",
+  "many": "Ещё {{count}} файлов cookie не удалось расшифровать по другой причине.",
+  "other": "Ещё {{count}} файлов cookie не удалось расшифровать по другой причине."
  }
 }
