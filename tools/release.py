@@ -54,7 +54,7 @@ PLIST = "/Applications/Orca.app/Contents/Info.plist"
 STATE = os.path.join(HERE, "release-state.json")
 ENTRY = os.path.join(HERE, "CHANGELOG_ENTRY.md")
 
-EXPECT = {"protected": 404, "oversized": 0, "allowed_paths": 34}
+EXPECT = {"oversized": 0, "allowed_paths": 34}
 ESC = re.compile(r"\\x([0-9a-fA-F]{2})|\\u([0-9a-fA-F]{4})")
 PLURAL_ONLY = re.compile(r"_(few|many)$")
 # файлы, которые вправе быть изменёнными к моменту publish
@@ -168,8 +168,12 @@ def acceptance(report: dict[str, int], extract: dict[str, int] | None) -> list[s
         problems.append(f"плейсхолдеры: {report['placeholders']} расхождений (нужно 0)")
     if report["suffix_left"]:
         problems.append(f"суффиксы мн. числа: {report['suffix_left']} осталось (нужно 0)")
-    if report["protected"] != EXPECT["protected"]:
-        problems.append(f"защищено Orca: {report['protected']} (ожидалось {EXPECT['protected']}) — защищённая зона поехала")
+    # «защищено» — плавающее число (сколько защищённых ключей имеют совпадающий
+    # перевод в словарях), равенство с эталоном не проверить. Опасен только ноль:
+    # значит protected() перестал узнавать пути, защищённое уйдёт в перевод, и
+    # валидатор Orca отвергнет весь пакет. Состав путей проверен отдельно.
+    if report["protected"] == 0:
+        problems.append("защищено Orca: 0 — защищённая зона перестала распознаваться")
     if report["oversized"] != EXPECT["oversized"]:
         problems.append(f"сверх лимита: {report['oversized']} (ожидалось {EXPECT['oversized']}) — новое длинное значение")
     if extract and extract["allowed_paths"] != EXPECT["allowed_paths"]:
@@ -394,10 +398,11 @@ def cmd_publish(args: argparse.Namespace) -> int:
         summary = (f"Каталог — {fmt(translated)} из {fmt(total)} строк ({pct}%). "
                    f"Приложение {changes_phrase(len(added), len(removed), len(rewritten))} — переведены все.")
         bullets = entry_body + "\n"
-    protected_line = f"- Защищённая зона не изменилась: те же {EXPECT['protected']} ключей и {EXPECT['allowed_paths']} разрешённых пути"
+    protected_line = (f"- Защищённая зона: {report['protected']} ключей остаются английскими, "
+                      f"разрешённых путей — {EXPECT['allowed_paths']}")
     entry = (f"## {version} — {today} · Orca {version} (совместим с {compat()}+)\n\n"
              + wrap(summary) + "\n\n" + (bullets + protected_line + "\n\n" if not no_changes else ""))
-    notes = release_notes(version, summary, entry_body, no_changes)
+    notes = release_notes(version, summary, entry_body, no_changes, report["protected"])
 
     print(f"версия {previous} → {version}; переведено {old_docs['translated']} → {fmt(translated)}, "
           f"всего {old_docs['total']} → {fmt(total)}, тождественных {old_docs['identity']} → {identity}")
@@ -515,14 +520,14 @@ def bullets_to_prose(entry: str) -> str:
     return "Новое: " + "; ".join(items) + "." if items else ""
 
 
-def release_notes(version: str, summary: str, entry_body: str, no_changes: bool) -> str:
+def release_notes(version: str, summary: str, entry_body: str, no_changes: bool, protected: int) -> str:
     head = summary.replace("Каталог — ", f"Каталог собран под **Orca {version}**: ", 1)
     parts = [head, ""]
     if not no_changes:
         joined = re.sub(r"\n(?!- )", " ", entry_body.strip())
         parts += ["## Что нового", "", joined, ""]
-    parts.append(f"Защищённая зона не изменилась: те же {EXPECT['protected']} ключей и {EXPECT['allowed_paths']} "
-                 f"разрешённых пути. Нижняя граница совместимости — **{compat()}**.")
+    parts.append(f"Защищённая зона: {protected} ключей остаются английскими, разрешённых путей — "
+                 f"{EXPECT['allowed_paths']}. Нижняя граница совместимости — **{compat()}**.")
     return "\n".join(parts) + "\n"
 
 

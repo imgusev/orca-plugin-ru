@@ -281,6 +281,8 @@ auto.lib.feedback.image.attachments.additionalErrors
 browser.newTab.runningElsewhere
 components.native-chat.githubPeek.comments
 components.orchestration.workerAutoClose.finished
+components.orchestrationCrew.show
+components.orchestrationCrew.summary
 dashboardPopout.card.time.days
 dashboardPopout.card.time.hours
 dashboardPopout.card.time.minutes
