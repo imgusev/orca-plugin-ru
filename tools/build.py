@@ -43,6 +43,9 @@ PLURAL_FORMS = ("one", "few", "many", "other")
 # "The plugin stopped after an activation or worker error". Упираются в него
 # только CSS-блоки витрины возможностей, переводить в них всё равно нечего.
 MAX_VALUE_LENGTH = 8192
+# Столько листовых записей и уровней вложенности принимает валидатор каталога
+MAX_CATALOG_RECORDS = 20000
+MAX_CATALOG_DEPTH = 16
 
 try:
     ALLOWED_CHROME = set(open(os.path.join(HERE, "allowed-chrome.txt")).read().split())
@@ -130,7 +133,10 @@ def main() -> None:
     # русские формы числа: i18next сам добавляет суффикс к ключу, когда приложение
     # передаёт count, поэтому _few и _many доезжают до интерфейса, хотя в английском
     # каталоге их нет. Ключ без count такой суффикс никогда не запросит — это ошибка.
-    plural_added, plural_stray, plural_broken = 0, [], []
+    # Формы, совпадающие с базовым переводом (число идёт через двоеточие или скобки
+    # и не склоняется), в каталог не пишутся: не найдя суффиксной формы, i18next
+    # вернётся к базовому ключу — он в каталоге есть, интерфейс не меняется.
+    plural_added, plural_stray, plural_broken, plural_skipped = 0, [], [], 0
     for base, forms in plurals.items():
         if base not in source:
             raise SystemExit(f"формы числа заданы для несуществующего ключа: {base}")
@@ -138,6 +144,10 @@ def main() -> None:
             plural_stray.append(base)
         english = decode_js(source[base])
         want = sorted(PLACEHOLDER_RE.findall(english))
+        base_tr = ru.get(english)
+        if base_tr is not None and set(forms.values()) == {base_tr}:
+            plural_skipped += len(forms)
+            continue
         for form, value in forms.items():
             if form not in PLURAL_FORMS:
                 raise SystemExit(f"неизвестная форма числа {form!r} у ключа {base}")
@@ -183,8 +193,22 @@ def main() -> None:
     if too_long:
         raise SystemExit(f"перевод длиннее {MAX_VALUE_LENGTH} символов отклонит весь пакет: {too_long[:3]}")
 
+    # тождественные записи (перевод равен английскому тексту: команды, имена, пути)
+    # не пишутся: непереведённый ключ показывает тот же текст из en.json
+    identity = {key for key, value in translated.items()
+                if key in source and value == decode_js(source[key])}
+    writable = {key: value for key, value in translated.items() if key not in identity}
+
     out = os.path.join(ROOT, "locales", "ru.json")
-    catalog = nest(translated)
+    catalog = nest(writable)
+    # жёсткие лимиты валидатора Orca — превышение отвергает весь пакет уже у
+    # пользователей, поэтому сборка обязана остановиться до публикации
+    if len(writable) > MAX_CATALOG_RECORDS:
+        raise SystemExit(f"каталог {len(writable)} записей — валидатор Orca принимает не больше "
+                         f"{MAX_CATALOG_RECORDS}; вычистите тождественные записи")
+    if depth(catalog) > MAX_CATALOG_DEPTH:
+        raise SystemExit(f"вложенность каталога {depth(catalog)} — валидатор Orca принимает не больше "
+                         f"{MAX_CATALOG_DEPTH}")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     json.dump(catalog, open(out, "w"), ensure_ascii=False, indent=1)
 
@@ -206,9 +230,10 @@ def main() -> None:
     print(f"нет в словарях:       {len(set(missing))}")
     print(f"плейсхолдеры:         {len(broken)} расхождений")
     print(f"суффиксы мн. числа:   {len(dropped_suffix)} отброшено · {len(kept_suffix)} осталось (должно быть 0)")
-    print(f"формы числа:          {plural_added} записей для {len(plurals)} ключей "
-          f"(кандидатов без форм: {len(candidates - set(plurals))})")
-    print(f"вложенность:          {depth(catalog)}/16 · записей {len(translated)}/20000")
+    print(f"формы числа:          {plural_added} записей для {len(plurals)} ключей · "
+          f"{plural_skipped} тождественных не пишутся (кандидатов без форм: {len(candidates - set(plurals))})")
+    print(f"вложенность:          {depth(catalog)}/{MAX_CATALOG_DEPTH} · записей {len(writable)}/{MAX_CATALOG_RECORDS}"
+          f" · тождественных не пишется {len(identity)}")
     print(f"\nзаписано: {out}")
 
     if plural_stray:
