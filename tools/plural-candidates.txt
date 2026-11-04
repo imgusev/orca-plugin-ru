@@ -1,5 +1,6 @@
 accounts.claude.switchSessions.notMovedOther
 accounts.claude.switchSessions.restartingOther
+accounts.claude.switchSessions.sharedOther
 accounts.claude.switchSessions.uncheckedOther
 auto.components.GitHubItemDialog.reactionCount
 auto.components.GitLabItemDialog.approvalsRemaining
