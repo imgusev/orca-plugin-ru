@@ -801,12 +801,6 @@
   "many": "Удалить заметки из этой рабочей области ({{count}})?",
   "other": "Удалить заметки из этой рабочей области ({{count}})?"
  },
- "auto.components.right.sidebar.SourceControl.commitsAheadShort": {
-  "one": "Впереди: {{count}}",
-  "few": "Впереди: {{count}}",
-  "many": "Впереди: {{count}}",
-  "other": "Впереди: {{count}}"
- },
  "auto.components.right.sidebar.SourceControl.compareBaseCommitsAhead": {
   "one": "коммитов впереди {{ref}}: {{count}}",
   "few": "коммитов впереди {{ref}}: {{count}}",
@@ -908,12 +902,6 @@
   "few": "Поставить в очередь PR: {{count}}",
   "many": "Поставить в очередь PR: {{count}}",
   "other": "Поставить в очередь PR: {{count}}"
- },
- "auto.components.right.sidebar.source.control.compare.summary.commitsAhead": {
-  "one": "коммитов впереди {{ref}}: {{count}}",
-  "few": "коммитов впереди {{ref}}: {{count}}",
-  "many": "коммитов впереди {{ref}}: {{count}}",
-  "other": "коммитов впереди {{ref}}: {{count}}"
  },
  "auto.components.right.sidebar.source.control.discard.dialog.fileCount": {
   "one": "файлов: {{count}}",
@@ -1112,12 +1100,6 @@
   "few": "Скрывается worktree: {{count}}",
   "many": "Скрывается worktree: {{count}}",
   "other": "Скрывается worktree: {{count}}"
- },
- "auto.components.sidebar.ImportedWorktreesVisibilityLine.hidingInRepo": {
-  "one": "Скрывается worktree в {{repo}}: {{count}}",
-  "few": "Скрывается worktree в {{repo}}: {{count}}",
-  "many": "Скрывается worktree в {{repo}}: {{count}}",
-  "other": "Скрывается worktree в {{repo}}: {{count}}"
  },
  "auto.components.sidebar.ImportedWorktreesVisibilityLine.keepHiddenAriaLabel": {
   "one": "Оставить скрытыми обнаруженные worktree для {{repo}}: {{count}}; восстановить можно из меню проекта",
@@ -1799,5 +1781,77 @@
   "few": "Ещё {{count}} файла cookie не удалось расшифровать по другой причине.",
   "many": "Ещё {{count}} файлов cookie не удалось расшифровать по другой причине.",
   "other": "Ещё {{count}} файлов cookie не удалось расшифровать по другой причине."
+ },
+ "auto.components.settings.PluginAuthor.shownPluginCount": {
+  "one": "Показано подходящих плагинов, включая этот: {{count}}",
+  "few": "Показано подходящих плагинов, включая этот: {{count}}",
+  "many": "Показано подходящих плагинов, включая этот: {{count}}",
+  "other": "Показано подходящих плагинов, включая этот: {{count}}"
+ },
+ "auto.components.sidebar.WorktreeList.projectGroupRefreshSuccess": {
+  "one": "Добавлен {{count}} проект в {{group}}",
+  "few": "Добавлено {{count}} проекта в {{group}}",
+  "many": "Добавлено {{count}} проектов в {{group}}",
+  "other": "Добавлено {{count}} проекта в {{group}}"
+ },
+ "components.native-chat.turnDiff.showMoreFiles": {
+  "one": "Показать ещё: {{count}}",
+  "few": "Показать ещё: {{count}}",
+  "many": "Показать ещё: {{count}}",
+  "other": "Показать ещё: {{count}}"
+ },
+ "components.orchestration.workerAutoClose.bannerFinished": {
+  "one": "Воркер оркестрации завершил работу · закроется через {{countdown}}",
+  "few": "Воркер оркестрации завершил работу · закроется через {{countdown}}",
+  "many": "Воркер оркестрации завершил работу · закроется через {{countdown}}",
+  "other": "Воркер оркестрации завершил работу · закроется через {{countdown}}"
+ },
+ "settings.browser.passwords.accountCount": {
+  "one": "{{count}} аккаунт",
+  "few": "{{count}} аккаунта",
+  "many": "{{count}} аккаунтов",
+  "other": "{{count}} аккаунта"
+ },
+ "settings.browser.passwords.importConflicts": {
+  "one": "Оставлено прежними — сохранён другой пароль: {{count}}",
+  "few": "Оставлено прежними — сохранён другой пароль: {{count}}",
+  "many": "Оставлено прежними — сохранён другой пароль: {{count}}",
+  "other": "Оставлено прежними — сохранён другой пароль: {{count}}"
+ },
+ "settings.browser.passwords.importDuplicates": {
+  "one": "Уже сохранено: {{count}}",
+  "few": "Уже сохранено: {{count}}",
+  "many": "Уже сохранено: {{count}}",
+  "other": "Уже сохранено: {{count}}"
+ },
+ "settings.browser.passwords.importInvalid": {
+  "one": "Нечитаемых строк: {{count}}",
+  "few": "Нечитаемых строк: {{count}}",
+  "many": "Нечитаемых строк: {{count}}",
+  "other": "Нечитаемых строк: {{count}}"
+ },
+ "settings.browser.passwords.importUndecryptable": {
+  "one": "Защищено браузером: {{count}} — экспортируйте из него CSV",
+  "few": "Защищено браузером: {{count}} — экспортируйте из него CSV",
+  "many": "Защищено браузером: {{count}} — экспортируйте из него CSV",
+  "other": "Защищено браузером: {{count}} — экспортируйте из него CSV"
+ },
+ "settings.browser.passwords.imported": {
+  "one": "Импортирован {{count}} пароль",
+  "few": "Импортировано {{count}} пароля",
+  "many": "Импортировано {{count}} паролей",
+  "other": "Импортировано {{count}} пароля"
+ },
+ "settings.browser.passwords.neverHeading": {
+  "one": "Не сохранялось для {{count}} сайта",
+  "few": "Не сохранялось для {{count}} сайтов",
+  "many": "Не сохранялось для {{count}} сайтов",
+  "other": "Не сохранялось для {{count}} сайтов"
+ },
+ "settings.browser.passwords.search": {
+  "one": "Поиск среди паролей: {{count}}",
+  "few": "Поиск среди паролей: {{count}}",
+  "many": "Поиск среди паролей: {{count}}",
+  "other": "Поиск среди паролей: {{count}}"
  }
 }

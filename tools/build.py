@@ -137,9 +137,13 @@ def main() -> None:
     # и не склоняется), в каталог не пишутся: не найдя суффиксной формы, i18next
     # вернётся к базовому ключу — он в каталоге есть, интерфейс не меняется.
     plural_added, plural_stray, plural_broken, plural_skipped = 0, [], [], 0
+    plural_dead = []
     for base, forms in plurals.items():
         if base not in source:
-            raise SystemExit(f"формы числа заданы для несуществующего ключа: {base}")
+            # ключ исчез из Orca — формы его уже никто не спросит, каталогу это
+            # не мешает; запись остаётся в plurals.json до ручной чистки
+            plural_dead.append(base)
+            continue
         if candidates and base not in candidates:
             plural_stray.append(base)
         english = decode_js(source[base])
@@ -236,6 +240,11 @@ def main() -> None:
           f" · тождественных не пишется {len(identity)}")
     print(f"\nзаписано: {out}")
 
+    if plural_dead:
+        print(f"\nМЁРТВЫЕ ЗАПИСИ ФОРМ ЧИСЛА ({len(plural_dead)}) — ключей больше нет в Orca, "
+              f"формы не пишутся; удалите их из plurals.json:")
+        for key in plural_dead[:10]:
+            print(f"  {key}")
     if plural_stray:
         print(f"\nФОРМЫ ЧИСЛА У КЛЮЧЕЙ, КОТОРЫМ НЕ ПЕРЕДАЁТСЯ count ({len(plural_stray)}) — "
               f"i18next их не спросит:")
