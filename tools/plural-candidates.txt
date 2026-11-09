@@ -160,7 +160,7 @@ auto.components.sidebar.DeleteWorktreeDialog.removeBatchMixed
 auto.components.sidebar.DeleteWorktreeDialog.removeWithChildrenFolder
 auto.components.sidebar.DeleteWorktreeDialog.removeWithChildrenGit
 auto.components.sidebar.DeleteWorktreeDialog.removeWithChildrenMixed
-auto.components.sidebar.DeleteWorktreeDirtyChangeHint.changeCount
+auto.components.sidebar.DeleteWorktreeDirtyChangeHint.changesLost
 auto.components.sidebar.DeleteWorktreeDirtyChangeHint.moreLoadedPaths
 auto.components.sidebar.DeleteWorktreeLineageNotice.alsoDeletesChildren
 auto.components.sidebar.DeleteWorktreeLineageNotice.moreChildren

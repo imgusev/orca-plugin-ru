@@ -1059,11 +1059,11 @@
   "many": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca.",
   "other": "Убрать <target/> и <descendants>дочерних рабочих областей: {{count}}</descendants> из Orca. Git worktree также будут удалены из git и с диска; из папочных рабочих областей удалится только запись в Orca."
  },
- "auto.components.sidebar.DeleteWorktreeDirtyChangeHint.changeCount": {
-  "one": "Незафиксированных или неотслеживаемых изменений: {{count}}",
-  "few": "Незафиксированных или неотслеживаемых изменений: {{count}}",
-  "many": "Незафиксированных или неотслеживаемых изменений: {{count}}",
-  "other": "Незафиксированных или неотслеживаемых изменений: {{count}}"
+ "auto.components.sidebar.DeleteWorktreeDirtyChangeHint.changesLost": {
+  "one": "Будет потеряно {{count}} незакоммиченное изменение",
+  "few": "Будут потеряны {{count}} незакоммиченных изменения",
+  "many": "Будут потеряны {{count}} незакоммиченных изменений",
+  "other": "Будут потеряны {{count}} незакоммиченных изменения"
  },
  "auto.components.sidebar.DeleteWorktreeDirtyChangeHint.moreLoadedPaths": {
   "one": "и ещё загруженных путей: {{count}}",
