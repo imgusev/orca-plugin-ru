@@ -120,6 +120,7 @@ auto.components.right.sidebar.useFileExplorerImport.importSkippedCount
 auto.components.rightSidebar.FolderWorkspacePrChecksPanel.failingCountLabel
 auto.components.rightSidebar.FolderWorkspacePrChecksPanel.pendingCountLabel
 auto.components.rightSidebar.FolderWorkspacePrChecksPanel.worktreeCountLabel
+auto.components.rightSidebar.FolderWorkspaceSourceControl.changeCount
 auto.components.rightSidebar.FolderWorkspaceWorktreesPanel.attachedCount
 auto.components.settings.NotificationHostToggles.offCount
 auto.components.settings.PluginAuthor.shownPluginCount

@@ -1853,5 +1853,11 @@
     "few": "Показать ещё {{count}} строки",
     "many": "Показать ещё {{count}} строк",
     "other": "Показать ещё {{count}} строки"
+  },
+  "auto.components.rightSidebar.FolderWorkspaceSourceControl.changeCount": {
+    "one": "{{count}} изменение",
+    "few": "{{count}} изменения",
+    "many": "{{count}} изменений",
+    "other": "{{count}} изменения"
   }
 }
