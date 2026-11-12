@@ -177,7 +177,7 @@ auto.components.sidebar.PreservedBranchBatchReviewDialog.a0f9863597
 auto.components.sidebar.ProjectGroupDeleteDialog.moreProjects
 auto.components.sidebar.ProjectGroupDeleteDialog.removeContainedProjects
 auto.components.sidebar.RemoveFolderDialog.openTerminalWarning
-auto.components.sidebar.SetupScriptPromptCard.savedWithSkippedFields
+auto.components.sidebar.SetupScriptCodeBlock.showMore
 auto.components.sidebar.SidebarFeedbackImageAttachments.screenshotsHint
 auto.components.sidebar.SidebarRepositoryFilterSection.selectedProjects
 auto.components.sidebar.SidebarWorkspaceOptionsMenu.optionsActiveFilters
