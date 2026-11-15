@@ -7,7 +7,7 @@
    по тегу той версии, что стоит локально (`ORCA_VERSION`), а не из `main`.
    Ключ, добавленный в `main`, но не попавший в релиз, ломает языковой пакет
    у всех пользователей: валидатор релиза его не знает и отвергает каталог
-   целиком. Полный каталог релиза — 19 677 ключей для 1.4.257.
+   целиком. Полный каталог релиза — 20 340 ключей для 1.4.259.
 
 2. Разбор `app.asar` — страховка: добавляет ключи, которых в `en.json` нет.
    До 1.4.197 так добирались строки поиска по настройкам (~152 ключа):
@@ -150,6 +150,22 @@ def scan_plural_candidates(asar: str) -> set[str]:
     return {k for k in keys if not re.search(r"_(one|few|many|other)$", k)}
 
 
+def normalize_plural_bases(pairs: dict[str, str], candidates: set[str]) -> list[str]:
+    """У count-вызова базовый текст мог устареть, а каталог уже содержит _other.
+
+    Берём форму из того же каталога только для подтверждённых count-вызовов:
+    базовый ключ используется и для проверки плейсхолдеров, и как fallback
+    при отсутствии русской суффиксной формы.
+    """
+    changed = []
+    for key in sorted(candidates):
+        other = pairs.get(f"{key}_other", "")
+        if "{{count}}" not in pairs[key] and "{{count}}" in other:
+            pairs[key] = other
+            changed.append(key)
+    return changed
+
+
 def main() -> None:
     asar = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_ASAR
     if not os.path.exists(asar):
@@ -188,6 +204,9 @@ def main() -> None:
           f"(суффикс подставляет i18next)")
 
     pairs = {**catalog, **extra}
+    normalized = normalize_plural_bases(pairs, candidates)
+    if normalized:
+        print(f"базовые строки count: обновлено из _other {len(normalized)}")
     out = os.path.join(HERE, "en-all.json")
     json.dump(pairs, open(out, "w"), ensure_ascii=False, indent=1)
     open(os.path.join(ROOT, "ORCA_VERSION"), "w").write(version + "\n")
@@ -195,4 +214,5 @@ def main() -> None:
     print(f"версия Orca: {version} → ORCA_VERSION")
 
 
-main()
+if __name__ == "__main__":
+    main()

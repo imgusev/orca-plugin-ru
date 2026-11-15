@@ -18,12 +18,6 @@
     "many": "Оркестрация: {{counts}}",
     "other": "Оркестрация: {{counts}}"
   },
-  "auto.components.sidebar.PreservedBranchBatchReviewDialog.a0f9863597": {
-    "one": "Удалить принудительно {{count}} ветку",
-    "few": "Удалить принудительно {{count}} ветки",
-    "many": "Удалить принудительно {{count}} веток",
-    "other": "Удалить принудительно {{count}} ветки"
-  },
   "auto.components.sidebar.preserved.branch.batch.toast.6310412304": {
     "one": "Разобрать {{count}} ветку",
     "few": "Разобрать {{count}} ветки",
@@ -1749,12 +1743,6 @@
     "many": "Показать простаивающих дочерних агентов: {{count}}",
     "other": "Показать простаивающих дочерних агентов: {{count}}"
   },
-  "sourceControl.discard.deleteCount": {
-    "one": "Удалить: {{count}}",
-    "few": "Удалить: {{count}}",
-    "many": "Удалить: {{count}}",
-    "other": "Удалить: {{count}}"
-  },
   "auto.components.UpdateCard.moreSinceLastUpdate": {
     "one": "+{{count}} новая с прошлого обновления",
     "few": "+{{count}} новых с прошлого обновления",
@@ -1859,5 +1847,131 @@
     "few": "{{count}} изменения",
     "many": "{{count}} изменений",
     "other": "{{count}} изменения"
+  },
+  "auto.components.settings.RepositoryRemoveProjectSection.checkoutCount": {
+    "one": "checkout: {{count}}",
+    "few": "checkout: {{count}}",
+    "many": "checkout: {{count}}",
+    "other": "checkout: {{count}}"
+  },
+  "auto.components.settings.RepositoryRemoveProjectSection.hostCount": {
+    "one": "{{count}} хост",
+    "few": "{{count}} хоста",
+    "many": "{{count}} хостов",
+    "other": "{{count}} хоста"
+  },
+  "auto.components.settings.RepositoryRemoveProjectSection.terminalWarning": {
+    "one": "Будет закрыт {{count}} открытый терминал этого проекта.",
+    "few": "Будут закрыты {{count}} открытых терминала этого проекта.",
+    "many": "Будут закрыты {{count}} открытых терминалов этого проекта.",
+    "other": "Будут закрыты {{count}} открытых терминала этого проекта."
+  },
+  "auto.hooks.useMacosTccPromptNotice.titleMany": {
+    "one": "macOS прерывала ваших агентов {{count}} раз",
+    "few": "macOS прерывала ваших агентов {{count}} раза",
+    "many": "macOS прерывала ваших агентов {{count}} раз",
+    "other": "macOS прерывала ваших агентов {{count}} раза"
+  },
+  "components.native-chat.ask.questionCount": {
+    "one": "{{count}} вопрос",
+    "few": "{{count}} вопроса",
+    "many": "{{count}} вопросов",
+    "other": "{{count}} вопроса"
+  },
+  "components.native-chat.queuedMessages.imageCount": {
+    "one": "{{count}} изображение",
+    "few": "{{count}} изображения",
+    "many": "{{count}} изображений",
+    "other": "{{count}} изображения"
+  },
+  "components.settings.workspaceCleanup.activity.failed": {
+    "one": "Ошибки · {{count}}",
+    "few": "Ошибки · {{count}}",
+    "many": "Ошибки · {{count}}",
+    "other": "Ошибки · {{count}}"
+  },
+  "components.settings.workspaceCleanup.activity.failedCount": {
+    "one": "Ошибок: {{count}}",
+    "few": "Ошибок: {{count}}",
+    "many": "Ошибок: {{count}}",
+    "other": "Ошибок: {{count}}"
+  },
+  "components.settings.workspaceCleanup.activity.kept": {
+    "one": "Сохранено · {{count}}",
+    "few": "Сохранено · {{count}}",
+    "many": "Сохранено · {{count}}",
+    "other": "Сохранено · {{count}}"
+  },
+  "components.settings.workspaceCleanup.activity.keptCount": {
+    "one": "Сохранено: {{count}}",
+    "few": "Сохранено: {{count}}",
+    "many": "Сохранено: {{count}}",
+    "other": "Сохранено: {{count}}"
+  },
+  "components.settings.workspaceCleanup.activity.removed": {
+    "one": "Удалено · {{count}}",
+    "few": "Удалено · {{count}}",
+    "many": "Удалено · {{count}}",
+    "other": "Удалено · {{count}}"
+  },
+  "components.settings.workspaceCleanup.activity.removedCount": {
+    "one": "Удалено: {{count}}",
+    "few": "Удалено: {{count}}",
+    "many": "Удалено: {{count}}",
+    "other": "Удалено: {{count}}"
+  },
+  "components.settings.workspaceCleanup.activity.showMore": {
+    "one": "Показать ещё {{count}}",
+    "few": "Показать ещё {{count}}",
+    "many": "Показать ещё {{count}}",
+    "other": "Показать ещё {{count}}"
+  },
+  "components.settings.workspaceCleanup.enable.summary": {
+    "one": "Будет удалена {{count}} рабочая область",
+    "few": "Будут удалены {{count}} рабочие области",
+    "many": "Будут удалены {{count}} рабочих областей",
+    "other": "Будут удалены {{count}} рабочие области"
+  },
+  "components.settings.workspaceCleanup.rules.inactiveDescription": {
+    "one": "Нет активности в течение {{count}} дня.",
+    "few": "Нет активности в течение {{count}} дней.",
+    "many": "Нет активности в течение {{count}} дней.",
+    "other": "Нет активности в течение {{count}} дней."
+  },
+  "components.settings.workspaceCleanup.rules.matchesCount": {
+    "one": "Сейчас подходит {{count}} рабочая область",
+    "few": "Сейчас подходят {{count}} рабочие области",
+    "many": "Сейчас подходят {{count}} рабочих областей",
+    "other": "Сейчас подходят {{count}} рабочие области"
+  },
+  "sidebar.hiddenProjects.sectionTitle": {
+    "one": "Скрытые проекты ({{count}})",
+    "few": "Скрытые проекты ({{count}})",
+    "many": "Скрытые проекты ({{count}})",
+    "other": "Скрытые проекты ({{count}})"
+  },
+  "terminal.newerDaemonBanner.reopenTerminal": {
+    "one": "Заново открыть {{count}} терминал",
+    "few": "Заново открыть {{count}} терминала",
+    "many": "Заново открыть {{count}} терминалов",
+    "other": "Заново открыть {{count}} терминала"
+  },
+  "terminal.newerDaemonBanner.reopened": {
+    "one": "Заново открыт {{count}} терминал",
+    "few": "Заново открыты {{count}} терминала",
+    "many": "Заново открыты {{count}} терминалов",
+    "other": "Заново открыты {{count}} терминала"
+  },
+  "terminal.newerDaemonBanner.resumed": {
+    "one": "Возобновлена {{count}} сессия агента.",
+    "few": "Возобновлены {{count}} сессии агента.",
+    "many": "Возобновлено {{count}} сессий агента.",
+    "other": "Возобновлены {{count}} сессии агента."
+  },
+  "terminal.severedDaemonBanner.count": {
+    "one": "{{count}} работающий терминал",
+    "few": "{{count}} работающих терминала",
+    "many": "{{count}} работающих терминалов",
+    "other": "{{count}} работающих терминала"
   }
 }
