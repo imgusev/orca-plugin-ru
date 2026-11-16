@@ -36,6 +36,7 @@ auto.components.automations.AutomationRunsDashboard.historyUnavailable
 auto.components.automations.AutomationsPage.runUsageSummaryTokens
 auto.components.automations.ExternalAutomationManagers.automationCount
 auto.components.automations.externalScope.uncheckedHostCount
+auto.components.automations.recentRuns.allRuns
 auto.components.automations.runHistory.occurrencesCount
 auto.components.automations.runHistory.occurrencesWithLatestCount
 auto.components.automations.runHistory.runCountSummary
@@ -59,6 +60,7 @@ auto.components.editor.HtmlDocPreview.allowDirectories
 auto.components.editor.HtmlDocPreview.multipleAssetsFailedNotice
 auto.components.editor.IpynbViewer.cellCount
 auto.components.github.PRFilterPickers.clearSelected
+auto.components.github.PRFilterSections.authorCount
 auto.components.github.PRFilterSections.labelCount
 auto.components.github.project.ProjectCell.linkedPullRequestsOverflow
 auto.components.hostPicker.moreHosts
@@ -263,8 +265,6 @@ auto.components.status.bar.tooltip.rateLimitResetsAvailable
 auto.components.status.bar.workspaceSpaceDecision.activeAgents
 auto.components.status.bar.workspaceSpaceDecision.browserTabsOpen
 auto.components.status.bar.workspaceSpaceDecision.changedFiles
-auto.components.status.bar.workspaceSpaceDecision.completedAgents
-auto.components.status.bar.workspaceSpaceDecision.completedAgentsRetained
 auto.components.status.bar.workspaceSpaceDecision.dirtyEditorBuffers
 auto.components.status.bar.workspaceSpaceDecision.editorFilesOpen
 auto.components.status.bar.workspaceSpaceDecision.openFiles
@@ -285,6 +285,8 @@ auto.lib.feedback.image.attachments.additionalErrors
 browser.newTab.runningElsewhere
 components.native-chat.ask.questionCount
 components.native-chat.githubPeek.comments
+components.native-chat.mcp.summary.connected
+components.native-chat.mcp.summary.failed
 components.native-chat.queuedMessages.imageCount
 components.native-chat.turnDiff.showMoreFiles
 components.orchestration.workerAutoClose.bannerFinished
@@ -321,6 +323,7 @@ settings.browser.passwords.search
 sidebar.agentSummary.hideIdleChildren
 sidebar.agentSummary.idleChildCount
 sidebar.agentSummary.showIdleChildren
+sidebar.cardSlot.needYouCount
 sidebar.hiddenProjects.sectionTitle
 terminal.newerDaemonBanner.reopenTerminal
 terminal.newerDaemonBanner.reopened

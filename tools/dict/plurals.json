@@ -1593,18 +1593,6 @@
     "many": "Изменённых файлов: {{count}}",
     "other": "Изменённых файлов: {{count}}"
   },
-  "auto.components.status.bar.workspaceSpaceDecision.completedAgents": {
-    "one": "Завершённых агентов: {{count}}",
-    "few": "Завершённых агентов: {{count}}",
-    "many": "Завершённых агентов: {{count}}",
-    "other": "Завершённых агентов: {{count}}"
-  },
-  "auto.components.status.bar.workspaceSpaceDecision.completedAgentsRetained": {
-    "one": "Оставлено завершённых агентов: {{count}}",
-    "few": "Оставлено завершённых агентов: {{count}}",
-    "many": "Оставлено завершённых агентов: {{count}}",
-    "other": "Оставлено завершённых агентов: {{count}}"
-  },
   "auto.components.status.bar.workspaceSpaceDecision.dirtyEditorBuffers": {
     "one": "Изменённых буферов редактора: {{count}}",
     "few": "Изменённых буферов редактора: {{count}}",
@@ -1973,5 +1961,35 @@
     "few": "{{count}} работающих терминала",
     "many": "{{count}} работающих терминалов",
     "other": "{{count}} работающих терминала"
+  },
+  "auto.components.automations.recentRuns.allRuns": {
+    "one": "Всего {{count}} запуск",
+    "few": "Всего {{count}} запуска",
+    "many": "Всего {{count}} запусков",
+    "other": "Всего {{count}} запуска"
+  },
+  "auto.components.github.PRFilterSections.authorCount": {
+    "one": "{{count}} автор",
+    "few": "{{count}} автора",
+    "many": "{{count}} авторов",
+    "other": "{{count}} автора"
+  },
+  "components.native-chat.mcp.summary.connected": {
+    "one": "Подключено: {{count}}",
+    "few": "Подключено: {{count}}",
+    "many": "Подключено: {{count}}",
+    "other": "Подключено: {{count}}"
+  },
+  "components.native-chat.mcp.summary.failed": {
+    "one": "Не удалось: {{count}}",
+    "few": "Не удалось: {{count}}",
+    "many": "Не удалось: {{count}}",
+    "other": "Не удалось: {{count}}"
+  },
+  "sidebar.cardSlot.needYouCount": {
+    "one": "Ждёт вас: {{count}}",
+    "few": "Ждут вас: {{count}}",
+    "many": "Ждут вас: {{count}}",
+    "other": "Ждут вас: {{count}}"
   }
 }
