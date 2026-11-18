@@ -1,6 +1,7 @@
 accounts.claude.switchSessions.notMovedOther
 accounts.claude.switchSessions.restartingOther
 accounts.claude.switchSessions.sharedOther
+accounts.claude.switchSessions.strandedOther
 accounts.claude.switchSessions.uncheckedOther
 auto.components.GitHubItemDialog.reactionCount
 auto.components.GitLabItemDialog.approvalsRemaining
@@ -303,11 +304,13 @@ components.settings.workspaceCleanup.activity.showMore
 components.settings.workspaceCleanup.enable.summary
 components.settings.workspaceCleanup.rules.inactiveDescription
 components.settings.workspaceCleanup.rules.matchesCount
+components.workspace.delete.ignoredFiles.lostIncomplete
 dashboardPopout.card.time.days
 dashboardPopout.card.time.hours
 dashboardPopout.card.time.minutes
 dashboardPopout.total
 fileSearch.filters.active
+jira.board.reorderColumnHint
 resourceManager.pty.endSelected
 resourceManager.pty.withoutTab
 sessionHistory.settings.showMore
@@ -325,6 +328,7 @@ sidebar.agentSummary.idleChildCount
 sidebar.agentSummary.showIdleChildren
 sidebar.cardSlot.needYouCount
 sidebar.hiddenProjects.sectionTitle
+sidebar.wslMoved.sectionTitle
 terminal.newerDaemonBanner.reopenTerminal
 terminal.newerDaemonBanner.reopened
 terminal.newerDaemonBanner.resumed
