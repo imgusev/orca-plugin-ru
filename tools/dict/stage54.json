@@ -274,7 +274,7 @@
  "Deleting {{count}} workspace": "Удаление рабочей области: {{count}}",
  "Deleting {{count}} workspaces": "Удаление рабочих областей: {{count}}",
  "Delete {{count}} workspace?": "Удалить рабочую область ({{count}})?",
- "Delete {{count}} workspaces?": "Удалить рабочих областей: {{count}}?",
+ "Delete {{count}} workspaces?": "Удалить рабочие области ({{count}})?",
  "Scroll to Bottom on Input": "Прокручивать вниз при вводе",
  "Typing or pasting while scrolled up jumps to the latest output. Turn off to keep your place.": "Ввод или вставка при прокрутке вверх переносит к самому свежему выводу. Выключите, чтобы оставаться на месте.",
  "jump": "переход",

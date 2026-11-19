@@ -290,6 +290,7 @@ components.native-chat.mcp.summary.connected
 components.native-chat.mcp.summary.failed
 components.native-chat.queuedMessages.imageCount
 components.native-chat.turnDiff.showMoreFiles
+components.native-chat.usageLimitActions.copyTruncated
 components.orchestration.workerAutoClose.bannerFinished
 components.orchestration.workerAutoClose.finished
 components.orchestrationCrew.show
@@ -336,3 +337,5 @@ terminal.severedDaemonBanner.count
 workspace.links.allReviewChecks
 workspace.links.stackSummary
 workspaceSpace.changes.count
+worktree.delete.batchTitle
+worktree.delete.batchVerb
