@@ -3,7 +3,7 @@
   "id": "russian-language-pack",
   "publisher": "imgusev",
   "name": "Русский язык для Orca",
-  "version": "1.4.263",
+  "version": "1.4.272",
   "description": "Полный перевод интерфейса Orca на русский язык.",
   "author": {
     "name": "imgusev",
@@ -11,7 +11,7 @@
   },
   "repository": "https://github.com/imgusev/orca-plugin-ru",
   "engines": {
-    "orca": ">=1.4.169"
+    "orca": ">=1.4.245"
   },
   "pluginApi": 1,
   "contributes": {

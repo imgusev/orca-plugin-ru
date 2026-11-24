@@ -43,8 +43,9 @@ PLURAL_FORMS = ("one", "few", "many", "other")
 # "The plugin stopped after an activation or worker error". Упираются в него
 # только CSS-блоки витрины возможностей, переводить в них всё равно нечего.
 MAX_VALUE_LENGTH = 8192
-# Столько листовых записей и уровней вложенности принимает валидатор каталога
-MAX_CATALOG_RECORDS = 20000
+# С Orca 1.4.245 валидатор допускает 50 000 ключей вместо 20 000.
+# В лимит входят как строки, так и содержащие их объекты.
+LARGER_CATALOG_SINCE = (1, 4, 245)
 MAX_CATALOG_DEPTH = 16
 
 try:
@@ -81,6 +82,10 @@ def nest(flat: dict) -> dict:
 
 def depth(node: dict, level: int = 1) -> int:
     return max([depth(v, level + 1) for v in node.values() if isinstance(v, dict)] + [level])
+
+
+def catalog_entries(node: dict) -> int:
+    return len(node) + sum(catalog_entries(value) for value in node.values() if isinstance(value, dict))
 
 
 def main() -> None:
@@ -205,11 +210,16 @@ def main() -> None:
 
     out = os.path.join(ROOT, "locales", "ru.json")
     catalog = nest(writable)
+    with open(os.path.join(ROOT, "COMPAT")) as handle:
+        compat = handle.read().strip()
+    min_version = tuple(map(int, compat.split(".")))
+    max_entries = 50000 if min_version >= LARGER_CATALOG_SINCE else 20000
+    entries = catalog_entries(catalog)
     # жёсткие лимиты валидатора Orca — превышение отвергает весь пакет уже у
     # пользователей, поэтому сборка обязана остановиться до публикации
-    if len(writable) > MAX_CATALOG_RECORDS:
-        raise SystemExit(f"каталог {len(writable)} записей — валидатор Orca принимает не больше "
-                         f"{MAX_CATALOG_RECORDS}; вычистите тождественные записи")
+    if entries > max_entries:
+        raise SystemExit(f"каталог: {entries} ключей с учётом вложенных объектов; Orca {compat} "
+                         f"принимает не больше {max_entries}")
     if depth(catalog) > MAX_CATALOG_DEPTH:
         raise SystemExit(f"вложенность каталога {depth(catalog)} — валидатор Orca принимает не больше "
                          f"{MAX_CATALOG_DEPTH}")
@@ -236,7 +246,8 @@ def main() -> None:
     print(f"суффиксы мн. числа:   {len(dropped_suffix)} отброшено · {len(kept_suffix)} осталось (должно быть 0)")
     print(f"формы числа:          {plural_added} записей для {len(plurals)} ключей · "
           f"{plural_skipped} тождественных не пишутся (кандидатов без форм: {len(candidates - set(plurals))})")
-    print(f"вложенность:          {depth(catalog)}/{MAX_CATALOG_DEPTH} · записей {len(writable)}/{MAX_CATALOG_RECORDS}"
+    print(f"вложенность:          {depth(catalog)}/{MAX_CATALOG_DEPTH} · ключей {entries}/{max_entries}"
+          f" · строк {len(writable)}"
           f" · тождественных не пишется {len(identity)}")
     print(f"\nзаписано: {out}")
 

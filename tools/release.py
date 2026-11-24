@@ -3,7 +3,7 @@
 
 Команды (запускать из любого места, скрипт сам находит корень репозитория):
 
-  precheck   выход 0, если установленная Orca новее ORCA_VERSION, иначе 1.
+  precheck   выход 0, если установленная Orca отличается от версии в HEAD, иначе 1.
              Дешёвая проверка для планировщика: пока версии совпадают,
              агент не запускается вовсе.
   check      extract.py + build.py; печатает отчёт приёмки и непокрытые
@@ -59,9 +59,9 @@ ESC = re.compile(r"\\x([0-9a-fA-F]{2})|\\u([0-9a-fA-F]{4})")
 PLURAL_ONLY = re.compile(r"_(few|many)$")
 # файлы, которые вправе быть изменёнными к моменту publish
 ALLOWED_DIRTY = re.compile(
-    r"^(ORCA_VERSION|locales/ru\.json|tools/(dict/.*|plural-candidates\.txt|allowed-chrome\.txt|"
-    r"extract\.py|release\.py|AUTOMATION\.md)|README\.md|README\.en\.md|UNTRANSLATED\.md|"
-    r"CHANGELOG\.md|orca-plugin\.json|\.gitignore)$"
+    r"^(ORCA_VERSION|COMPAT|locales/ru\.json|tools/(dict/.*|plural-candidates\.txt|allowed-chrome\.txt|"
+    r"build\.py|extract\.py|release\.py|AUTOMATION\.md)|README\.md|README\.en\.md|UNTRANSLATED\.md|"
+    r"CHANGELOG\.md|orca-plugin\.json|docs/index\.html|\.gitignore)$"
 )
 
 
@@ -81,6 +81,11 @@ def installed_version() -> str:
 
 def built_version() -> str:
     return open(os.path.join(ROOT, "ORCA_VERSION")).read().strip()
+
+
+def committed_version() -> str:
+    # extract.py обновляет рабочий ORCA_VERSION ещё до проверки и сборки.
+    return sh("git", "show", "HEAD:ORCA_VERSION", quiet=True).strip()
 
 
 def dec(value: str) -> str:
@@ -249,18 +254,18 @@ def pending_plural_candidates() -> list[str]:
 # --- команды -----------------------------------------------------------------
 
 def cmd_precheck(_: argparse.Namespace) -> int:
-    inst, built = installed_version(), built_version()
-    if inst == built:
+    inst, committed = installed_version(), committed_version()
+    if inst == committed:
         print(f"Orca {inst} уже переведена — запуск не нужен")
         return 1
-    print(f"нужно обновление: {built} → {inst}")
+    print(f"нужно обновление: {committed} → {inst}")
     return 0
 
 
 def cmd_check(_: argparse.Namespace) -> int:
     inst, built = installed_version(), built_version()
     print(f"на диске Orca {inst}, каталог собран под {built}")
-    released = sh("git", "show", "HEAD:ORCA_VERSION", quiet=True).strip()
+    released = committed_version()
     if inst == released:
         print(f"Orca {inst} уже выпущена (HEAD собран под неё) — ВЫПУСКАТЬ НЕЧЕГО, остановиться")
         return 0
@@ -345,7 +350,7 @@ def cmd_publish(args: argparse.Namespace) -> int:
               f"вернитесь к check", file=sys.stderr)
         return 1
     version = inst
-    previous = sh("git", "show", "HEAD:ORCA_VERSION", quiet=True).strip()
+    previous = committed_version()
     if version == previous and not dry:
         print(f"HEAD уже собран под {version} — публиковать нечего", file=sys.stderr)
         return 1

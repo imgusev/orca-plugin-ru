@@ -1,0 +1,16 @@
+{
+ "Update all": "Обновить все",
+ "{{count}} update": "{{count}} обновление",
+ "{{count}} updates": "{{count}} обновлений",
+ "New bot": "Новый бот",
+ "Your AI teammate": "Ваш ИИ-напарник",
+ "Templates": "Шаблоны",
+ "Expand Bots": "Развернуть раздел «Боты»",
+ "Collapse Bots": "Свернуть раздел «Боты»",
+ "{{action}}, {{total}} bots, {{attention}} need you, {{unread}} unread, {{working}} working": "{{action}}. Всего ботов: {{total}}, ждут вас: {{attention}}, непрочитанных: {{unread}}, работают: {{working}}",
+ "Show {{count}} more bot": "Показать ещё ботов: {{count}}",
+ "Show {{count}} more bots": "Показать ещё ботов: {{count}}",
+ "New bot or group": "Новый бот или группа",
+ "Expand all bots": "Развернуть всех ботов",
+ "Collapse all bots": "Свернуть всех ботов"
+}

@@ -249,11 +249,11 @@
     "many": "{{count}} из {{total}}",
     "other": "{{count}} из {{total}}"
   },
-  "auto.components.settings.serverList.updateAll": {
-    "one": "Обновить все ({{count}})",
-    "few": "Обновить все ({{count}})",
-    "many": "Обновить все ({{count}})",
-    "other": "Обновить все ({{count}})"
+  "auto.components.settings.serverList.updatesCount": {
+    "one": "{{count}} обновление",
+    "few": "{{count}} обновления",
+    "many": "{{count}} обновлений",
+    "other": "{{count}} обновления"
   },
   "auto.components.settings.sshBulkRemove.failedCount": {
     "one": "Не удалось: {{count}}",
@@ -2033,5 +2033,575 @@
     "few": "Удалить рабочие области ({{count}})",
     "many": "Удалить рабочие области ({{count}})",
     "other": "Удалить рабочие области ({{count}})"
+  },
+  "accounts.claude.switchSessions.hostAskOther": {
+    "one": "В {{previous}} остались сессии Claude: {{count}}.",
+    "few": "В {{previous}} остались сессии Claude: {{count}}.",
+    "many": "В {{previous}} остались сессии Claude: {{count}}.",
+    "other": "В {{previous}} остались сессии Claude: {{count}}."
+  },
+  "auto.components.NativeChatResumeToast.resumedOn": {
+    "one": "На {{machine}} продолжили работу агенты: {{count}}.",
+    "few": "На {{machine}} продолжили работу агенты: {{count}}.",
+    "many": "На {{machine}} продолжили работу агенты: {{count}}.",
+    "other": "На {{machine}} продолжили работу агенты: {{count}}."
+  },
+  "auto.components.NativeChatResumeToast.resumedRestart": {
+    "one": "После перезапуска продолжили работу агенты: {{count}}.",
+    "few": "После перезапуска продолжили работу агенты: {{count}}.",
+    "many": "После перезапуска продолжили работу агенты: {{count}}.",
+    "other": "После перезапуска продолжили работу агенты: {{count}}."
+  },
+  "auto.components.NativeChatResumeToast.resumedUpdate": {
+    "one": "После обновления продолжили работу агенты: {{count}}.",
+    "few": "После обновления продолжили работу агенты: {{count}}.",
+    "many": "После обновления продолжили работу агенты: {{count}}.",
+    "other": "После обновления продолжили работу агенты: {{count}}."
+  },
+  "auto.components.NativeChatResumeToast.resuming": {
+    "one": "Возобновляем работу агентов: {{count}}…",
+    "few": "Возобновляем работу агентов: {{count}}…",
+    "many": "Возобновляем работу агентов: {{count}}…",
+    "other": "Возобновляем работу агентов: {{count}}…"
+  },
+  "auto.components.NativeChatResumeToast.resumingOn": {
+    "one": "Возобновляем работу агентов на {{machine}}: {{count}}…",
+    "few": "Возобновляем работу агентов на {{machine}}: {{count}}…",
+    "many": "Возобновляем работу агентов на {{machine}}: {{count}}…",
+    "other": "Возобновляем работу агентов на {{machine}}: {{count}}…"
+  },
+  "auto.components.NativeChatResumeToast.stoppedOn": {
+    "one": "На {{machine}} остановились агенты: {{count}}.",
+    "few": "На {{machine}} остановились агенты: {{count}}.",
+    "many": "На {{machine}} остановились агенты: {{count}}.",
+    "other": "На {{machine}} остановились агенты: {{count}}."
+  },
+  "auto.components.NativeChatResumeToast.stoppedRestart": {
+    "one": "При закрытии Orca остановились агенты: {{count}}.",
+    "few": "При закрытии Orca остановились агенты: {{count}}.",
+    "many": "При закрытии Orca остановились агенты: {{count}}.",
+    "other": "При закрытии Orca остановились агенты: {{count}}."
+  },
+  "auto.components.NativeChatResumeToast.stoppedUpdate": {
+    "one": "При обновлении Orca остановились агенты: {{count}}.",
+    "few": "При обновлении Orca остановились агенты: {{count}}.",
+    "many": "При обновлении Orca остановились агенты: {{count}}.",
+    "other": "При обновлении Orca остановились агенты: {{count}}."
+  },
+  "auto.components.automations.usage.tokens": {
+    "one": "Токенов: {{tokens}}",
+    "few": "Токенов: {{tokens}}",
+    "many": "Токенов: {{tokens}}",
+    "other": "Токенов: {{tokens}}"
+  },
+  "auto.components.sidebar.RemoveFolderDialog.linkedWorkspaceWarning": {
+    "one": "Orca также уберёт рабочие области этого проекта. Всего: {{count}}.",
+    "few": "Orca также уберёт рабочие области этого проекта. Всего: {{count}}.",
+    "many": "Orca также уберёт рабочие области этого проекта. Всего: {{count}}.",
+    "other": "Orca также уберёт рабочие области этого проекта. Всего: {{count}}."
+  },
+  "auto.components.status.bar.StatusBar.rateLimitResetsUnsupportedWsl": {
+    "one": "Доступно сбросов: {{count}} · пока без поддержки WSL",
+    "few": "Доступно сбросов: {{count}} · пока без поддержки WSL",
+    "many": "Доступно сбросов: {{count}} · пока без поддержки WSL",
+    "other": "Доступно сбросов: {{count}} · пока без поддержки WSL"
+  },
+  "automations.botEvents.unnamed.githubRepo": {
+    "one": "{{count}} репозиторий",
+    "few": "{{count}} репозитория",
+    "many": "{{count}} репозиториев",
+    "other": "{{count}} репозитория"
+  },
+  "automations.botEvents.unnamed.linearTeam": {
+    "one": "{{count}} команда Linear",
+    "few": "{{count}} команды Linear",
+    "many": "{{count}} команд Linear",
+    "other": "{{count}} команды Linear"
+  },
+  "automations.botEvents.unnamed.people": {
+    "one": "{{count}} человек",
+    "few": "{{count}} человека",
+    "many": "{{count}} человек",
+    "other": "{{count}} человека"
+  },
+  "automations.botEvents.unnamed.slackChannel": {
+    "one": "{{count}} канал Slack",
+    "few": "{{count}} канала Slack",
+    "many": "{{count}} каналов Slack",
+    "other": "{{count}} канала Slack"
+  },
+  "bots.accessRequest.toastMany": {
+    "one": "Запросили доступ к вашим ботам: {{count}}.",
+    "few": "Запросили доступ к вашим ботам: {{count}}.",
+    "many": "Запросили доступ к вашим ботам: {{count}}.",
+    "other": "Запросили доступ к вашим ботам: {{count}}."
+  },
+  "bots.automations.all": {
+    "one": "Все автоматизации ({{count}})",
+    "few": "Все автоматизации ({{count}})",
+    "many": "Все автоматизации ({{count}})",
+    "other": "Все автоматизации ({{count}})"
+  },
+  "bots.automations.google.minutesBefore": {
+    "one": "За {{count}} мин",
+    "few": "За {{count}} мин",
+    "many": "За {{count}} мин",
+    "other": "За {{count}} мин"
+  },
+  "bots.automations.pausedCount": {
+    "one": "Приостановлено: {{count}}",
+    "few": "Приостановлено: {{count}}",
+    "many": "Приостановлено: {{count}}",
+    "other": "Приостановлено: {{count}}"
+  },
+  "bots.chats.needsYouCount": {
+    "one": "Ждут вас: {{count}}",
+    "few": "Ждут вас: {{count}}",
+    "many": "Ждут вас: {{count}}",
+    "other": "Ждут вас: {{count}}"
+  },
+  "bots.chats.older": {
+    "one": "Показать более ранние ({{count}})",
+    "few": "Показать более ранние ({{count}})",
+    "many": "Показать более ранние ({{count}})",
+    "other": "Показать более ранние ({{count}})"
+  },
+  "bots.chats.olderStep": {
+    "one": "Показать ещё 8 · более ранних: {{count}}",
+    "few": "Показать ещё 8 · более ранних: {{count}}",
+    "many": "Показать ещё 8 · более ранних: {{count}}",
+    "other": "Показать ещё 8 · более ранних: {{count}}"
+  },
+  "bots.chats.runningCount": {
+    "one": "Работают: {{count}}",
+    "few": "Работают: {{count}}",
+    "many": "Работают: {{count}}",
+    "other": "Работают: {{count}}"
+  },
+  "bots.chats.showMoreCount": {
+    "one": "Показать ещё ({{count}})",
+    "few": "Показать ещё ({{count}})",
+    "many": "Показать ещё ({{count}})",
+    "other": "Показать ещё ({{count}})"
+  },
+  "bots.composio.filterConnected": {
+    "one": "Подключено: {{count}}",
+    "few": "Подключено: {{count}}",
+    "many": "Подключено: {{count}}",
+    "other": "Подключено: {{count}}"
+  },
+  "bots.composio.toolConnected": {
+    "one": "Подключено: {{count}} · {{custody}}",
+    "few": "Подключено: {{count}} · {{custody}}",
+    "many": "Подключено: {{count}} · {{custody}}",
+    "other": "Подключено: {{count}} · {{custody}}"
+  },
+  "bots.firstScreen.githubMany": {
+    "one": "GitHub: открытых у вас пул-реквестов — {{count}}",
+    "few": "GitHub: открытых у вас пул-реквестов — {{count}}",
+    "many": "GitHub: открытых у вас пул-реквестов — {{count}}",
+    "other": "GitHub: открытых у вас пул-реквестов — {{count}}"
+  },
+  "bots.firstScreen.linearMany": {
+    "one": "Linear: назначенных вам открытых задач — {{count}}",
+    "few": "Linear: назначенных вам открытых задач — {{count}}",
+    "many": "Linear: назначенных вам открытых задач — {{count}}",
+    "other": "Linear: назначенных вам открытых задач — {{count}}"
+  },
+  "bots.firstScreen.linearMore": {
+    "one": "Linear: назначенных вам открытых задач — {{count}}+",
+    "few": "Linear: назначенных вам открытых задач — {{count}}+",
+    "many": "Linear: назначенных вам открытых задач — {{count}}+",
+    "other": "Linear: назначенных вам открытых задач — {{count}}+"
+  },
+  "bots.firstScreen.projectsMany": {
+    "one": "Найдено проектов: {{count}}. {{names}}",
+    "few": "Найдено проектов: {{count}}. {{names}}",
+    "many": "Найдено проектов: {{count}}. {{names}}",
+    "other": "Найдено проектов: {{count}}. {{names}}"
+  },
+  "bots.firstScreen.toolsMany": {
+    "one": "Серверов MCP: {{count}}. {{names}}",
+    "few": "Серверов MCP: {{count}}. {{names}}",
+    "many": "Серверов MCP: {{count}}. {{names}}",
+    "other": "Серверов MCP: {{count}}. {{names}}"
+  },
+  "bots.firstScreen.workspacesMany": {
+    "one": "Рабочих областей с открытым агентом: {{count}}",
+    "few": "Рабочих областей с открытым агентом: {{count}}",
+    "many": "Рабочих областей с открытым агентом: {{count}}",
+    "other": "Рабочих областей с открытым агентом: {{count}}"
+  },
+  "bots.groups.allBotsCount": {
+    "one": "Все боты · {{count}}",
+    "few": "Все боты · {{count}}",
+    "many": "Все боты · {{count}}",
+    "other": "Все боты · {{count}}"
+  },
+  "bots.groups.mentionedCount": {
+    "one": "Упоминаний: {{count}}",
+    "few": "Упоминаний: {{count}}",
+    "many": "Упоминаний: {{count}}",
+    "other": "Упоминаний: {{count}}"
+  },
+  "bots.groups.panel.membersCount": {
+    "one": "Участники ({{count}})",
+    "few": "Участники ({{count}})",
+    "many": "Участники ({{count}})",
+    "other": "Участники ({{count}})"
+  },
+  "bots.groups.picked": {
+    "one": "Выбрано: {{count}}",
+    "few": "Выбрано: {{count}}",
+    "many": "Выбрано: {{count}}",
+    "other": "Выбрано: {{count}}"
+  },
+  "bots.import.found": {
+    "one": "Найдено: {{count}}",
+    "few": "Найдено: {{count}}",
+    "many": "Найдено: {{count}}",
+    "other": "Найдено: {{count}}"
+  },
+  "bots.import.nudgeMany": {
+    "one": "В {{app}} найдено ботов: {{count}}.",
+    "few": "В {{app}} найдено ботов: {{count}}.",
+    "many": "В {{app}} найдено ботов: {{count}}.",
+    "other": "В {{app}} найдено ботов: {{count}}."
+  },
+  "bots.items.cancel.confirmMany": {
+    "one": "Отменить ({{count}})",
+    "few": "Отменить ({{count}})",
+    "many": "Отменить ({{count}})",
+    "other": "Отменить ({{count}})"
+  },
+  "bots.items.cancel.titleMany": {
+    "one": "Отменить элементы ({{count}})?",
+    "few": "Отменить элементы ({{count}})?",
+    "many": "Отменить элементы ({{count}})?",
+    "other": "Отменить элементы ({{count}})?"
+  },
+  "bots.items.chat.moreItems": {
+    "one": "Ещё {{count}}",
+    "few": "Ещё {{count}}",
+    "many": "Ещё {{count}}",
+    "other": "Ещё {{count}}"
+  },
+  "bots.items.group.new": {
+    "one": "Новых: {{count}}",
+    "few": "Новых: {{count}}",
+    "many": "Новых: {{count}}",
+    "other": "Новых: {{count}}"
+  },
+  "bots.items.group.showMore": {
+    "one": "Показать ещё ({{count}})",
+    "few": "Показать ещё ({{count}})",
+    "many": "Показать ещё ({{count}})",
+    "other": "Показать ещё ({{count}})"
+  },
+  "bots.items.selected": {
+    "one": "Выбрано: {{count}}",
+    "few": "Выбрано: {{count}}",
+    "many": "Выбрано: {{count}}",
+    "other": "Выбрано: {{count}}"
+  },
+  "bots.items.stale.reason": {
+    "one": "Без активности: {{count}} дн.",
+    "few": "Без активности: {{count}} дн.",
+    "many": "Без активности: {{count}} дн.",
+    "other": "Без активности: {{count}} дн."
+  },
+  "bots.items.view.moreLinks": {
+    "one": "Ещё {{count}} ссылка",
+    "few": "Ещё {{count}} ссылки",
+    "many": "Ещё {{count}} ссылок",
+    "other": "Ещё {{count}} ссылки"
+  },
+  "bots.items.wait.titleMany": {
+    "one": "Чего ждут эти элементы ({{count}})?",
+    "few": "Чего ждут эти элементы ({{count}})?",
+    "many": "Чего ждут эти элементы ({{count}})?",
+    "other": "Чего ждут эти элементы ({{count}})?"
+  },
+  "bots.panel.working": {
+    "one": "Работают: {{count}}",
+    "few": "Работают: {{count}}",
+    "many": "Работают: {{count}}",
+    "other": "Работают: {{count}}"
+  },
+  "bots.row.waitingCount": {
+    "one": "Ожидается событий: {{count}}",
+    "few": "Ожидается событий: {{count}}",
+    "many": "Ожидается событий: {{count}}",
+    "other": "Ожидается событий: {{count}}"
+  },
+  "bots.settingsPage.toolsFrom": {
+    "one": "От {{agent}}: {{count}}",
+    "few": "От {{agent}}: {{count}}",
+    "many": "От {{agent}}: {{count}}",
+    "other": "От {{agent}}: {{count}}"
+  },
+  "bots.settingsPage.toolsMore": {
+    "one": "Ещё от {{agent}}: {{count}}",
+    "few": "Ещё от {{agent}}: {{count}}",
+    "many": "Ещё от {{agent}}: {{count}}",
+    "other": "Ещё от {{agent}}: {{count}}"
+  },
+  "bots.share.lines": {
+    "one": "{{count}} строка",
+    "few": "{{count}} строки",
+    "many": "{{count}} строк",
+    "other": "{{count}} строки"
+  },
+  "bots.share.memoryLimit": {
+    "one": "Файлов: до {{count}}",
+    "few": "Файлов: до {{count}}",
+    "many": "Файлов: до {{count}}",
+    "other": "Файлов: до {{count}}"
+  },
+  "bots.share.review.files": {
+    "one": "{{count}} файл",
+    "few": "{{count}} файла",
+    "many": "{{count}} файлов",
+    "other": "{{count}} файла"
+  },
+  "bots.share.review.notes": {
+    "one": "{{count}} заметка",
+    "few": "{{count}} заметки",
+    "many": "{{count}} заметок",
+    "other": "{{count}} заметки"
+  },
+  "bots.share.secretsFound": {
+    "one": "Найдено секретов: {{count}}",
+    "few": "Найдено секретов: {{count}}",
+    "many": "Найдено секретов: {{count}}",
+    "other": "Найдено секретов: {{count}}"
+  },
+  "bots.share.warnings": {
+    "one": "{{count}} предупреждение",
+    "few": "{{count}} предупреждения",
+    "many": "{{count}} предупреждений",
+    "other": "{{count}} предупреждения"
+  },
+  "bots.upNext.newCount": {
+    "one": "Новых: {{count}}",
+    "few": "Новых: {{count}}",
+    "many": "Новых: {{count}}",
+    "other": "Новых: {{count}}"
+  },
+  "bots.upNext.newSuggestions": {
+    "one": "Новых предложений: {{count}}. Нажмите, чтобы посмотреть.",
+    "few": "Новых предложений: {{count}}. Нажмите, чтобы посмотреть.",
+    "many": "Новых предложений: {{count}}. Нажмите, чтобы посмотреть.",
+    "other": "Новых предложений: {{count}}. Нажмите, чтобы посмотреть."
+  },
+  "bots.usageLimit.stoppedCount": {
+    "one": "Остановлено: {{count}}",
+    "few": "Остановлено: {{count}}",
+    "many": "Остановлено: {{count}}",
+    "other": "Остановлено: {{count}}"
+  },
+  "bots.webhooks.hookCount": {
+    "one": "{{count}} вебхук",
+    "few": "{{count}} вебхука",
+    "many": "{{count}} вебхуков",
+    "other": "{{count}} вебхука"
+  },
+  "bots.webhooks.rotate.stopCancels": {
+    "one": "Используйте при утечке ключа. Ожидающие вызовы с этим ключом будут отменены ({{count}}).",
+    "few": "Используйте при утечке ключа. Ожидающие вызовы с этим ключом будут отменены ({{count}}).",
+    "many": "Используйте при утечке ключа. Ожидающие вызовы с этим ключом будут отменены ({{count}}).",
+    "other": "Используйте при утечке ключа. Ожидающие вызовы с этим ключом будут отменены ({{count}})."
+  },
+  "bots.whoCanAsk.addMany": {
+    "one": "Добавить людей ({{count}})",
+    "few": "Добавить людей ({{count}})",
+    "many": "Добавить людей ({{count}})",
+    "other": "Добавить людей ({{count}})"
+  },
+  "bots.whoCanAsk.addedCount": {
+    "one": "Добавлено: {{count}} из {{max}}",
+    "few": "Добавлено: {{count}} из {{max}}",
+    "many": "Добавлено: {{count}} из {{max}}",
+    "other": "Добавлено: {{count}} из {{max}}"
+  },
+  "bots.whoCanAsk.cap": {
+    "one": "Можно добавить до {{count}} чел.",
+    "few": "Можно добавить до {{count}} чел.",
+    "many": "Можно добавить до {{count}} чел.",
+    "other": "Можно добавить до {{count}} чел."
+  },
+  "bots.whoCanAsk.selected": {
+    "one": "Выбрано: {{count}}",
+    "few": "Выбрано: {{count}}",
+    "many": "Выбрано: {{count}}",
+    "other": "Выбрано: {{count}}"
+  },
+  "bots.whoCanAsk.showMore": {
+    "one": "Показать ещё ({{count}})",
+    "few": "Показать ещё ({{count}})",
+    "many": "Показать ещё ({{count}})",
+    "other": "Показать ещё ({{count}})"
+  },
+  "bots.workspaces.moreAgents": {
+    "one": "Ещё {{count}} агент",
+    "few": "Ещё {{count}} агента",
+    "many": "Ещё {{count}} агентов",
+    "other": "Ещё {{count}} агента"
+  },
+  "bots.workspaces.showMore": {
+    "one": "Показать ещё ({{count}})",
+    "few": "Показать ещё ({{count}})",
+    "many": "Показать ещё ({{count}})",
+    "other": "Показать ещё ({{count}})"
+  },
+  "components.native-chat.connectorAsker.earlierMessages": {
+    "one": "Более ранних сообщений в треде: {{count}}",
+    "few": "Более ранних сообщений в треде: {{count}}",
+    "many": "Более ранних сообщений в треде: {{count}}",
+    "other": "Более ранних сообщений в треде: {{count}}"
+  },
+  "components.native-chat.importPlan.askedMany": {
+    "one": "Запрошен импорт элементов ({{count}})",
+    "few": "Запрошен импорт элементов ({{count}})",
+    "many": "Запрошен импорт элементов ({{count}})",
+    "other": "Запрошен импорт элементов ({{count}})"
+  },
+  "components.native-chat.importPlan.importMany": {
+    "one": "Импортировать элементы ({{count}})",
+    "few": "Импортировать элементы ({{count}})",
+    "many": "Импортировать элементы ({{count}})",
+    "other": "Импортировать элементы ({{count}})"
+  },
+  "components.native-chat.workerDock.failedCount": {
+    "one": "С ошибкой: {{count}}",
+    "few": "С ошибкой: {{count}}",
+    "many": "С ошибкой: {{count}}",
+    "other": "С ошибкой: {{count}}"
+  },
+  "components.native-chat.workerDock.moreQuestions": {
+    "one": "Ещё ждут вас: {{count}}",
+    "few": "Ещё ждут вас: {{count}}",
+    "many": "Ещё ждут вас: {{count}}",
+    "other": "Ещё ждут вас: {{count}}"
+  },
+  "components.native-chat.workerDock.needsYouCount": {
+    "one": "Ждут вас: {{count}}",
+    "few": "Ждут вас: {{count}}",
+    "many": "Ждут вас: {{count}}",
+    "other": "Ждут вас: {{count}}"
+  },
+  "components.native-chat.workerDock.questions": {
+    "one": "Ждут вас: {{count}}",
+    "few": "Ждут вас: {{count}}",
+    "many": "Ждут вас: {{count}}",
+    "other": "Ждут вас: {{count}}"
+  },
+  "components.native-chat.workerDock.runningCount": {
+    "one": "Работают: {{count}}",
+    "few": "Работают: {{count}}",
+    "many": "Работают: {{count}}",
+    "other": "Работают: {{count}}"
+  },
+  "featureTips.botsTeammate.inProgressCount": {
+    "one": "В работе: {{count}}",
+    "few": "В работе: {{count}}",
+    "many": "В работе: {{count}}",
+    "other": "В работе: {{count}}"
+  },
+  "featureTips.botsTeammate.needsYouCount": {
+    "one": "Ждут вас: {{count}}",
+    "few": "Ждут вас: {{count}}",
+    "many": "Ждут вас: {{count}}",
+    "other": "Ждут вас: {{count}}"
+  },
+  "settings.bots.connectorRequests": {
+    "one": "{{count}} запрос",
+    "few": "{{count}} запроса",
+    "many": "{{count}} запросов",
+    "other": "{{count}} запроса"
+  },
+  "settings.bots.memoryHistory.addedMany": {
+    "one": "Добавлено строк: {{count}}",
+    "few": "Добавлено строк: {{count}}",
+    "many": "Добавлено строк: {{count}}",
+    "other": "Добавлено строк: {{count}}"
+  },
+  "settings.bots.memoryHistory.changedMany": {
+    "one": "Изменено строк: {{count}}",
+    "few": "Изменено строк: {{count}}",
+    "many": "Изменено строк: {{count}}",
+    "other": "Изменено строк: {{count}}"
+  },
+  "settings.bots.memoryHistory.forgotMany": {
+    "one": "Забыто строк: {{count}}",
+    "few": "Забыто строк: {{count}}",
+    "many": "Забыто строк: {{count}}",
+    "other": "Забыто строк: {{count}}"
+  },
+  "settings.bots.memoryHistory.keptMany": {
+    "one": "Сохранено строк, которые переписали другие чаты: {{count}}",
+    "few": "Сохранено строк, которые переписали другие чаты: {{count}}",
+    "many": "Сохранено строк, которые переписали другие чаты: {{count}}",
+    "other": "Сохранено строк, которые переписали другие чаты: {{count}}"
+  },
+  "settings.bots.memoryHistory.tidied": {
+    "one": "Приведено в порядок строк: {{count}}",
+    "few": "Приведено в порядок строк: {{count}}",
+    "many": "Приведено в порядок строк: {{count}}",
+    "other": "Приведено в порядок строк: {{count}}"
+  },
+  "settings.bots.memoryLines": {
+    "one": "Строк: {{count}} из {{cap}}",
+    "few": "Строк: {{count}} из {{cap}}",
+    "many": "Строк: {{count}} из {{cap}}",
+    "other": "Строк: {{count}} из {{cap}}"
+  },
+  "settings.bots.skills.showMore": {
+    "one": "Показать ещё ({{count}})",
+    "few": "Показать ещё ({{count}})",
+    "many": "Показать ещё ({{count}})",
+    "other": "Показать ещё ({{count}})"
+  },
+  "settings.bots.tidyUp.changes": {
+    "one": "{{count}} изменение",
+    "few": "{{count}} изменения",
+    "many": "{{count}} изменений",
+    "other": "{{count}} изменения"
+  },
+  "settings.bots.tidyUp.filed": {
+    "one": "Строк отправлено в memory/{{topic}}.md: {{count}}",
+    "few": "Строк отправлено в memory/{{topic}}.md: {{count}}",
+    "many": "Строк отправлено в memory/{{topic}}.md: {{count}}",
+    "other": "Строк отправлено в memory/{{topic}}.md: {{count}}"
+  },
+  "settings.bots.tidyUp.merged": {
+    "one": "Объединено повторяющихся строк: {{count}}",
+    "few": "Объединено повторяющихся строк: {{count}}",
+    "many": "Объединено повторяющихся строк: {{count}}",
+    "other": "Объединено повторяющихся строк: {{count}}"
+  },
+  "settings.bots.tidyUp.moved": {
+    "one": "Старых строк перемещено в memory/archive.md: {{count}}",
+    "few": "Старых строк перемещено в memory/archive.md: {{count}}",
+    "many": "Старых строк перемещено в memory/archive.md: {{count}}",
+    "other": "Старых строк перемещено в memory/archive.md: {{count}}"
+  },
+  "settings.bots.tidyUp.readChats": {
+    "one": "прочитано чатов: {{count}}",
+    "few": "прочитано чатов: {{count}}",
+    "many": "прочитано чатов: {{count}}",
+    "other": "прочитано чатов: {{count}}"
+  },
+  "settings.bots.tools.fromYours": {
+    "one": "Ещё от вашего агента {{agent}}: {{count}}",
+    "few": "Ещё от вашего агента {{agent}}: {{count}}",
+    "many": "Ещё от вашего агента {{agent}}: {{count}}",
+    "other": "Ещё от вашего агента {{agent}}: {{count}}"
+  },
+  "settings.bots.tools.fromYoursOpen": {
+    "one": "От вашего агента {{agent}}: {{count}}",
+    "few": "От вашего агента {{agent}}: {{count}}",
+    "many": "От вашего агента {{agent}}: {{count}}",
+    "other": "От вашего агента {{agent}}: {{count}}"
   }
 }
