@@ -2675,5 +2675,59 @@
     "few": "Выбрать все: {{count}}",
     "many": "Выбрать все: {{count}}",
     "other": "Выбрать все: {{count}}"
+  },
+  "browser.annotatePalette.noteCount": {
+    "one": "{{count}} заметка",
+    "few": "{{count}} заметки",
+    "many": "{{count}} заметок",
+    "other": "{{count}} заметки"
+  },
+  "settings.mcpServers.agents.someOff": {
+    "one": "Отключён для {{count}} агента",
+    "few": "Отключён для {{count}} агентов",
+    "many": "Отключён для {{count}} агентов",
+    "other": "Отключён для {{count}} агентов"
+  },
+  "settings.mcpServers.custom.addMany": {
+    "one": "Добавить {{count}} сервер",
+    "few": "Добавить {{count}} сервера",
+    "many": "Добавить {{count}} серверов",
+    "other": "Добавить {{count}} сервера"
+  },
+  "settings.mcpServers.custom.found": {
+    "one": "Найден {{count}} сервер",
+    "few": "Найдено {{count}} сервера",
+    "many": "Найдено {{count}} серверов",
+    "other": "Найдено {{count}} сервера"
+  },
+  "settings.mcpServers.empty.copied": {
+    "one": "С хоста {{host}} скопирован {{count}} сервер",
+    "few": "С хоста {{host}} скопировано {{count}} сервера",
+    "many": "С хоста {{host}} скопировано {{count}} серверов",
+    "other": "С хоста {{host}} скопировано {{count}} сервера"
+  },
+  "settings.mcpServers.found.summary": {
+    "one": "В настройках {{agents}} найден {{count}} сервер",
+    "few": "В настройках {{agents}} найдено {{count}} сервера",
+    "many": "В настройках {{agents}} найдено {{count}} серверов",
+    "other": "В настройках {{agents}} найдено {{count}} сервера"
+  },
+  "settings.mcpServers.move.allTitle": {
+    "one": "Перенести {{count}} сервер в Orca?",
+    "few": "Перенести {{count}} сервера в Orca?",
+    "many": "Перенести {{count}} серверов в Orca?",
+    "other": "Перенести {{count}} сервера в Orca?"
+  },
+  "settings.mcpServers.toast.addedMany": {
+    "one": "Добавлен {{count}} сервер",
+    "few": "Добавлено {{count}} сервера",
+    "many": "Добавлено {{count}} серверов",
+    "other": "Добавлено {{count}} сервера"
+  },
+  "settings.mcpServers.toast.restart": {
+    "one": "Перезапустить {{count}} сессию",
+    "few": "Перезапустить {{count}} сессии",
+    "many": "Перезапустить {{count}} сессий",
+    "other": "Перезапустить {{count}} сессии"
   }
 }

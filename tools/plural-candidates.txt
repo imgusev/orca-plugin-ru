@@ -257,7 +257,6 @@ auto.components.status.bar.RemoteServerUpdateStatusSegment.updatedCount
 auto.components.status.bar.ResourceUsageStatusSegment.endOrphanTerminals
 auto.components.status.bar.ResourceUsageStatusSegment.orphanCount
 auto.components.status.bar.SkillUpdateStatusSegment.runningSkills
-auto.components.status.bar.SshStatusSegment.connectedHostCount
 auto.components.status.bar.SshStatusSegment.moreSshHostMatches
 auto.components.status.bar.SshStatusSegment.moreSshHosts
 auto.components.status.bar.StatusBar.rateLimitResetsAvailable
@@ -324,7 +323,7 @@ bots.items.group.new
 bots.items.group.showMore
 bots.items.selected
 bots.items.stale.reason
-bots.items.view.linkCount
+bots.items.view.moreLinks
 bots.items.wait.titleMany
 bots.panel.working
 bots.row.waitingCount
@@ -348,6 +347,7 @@ bots.whoCanAsk.selected
 bots.whoCanAsk.showMore
 bots.workspaces.moreAgents
 bots.workspaces.showMore
+browser.annotatePalette.noteCount
 browser.newTab.runningElsewhere
 components.native-chat.ask.questionCount
 components.native-chat.connectorAsker.earlierMessages
@@ -418,6 +418,14 @@ settings.browser.passwords.importUndecryptable
 settings.browser.passwords.imported
 settings.browser.passwords.neverHeading
 settings.browser.passwords.search
+settings.mcpServers.agents.someOff
+settings.mcpServers.custom.addMany
+settings.mcpServers.custom.found
+settings.mcpServers.empty.copied
+settings.mcpServers.found.summary
+settings.mcpServers.move.allTitle
+settings.mcpServers.toast.addedMany
+settings.mcpServers.toast.restart
 sidebar.agentSummary.hideIdleChildren
 sidebar.agentSummary.idleChildCount
 sidebar.agentSummary.showIdleChildren
