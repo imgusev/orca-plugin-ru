@@ -98,6 +98,9 @@ auto.components.right.sidebar.SourceControl.compareBaseCommitsBehind
 auto.components.right.sidebar.SourceControl.conflictCount
 auto.components.right.sidebar.SourceControl.discardFailed
 auto.components.right.sidebar.SourceControl.noteCount
+auto.components.right.sidebar.SourceControl.rebaseConflictCount
+auto.components.right.sidebar.SourceControl.scopeCommitCount
+auto.components.right.sidebar.SourceControl.scopeFileCount
 auto.components.right.sidebar.checks.panel.content.commitsBehind
 auto.components.right.sidebar.checks.panel.content.failingChecks
 auto.components.right.sidebar.checks.panel.content.failingCount
@@ -171,8 +174,6 @@ auto.components.sidebar.DeleteWorktreeDialog.removeWithChildrenGit
 auto.components.sidebar.DeleteWorktreeDialog.removeWithChildrenMixed
 auto.components.sidebar.DeleteWorktreeDirtyChangeHint.changesLost
 auto.components.sidebar.DeleteWorktreeDirtyChangeHint.moreLoadedPaths
-auto.components.sidebar.DeleteWorktreeLineageNotice.alsoDeletesChildren
-auto.components.sidebar.DeleteWorktreeLineageNotice.moreChildren
 auto.components.sidebar.HostRemoveDialog.alsoRemoveWorkspaces
 auto.components.sidebar.HostRemoveDialog.workspacesFailed
 auto.components.sidebar.HostSectionHeader.workspaceCount
@@ -292,6 +293,7 @@ automations.botEvents.unnamed.linearTeam
 automations.botEvents.unnamed.people
 automations.botEvents.unnamed.slackChannel
 bots.accessRequest.toastMany
+bots.apps.addedCount
 bots.automations.all
 bots.automations.google.minutesBefore
 bots.automations.pausedCount
@@ -314,14 +316,15 @@ bots.groups.panel.membersCount
 bots.groups.picked
 bots.import.found
 bots.import.nudgeMany
+bots.items.ask.sendSome
+bots.items.ask.sendSomeLabel
 bots.items.cancel.confirmMany
-bots.items.cancel.titleMany
 bots.items.chat.moreItems
 bots.items.group.new
 bots.items.group.showMore
 bots.items.selected
 bots.items.stale.reason
-bots.items.view.moreLinks
+bots.items.view.linkCount
 bots.items.wait.titleMany
 bots.panel.working
 bots.row.waitingCount
@@ -354,6 +357,7 @@ components.native-chat.importPlan.importMany
 components.native-chat.mcp.summary.connected
 components.native-chat.mcp.summary.failed
 components.native-chat.queuedMessages.imageCount
+components.native-chat.railMatchCount
 components.native-chat.turnDiff.showMoreFiles
 components.native-chat.usageLimitActions.copyTruncated
 components.native-chat.workerDock.failedCount
@@ -362,7 +366,6 @@ components.native-chat.workerDock.needsYouCount
 components.native-chat.workerDock.questions
 components.native-chat.workerDock.runningCount
 components.orchestration.workerAutoClose.bannerFinished
-components.orchestration.workerAutoClose.finished
 components.orchestrationCrew.show
 components.orchestrationCrew.summary
 components.settings.workspaceCleanup.activity.failed
@@ -375,6 +378,10 @@ components.settings.workspaceCleanup.activity.showMore
 components.settings.workspaceCleanup.enable.summary
 components.settings.workspaceCleanup.rules.inactiveDescription
 components.settings.workspaceCleanup.rules.matchesCount
+components.workspace.cleanup.confirm.showMore
+components.workspace.cleanup.footer.selected
+components.workspace.cleanup.group.selected
+components.workspace.cleanup.selectAll.all
 components.workspace.delete.ignoredFiles.lostIncomplete
 dashboardPopout.card.time.days
 dashboardPopout.card.time.hours

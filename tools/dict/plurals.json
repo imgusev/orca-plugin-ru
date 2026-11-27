@@ -2603,5 +2603,77 @@
     "few": "От вашего агента {{agent}}: {{count}}",
     "many": "От вашего агента {{agent}}: {{count}}",
     "other": "От вашего агента {{agent}}: {{count}}"
+  },
+  "auto.components.right.sidebar.SourceControl.rebaseConflictCount": {
+    "one": "{{count}} конфликт",
+    "few": "{{count}} конфликта",
+    "many": "{{count}} конфликтов",
+    "other": "{{count}} конфликта"
+  },
+  "auto.components.right.sidebar.SourceControl.scopeCommitCount": {
+    "one": "{{count}} коммит",
+    "few": "{{count}} коммита",
+    "many": "{{count}} коммитов",
+    "other": "{{count}} коммита"
+  },
+  "auto.components.right.sidebar.SourceControl.scopeFileCount": {
+    "one": "{{count}} файл",
+    "few": "{{count}} файла",
+    "many": "{{count}} файлов",
+    "other": "{{count}} файла"
+  },
+  "bots.apps.addedCount": {
+    "one": "Добавлено: {{count}}",
+    "few": "Добавлено: {{count}}",
+    "many": "Добавлено: {{count}}",
+    "other": "Добавлено: {{count}}"
+  },
+  "bots.items.ask.sendSome": {
+    "one": "Отправить {{count}}/{{total}}",
+    "few": "Отправить {{count}}/{{total}}",
+    "many": "Отправить {{count}}/{{total}}",
+    "other": "Отправить {{count}}/{{total}}"
+  },
+  "bots.items.ask.sendSomeLabel": {
+    "one": "Отправить {{count}} из {{total}} ответов",
+    "few": "Отправить {{count}} из {{total}} ответов",
+    "many": "Отправить {{count}} из {{total}} ответов",
+    "other": "Отправить {{count}} из {{total}} ответов"
+  },
+  "bots.items.view.linkCount": {
+    "one": "{{count}} ссылка",
+    "few": "{{count}} ссылки",
+    "many": "{{count}} ссылок",
+    "other": "{{count}} ссылки"
+  },
+  "components.native-chat.railMatchCount": {
+    "one": "{{count}} из {{total}}",
+    "few": "{{count}} из {{total}}",
+    "many": "{{count}} из {{total}}",
+    "other": "{{count}} из {{total}}"
+  },
+  "components.workspace.cleanup.confirm.showMore": {
+    "one": "Показать ещё {{count}}",
+    "few": "Показать ещё {{count}}",
+    "many": "Показать ещё {{count}}",
+    "other": "Показать ещё {{count}}"
+  },
+  "components.workspace.cleanup.footer.selected": {
+    "one": "выбрано: {{count}}",
+    "few": "выбрано: {{count}}",
+    "many": "выбрано: {{count}}",
+    "other": "выбрано: {{count}}"
+  },
+  "components.workspace.cleanup.group.selected": {
+    "one": "выбрано: {{count}}",
+    "few": "выбрано: {{count}}",
+    "many": "выбрано: {{count}}",
+    "other": "выбрано: {{count}}"
+  },
+  "components.workspace.cleanup.selectAll.all": {
+    "one": "Выбрать все: {{count}}",
+    "few": "Выбрать все: {{count}}",
+    "many": "Выбрать все: {{count}}",
+    "other": "Выбрать все: {{count}}"
   }
 }
